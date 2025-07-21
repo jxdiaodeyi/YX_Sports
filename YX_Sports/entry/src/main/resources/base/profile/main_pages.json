@@ -1,0 +1,11 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/Starter",
+    "pages/PrivatePoliticPage",
+    "pages/TrainTimePage",
+    "pages/CaloriePage",
+    "pages/TrainRecordPage",
+    "pages/WeightRecordPage"
+  ]
+}
