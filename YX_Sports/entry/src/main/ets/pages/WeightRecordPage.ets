@@ -309,11 +309,12 @@ struct NumberKeyboardPage {
 
   build() {
     Column() {
+      Text().height(40)
       //标题部分
       Row(){
-        Image($r('app.media.leftback'))
-          .width(20)
-          .height(20)
+        Image($r('app.media.return'))
+          .width(40)
+          .height(40)
           .onClick(()=>{
             router.back()
           })
@@ -324,11 +325,12 @@ struct NumberKeyboardPage {
         Text('     ')
           .fontSize(24)
       }
-      .justifyContent(FlexAlign.SpaceAround)
+      .justifyContent(FlexAlign.SpaceBetween)
       .width('100%')
       .height(30)
       .padding(5)
 
+      //记录部分
       Column({space:5}){
         Row(){
           //初始体重

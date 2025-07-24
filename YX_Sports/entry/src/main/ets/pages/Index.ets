@@ -1,11 +1,19 @@
-import { TabBarPosition } from '@kit.ArkUI';
+import { router, TabBarPosition } from '@kit.ArkUI';
+import { Home } from './home';
+import { mine } from './mine';
+import { Plan } from './plan';
 import { Practice } from './PracticePage';
+import { vip } from './vip';
+import { SubscriptionPlan } from './vipplan';
+
+
 
 @Entry
 @Component
 struct Index {
   @State message: string = 'Hello World';
   @State curIndex: number = 0;
+  @State change:boolean=false
 
   @Builder
   navBar(selImg:Resource, img:Resource, tex:string, index:number){
@@ -18,20 +26,33 @@ struct Index {
     }
   }
 
+  aboutToAppear():boolean {
+    const params = router.getParams()as vip | undefined
+    if (params) {
+      this.change=params.changes
+    }
+    return this.change
+  }
+
+
   build() {
     Column(){
       Tabs({barPosition:BarPosition.End}){
         TabContent(){
-          Text("首页内容")
+          Home()
         }.tabBar(this.navBar($r("app.media.home"),$r("app.media.img_0"),"首页",0))
         TabContent(){
-          Text("计划内容")
+          if(this.aboutToAppear()){
+            Plan()
+          }else {
+            SubscriptionPlan()
+          }
         }.tabBar(this.navBar($r("app.media.plan"),$r("app.media.img_1"),"计划",1))
         TabContent(){
           Practice()
         }.tabBar(this.navBar($r("app.media.practice"),$r("app.media.img_2"),"训练",2))
         TabContent(){
-          Text("我的内容")
+          mine()
         }.tabBar(this.navBar($r("app.media.mine"),$r("app.media.img_3"),"我的",3))
       }
       .onChange((index : number) => {this.curIndex = index;})

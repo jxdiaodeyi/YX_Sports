@@ -62,7 +62,7 @@ struct Starter {
             .onClick(() => {
               // 点击事件处理逻辑
               console.log('点击了立即体验按钮');
-              router.replaceUrl({url:'pages/Index'})
+              router.replaceUrl({url:'pages/start'})
             })
         }
         .height('100%')

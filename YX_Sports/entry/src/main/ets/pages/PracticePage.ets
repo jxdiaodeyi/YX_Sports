@@ -14,6 +14,7 @@ export struct Practice {
 
   build() {
     Column(){
+      Text().height(20)
       //标题
       Row({space:15}){
         Text('训练')

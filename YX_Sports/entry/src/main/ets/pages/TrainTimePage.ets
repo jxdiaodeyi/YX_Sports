@@ -1,6 +1,6 @@
 import { router } from '@kit.ArkUI';
 import { DateType, DialogAction, DialogHelper } from '@pura/harmony-dialog';
-import { DateUtil, DisplayUtil, LogUtil, ToastUtil } from '@pura/harmony-utils';
+//import { DateUtil, DisplayUtil, LogUtil, ToastUtil } from '@pura/harmony-utils';
 
 interface weekWork {
   weekid: number,
@@ -78,8 +78,9 @@ struct TrainTimePage {
 
   build() {
     Column(){
+      Text().height(40)
       Row(){
-        Image($r('app.media.leftback'))
+        Image($r('app.media.return'))
           .width(20)
           .height(20)
           .onClick(()=>{
@@ -92,7 +93,7 @@ struct TrainTimePage {
         Text('     ')
           .fontSize(24)
       }
-      .justifyContent(FlexAlign.SpaceAround)
+      .justifyContent(FlexAlign.SpaceBetween)
       .width('100%')
       .height(30)
       .padding(5)

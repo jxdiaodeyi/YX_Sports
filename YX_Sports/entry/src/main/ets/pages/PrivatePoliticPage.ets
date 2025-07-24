@@ -1,3 +1,5 @@
+import { router } from '@kit.ArkUI';
+
 @Entry
 @Component
 struct PrivatePoliticPage {
@@ -5,11 +7,14 @@ struct PrivatePoliticPage {
 
   build() {
     Column(){
+      Text().height(40)
       Row(){
-        Text('<')
-          .fontColor('#333333')
-          .fontSize(24)
-          .fontWeight(500)
+        Image($r("app.media.return"))
+          .height(40)
+          .width(40)
+          .onClick(()=>{
+            router.back()
+          })
         Text('隐私政策')
           .fontColor('#333333')
           .fontSize(24)
@@ -17,7 +22,7 @@ struct PrivatePoliticPage {
         Text('     ')
           .fontSize(24)
       }
-      .justifyContent(FlexAlign.SpaceAround)
+      .justifyContent(FlexAlign.SpaceBetween)
       .width('100%')
       .height(30)
       .padding(5)

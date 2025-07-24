@@ -3,7 +3,8 @@
   "description": "Please describe the basic information.",
   "dependencies": {
     "@pura/harmony-dialog": "^1.1.7",
-    "@pura/harmony-utils": "^1.3.6"
+    "@abner/keyboard": "^1.0.2",
+    "@pharos/pin_code_text_input": "^1.0.0"
   },
   "devDependencies": {
     "@ohos/hypium": "1.0.21",
