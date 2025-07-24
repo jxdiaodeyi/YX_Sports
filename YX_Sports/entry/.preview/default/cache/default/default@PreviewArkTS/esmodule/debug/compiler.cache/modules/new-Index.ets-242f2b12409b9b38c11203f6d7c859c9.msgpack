@@ -1,0 +1,234 @@
+Ôr@Ÿªassertions¤code´customTransformCache¬dependencies¢id¤meta±moduleSideEffects¬originalCode±originalSourcemap«resolvedIds®sourcemapChainµsyntheticNamedExportsµtransformDependencies®transformFiles¨cacheAstÔrAÚ²if (!("finalizeConstruction" in ViewPU.prototype)) {
+    Reflect.set(ViewPU.prototype, "finalizeConstruction", () => { });
+}
+import { Practice } from './PracticePage';
+class Index extends ViewPU {
+    constructor(parent, params, __localStorage, elmtId = -1, paramsLambda = undefined, extraInfo) {
+        super(parent, __localStorage, elmtId, extraInfo);
+        if (typeof paramsLambda === "function") {
+            this.paramsGenerator_ = paramsLambda;
+        }
+        this.__message = new ObservedPropertySimplePU('Hello World', this, "message");
+        this.__curIndex = new ObservedPropertySimplePU(0, this, "curIndex");
+        this.setInitiallyProvidedValue(params);
+        this.finalizeConstruction();
+    }
+    setInitiallyProvidedValue(params) {
+        if (params.message !== undefined) {
+            this.message = params.message;
+        }
+        if (params.curIndex !== undefined) {
+            this.curIndex = params.curIndex;
+        }
+    }
+    updateStateVars(params) {
+    }
+    purgeVariableDependenciesOnElmtId(rmElmtId) {
+        this.__message.purgeDependencyOnElmtId(rmElmtId);
+        this.__curIndex.purgeDependencyOnElmtId(rmElmtId);
+    }
+    aboutToBeDeleted() {
+        this.__message.aboutToBeDeleted();
+        this.__curIndex.aboutToBeDeleted();
+        SubscriberManager.Get().delete(this.id__());
+        this.aboutToBeDeletedInternal();
+    }
+    get message() {
+        return this.__message.get();
+    }
+    set message(newValue) {
+        this.__message.set(newValue);
+    }
+    get curIndex() {
+        return this.__curIndex.get();
+    }
+    set curIndex(newValue) {
+        this.__curIndex.set(newValue);
+    }
+    navBar(selImg, img, tex, index, parent = null) {
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Column.create({ space: 5 });
+            Column.debugLine("entry/src/main/ets/pages/Index.ets(12:5)", "entry");
+        }, Column);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Image.create(index == this.curIndex ? selImg : img);
+            Image.debugLine("entry/src/main/ets/pages/Index.ets(13:7)", "entry");
+            Image.size({ width: 20, height: 20 });
+        }, Image);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create(tex);
+            Text.debugLine("entry/src/main/ets/pages/Index.ets(15:7)", "entry");
+            Text.fontColor(index == this.curIndex ? "#6C55E4" : "#CCCCCC");
+            Text.fontSize(10);
+        }, Text);
+        Text.pop();
+        Column.pop();
+    }
+    initialRender() {
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Column.create();
+            Column.debugLine("entry/src/main/ets/pages/Index.ets(22:5)", "entry");
+            Column.height('100%');
+            Column.width('100%');
+        }, Column);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Tabs.create({ barPosition: BarPosition.End });
+            Tabs.debugLine("entry/src/main/ets/pages/Index.ets(23:7)", "entry");
+            Tabs.onChange((index) => { this.curIndex = index; });
+        }, Tabs);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            TabContent.create(() => {
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Text.create("é¦–é¡µå†…å®¹");
+                    Text.debugLine("entry/src/main/ets/pages/Index.ets(25:11)", "entry");
+                }, Text);
+                Text.pop();
+            });
+            TabContent.tabBar({ builder: () => {
+                    this.navBar.call(this, { "id": 16777228, "type": 20000, params: [], "bundleName": "com.example.watermalon_sport", "moduleName": "entry" }, { "id": 16777243, "type": 20000, params: [], "bundleName": "com.example.watermalon_sport", "moduleName": "entry" }, "é¦–é¡µ", 0);
+                } });
+            TabContent.debugLine("entry/src/main/ets/pages/Index.ets(24:9)", "entry");
+        }, TabContent);
+        TabContent.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            TabContent.create(() => {
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Text.create("è®¡åˆ’å†…å®¹");
+                    Text.debugLine("entry/src/main/ets/pages/Index.ets(28:11)", "entry");
+                }, Text);
+                Text.pop();
+            });
+            TabContent.tabBar({ builder: () => {
+                    this.navBar.call(this, { "id": 16777239, "type": 20000, params: [], "bundleName": "com.example.watermalon_sport", "moduleName": "entry" }, { "id": 16777229, "type": 20000, params: [], "bundleName": "com.example.watermalon_sport", "moduleName": "entry" }, "è®¡åˆ’", 1);
+                } });
+            TabContent.debugLine("entry/src/main/ets/pages/Index.ets(27:9)", "entry");
+        }, TabContent);
+        TabContent.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            TabContent.create(() => {
+                {
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        if (isInitialRender) {
+                            let componentCall = new Practice(this, {}, undefined, elmtId, () => { }, { page: "entry/src/main/ets/pages/Index.ets", line: 31, col: 11 });
+                            ViewPU.create(componentCall);
+                            let paramsLambda = () => {
+                                return {};
+                            };
+                            componentCall.paramsGenerator_ = paramsLambda;
+                        }
+                        else {
+                            this.updateStateVarsOfChildByElmtId(elmtId, {});
+                        }
+                    }, { name: "Practice" });
+                }
+            });
+            TabContent.tabBar({ builder: () => {
+                    this.navBar.call(this, { "id": 16777240, "type": 20000, params: [], "bundleName": "com.example.watermalon_sport", "moduleName": "entry" }, { "id": 16777238, "type": 20000, params: [], "bundleName": "com.example.watermalon_sport", "moduleName": "entry" }, "è®­ç»ƒ", 2);
+                } });
+            TabContent.debugLine("entry/src/main/ets/pages/Index.ets(30:9)", "entry");
+        }, TabContent);
+        TabContent.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            TabContent.create(() => {
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Text.create("æˆ‘çš„å†…å®¹");
+                    Text.debugLine("entry/src/main/ets/pages/Index.ets(34:11)", "entry");
+                }, Text);
+                Text.pop();
+            });
+            TabContent.tabBar({ builder: () => {
+                    this.navBar.call(this, { "id": 16777227, "type": 20000, params: [], "bundleName": "com.example.watermalon_sport", "moduleName": "entry" }, { "id": 16777220, "type": 20000, params: [], "bundleName": "com.example.watermalon_sport", "moduleName": "entry" }, "æˆ‘çš„", 3);
+                } });
+            TabContent.debugLine("entry/src/main/ets/pages/Index.ets(33:9)", "entry");
+        }, TabContent);
+        TabContent.pop();
+        Tabs.pop();
+        Column.pop();
+    }
+    rerender() {
+        this.updateDirtyElements();
+    }
+    static getEntryName() {
+        return "Index";
+    }
+}
+registerNamedRoute(() => new Index(undefined, {}), "", { bundleName: "com.example.watermalon_sport", moduleName: "entry", pagePath: "pages/Index", pageFullPath: "entry/src/main/ets/pages/Index", integratedHsp: "false", moduleType: "followWithHap" });
+//# sourceMappingURL=Index.js.mapÂ‘Ù\D:\devecostudio-windows-5.1.0.840\Watermalon_Sport\entry\src\main\ets\pages\PracticePage.etsÙUD:\devecostudio-windows-5.1.0.840\Watermalon_Sport\entry\src\main\ets\pages\Index.etsÔrBšªmoduleName±isLocalDependency¯isNodeEntryFile§pkgPath±belongProjectPath§pkgNameªpkgVersion±dependencyPkgInfo°belongModulePath¬shouldEmitJs¥entryÃÂÙ8D:\devecostudio-windows-5.1.0.840\Watermalon_Sport\entryÙ2D:\devecostudio-windows-5.1.0.840\Watermalon_Sport¥entry¥1.0.0Ô  Ù8D:\devecostudio-windows-5.1.0.840\Watermalon_Sport\entryÃÃÚÓimport { TabBarPosition } from '@kit.ArkUI';
+import { Practice } from './PracticePage';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'Hello World';
+  @State curIndex: number = 0;
+
+  @Builder
+  navBar(selImg:Resource, img:Resource, tex:string, index:number){
+    Column({space:5}){
+      Image(index == this.curIndex ? selImg : img)
+        .size({width:20, height: 20})
+      Text(tex)
+        .fontColor(index == this.curIndex ? "#6C55E4" : "#CCCCCC")
+      .fontSize(10)
+    }
+  }
+
+  build() {
+    Column(){
+      Tabs({barPosition:BarPosition.End}){
+        TabContent(){
+          Text("é¦–é¡µå†…å®¹")
+        }.tabBar(this.navBar($r("app.media.home"),$r("app.media.img_0"),"é¦–é¡µ",0))
+        TabContent(){
+          Text("è®¡åˆ’å†…å®¹")
+        }.tabBar(this.navBar($r("app.media.plan"),$r("app.media.img_1"),"è®¡åˆ’",1))
+        TabContent(){
+          Practice()
+        }.tabBar(this.navBar($r("app.media.practice"),$r("app.media.img_2"),"è®­ç»ƒ",2))
+        TabContent(){
+          Text("æˆ‘çš„å†…å®¹")
+        }.tabBar(this.navBar($r("app.media.mine"),$r("app.media.img_3"),"æˆ‘çš„",3))
+      }
+      .onChange((index : number) => {this.curIndex = index;})
+    }
+    .height('100%')
+    .width('100%')
+  }
+}ÀÔrC‘®./PracticePageÔrD—ªassertions¨external¢id¤meta±moduleSideEffectsªresolvedByµsyntheticNamedExportsAÂÙ\D:\devecostudio-windows-5.1.0.840\Watermalon_Sport\entry\src\main\ets\pages\PracticePage.etsAÃªoh-resolveÂ“ÔrE–§version¤fileªsourceRoot§sources¥names¨mappings¨Index.js ‘©Index.etsÜ “˜”   ” ”	 	” ” ” ”) )”* *’” ” ‘”  ’”6 ”ÌC (’”7 ”8 ‘” *’” 	” ’” 	” ’” 	” ’” 	” š” 
+”
+ 
+” 
+	” 
+” 
+” 
+&” 
+(” 
+2” 
+4”" 
+Ì@˜” ” 
+” ” ”! ”# ”$ ”& Ü ” ” ” ” ”" ”& ”' ”/ "”0 #”1 $”2 %”8 +”9 ,”: -”; .”> 1” ” ” 	” ” ” ” ”  ”" ”$ ”* ”, !”. #”0 $”” ” 
+” ” Ü ” ” 
+” 	” ” ”  ”$ ”(  ”) !”1 )”2 *”3 +”4 ,”= 5”> 6”? 7”Ì@ 8”ÌI ÌA–” ” 
+” ” ” ” ’” ” 
+’” ” 
+‘” ‘” ’” ” 
+–” ” 
+” &” &” &”  &–” ” 
+” '” '
+” '” 'š” ” 
+” ” ”% ”' ”2 #”3 $”6 '”8 (Ü ” ” 
+” $” $” $” $”  $”" $!”$ $#”' $%”+ $)”, $*”4 $2”7 $5”< $:”= $;”> $;”? $<”” 
+” ”  ”& ’” 
+” ’” 
+” ˜” ” ” ” ”Í ÌH”Í ÌL”Í ÌM”Í ÌN”” 
+” ”  ”& ’” 
+” ’” 
+” ˜” ” ” ” ”Í ÌH”Í ÌL”Í ÌM”Í ÌN’”4 
+”< ’” 
+” ˜” ” ” ” ”Í ÌL”Í ÌP”Í ÌQ”Í ÌR”” !
+” !”  !”& !’” !
+” !’” "
+” "˜” "” "” "” "”Í "ÌH”Í "ÌL”Í "ÌM”Í "ÌN’” ” 
+’” ” 
+‘” (ÔrF–§version¤file§sources®sourcesContent¥names¨mappingsÀ‘À‘ÀÜ œ‘”    ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”  	 ‘”  
+ ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”    ‘”  ! ‘”  " ‘”  # ‘”  $ ‘”  % ‘”  & ‘”  ' ‘”  ( ‘”  ) ‘”  * ‘”  + ‘”  , ‘”  - ‘”  . ‘”  / ‘”  0 ‘”  1 ‘”  2 ‘”  3 ‘”  4 ‘”  5 ‘”  6 ‘”  7 ‘”  8 ‘”  9 ‘”  : ‘”  ; ‘”  < ‘”  = ‘”  > ‘”  ? ‘”  Ì@ ‘”  ÌA ‘”  ÌB ‘”  ÌC ‘”  ÌD ‘”  ÌE ‘”  ÌF ‘”  ÌG ‘”  ÌH ‘”  ÌI ‘”  ÌJ ‘”  ÌK ‘”  ÌL ‘”  ÌM ‘”  ÌN ‘”  ÌO ‘”  ÌP ‘”  ÌQ ‘”  ÌR ‘”  ÌS ‘”  ÌT ‘”  ÌU ‘”  ÌV ‘”  ÌW ‘”  ÌX ‘”  ÌY ‘”  ÌZ ‘”  Ì[ ‘”  Ì\ ‘”  Ì] ‘”  Ì^ ‘”  Ì_ ‘”  Ì` ‘”  Ìa ‘”  Ìb ‘”  Ìc ‘”  Ìd ‘”  Ìe ‘”  Ìf ‘”  Ìg ‘”  Ìh ‘”  Ìi ‘”  Ìj ‘”  Ìk ‘”  Ìl ‘”  Ìm ‘”  Ìn ‘”  Ìo ‘”  Ìp ‘”  Ìq ‘”  Ìr ‘”  Ìs ‘”  Ìt ‘”  Ìu ‘”  Ìv ‘”  Ìw ‘”  Ìx ‘”  Ìy ‘”  Ìz ‘”  Ì{ ‘”  Ì| ‘”  Ì} ‘”  Ì~ ‘”  Ì ‘”  Ì€ ‘”  Ì ‘”  Ì‚ ‘”  Ìƒ ‘”  Ì„ ‘”  Ì… ‘”  Ì† ‘”  Ì‡ ‘”  Ìˆ ‘”  Ì‰ ‘”  ÌŠ ‘”  Ì‹ ‘”  ÌŒ ‘”  Ì ‘”  Ì ‘”  Ì ‘”  Ì ‘”  Ì‘ ‘”  Ì’ ‘”  Ì“ ‘”  Ì” ‘”  Ì• ‘”  Ì– ‘”  Ì— ‘”  Ì˜ ‘”  Ì™ ‘”  Ìš ‘”  Ì› ÔrG’§missing¦pluginÃ¦genAbcÂÔ  ÔrH”²dynamicImportCache¹exportAllDeclarationCache»exportNamedDeclarationCache«importCache‘ÔrI•¤type¥start£endªspecifiers¦source±ImportDeclarationÌ€Ìª‘ÔrJ•¤type¥start£end¨imported¥local¯ImportSpecifierÌ‰Ì‘ÔrK”¤type¥start£end¤nameªIdentifierÌ‰Ì‘¨PracticeKªIdentifierÌ‰Ì‘¨PracticeÔrL•¤type¥start£end¥value£raw§LiteralÌ™Ì©®./PracticePage°'./PracticePage'

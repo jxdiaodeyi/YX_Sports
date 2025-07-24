@@ -1,0 +1,2 @@
+string agcit_pura_harmony_utils 0x06000000
+string lib_name 0x06000001

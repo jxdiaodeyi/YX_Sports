@@ -1,0 +1,326 @@
+Ôr@Ÿªassertions¤code´customTransformCache¬dependencies¢id¤meta±moduleSideEffects¬originalCode±originalSourcemap«resolvedIds®sourcemapChainµsyntheticNamedExportsµtransformDependencies®transformFiles¨cacheAstÔrAÚtvar __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+if (!("finalizeConstruction" in ViewPU.prototype)) {
+    Reflect.set(ViewPU.prototype, "finalizeConstruction", () => { });
+}
+export class SpinU extends ViewV2 {
+    constructor(parent, params, __localStorage, elmtId = -1, paramsLambda, extraInfo) {
+        super(parent, elmtId, extraInfo);
+        this.initParam("spinSize", (params && "spinSize" in params) ? params.spinSize : undefined);
+        this.initParam("spinColor", (params && "spinColor" in params) ? params.spinColor : undefined);
+        this.angle1 = 0;
+        this.angle2 = 0;
+        this.angle3 = 0;
+        this.finalizeConstruction();
+    }
+    resetStateVarsOnReuse(params) {
+        this.resetParam("spinSize", (params && "spinSize" in params) ? params.spinSize : undefined);
+        this.resetParam("spinColor", (params && "spinColor" in params) ? params.spinColor : undefined);
+        this.angle1 = 0;
+        this.angle2 = 0;
+        this.angle3 = 0;
+    }
+    initialRender() {
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Stack.create();
+            Stack.renderFit(RenderFit.CENTER);
+            Stack.width(this.spinSize);
+            Stack.height(this.spinSize);
+            Stack.onAppear(() => {
+                let keyframes1 = [
+                    {
+                        duration: 2000,
+                        curve: Curve.Linear,
+                        event: () => {
+                            this.angle1 = 360;
+                        }
+                    }
+                ];
+                let keyframes2 = [
+                    {
+                        duration: 1750,
+                        curve: Curve.Linear,
+                        event: () => {
+                            this.angle2 = -360;
+                        }
+                    }
+                ];
+                let keyframes3 = [
+                    {
+                        duration: 1500,
+                        curve: Curve.EaseInOut,
+                        event: () => {
+                            this.angle3 = 360;
+                        }
+                    }
+                ];
+                this.getUIContext().keyframeAnimateTo({ iterations: -1, delay: 0 }, keyframes1);
+                this.getUIContext().keyframeAnimateTo({ iterations: -1, delay: 0 }, keyframes2);
+                this.getUIContext().keyframeAnimateTo({ iterations: -1, delay: 0 }, keyframes3);
+            });
+        }, Stack);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Canvas.create();
+            Canvas.width(this.spinSize);
+            Canvas.height(this.spinSize);
+            Canvas.border({
+                width: this.spinSize * 0.08,
+                radius: this.spinSize,
+                color: { top: this.spinColor, right: this.spinColor, bottom: Color.Transparent, left: Color.Transparent },
+            });
+            Canvas.rotate({ angle: this.angle1 });
+        }, Canvas);
+        Canvas.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Canvas.create();
+            Canvas.width(this.spinSize * 0.65);
+            Canvas.height(this.spinSize * 0.65);
+            Canvas.border({
+                width: this.spinSize * 0.08,
+                radius: this.spinSize,
+                color: { top: this.spinColor, right: this.spinColor, bottom: Color.Transparent, left: Color.Transparent },
+            });
+            Canvas.rotate({ angle: this.angle2 });
+        }, Canvas);
+        Canvas.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Canvas.create();
+            Canvas.width(this.spinSize * 0.3);
+            Canvas.height(this.spinSize * 0.3);
+            Canvas.border({
+                width: this.spinSize * 0.08,
+                radius: this.spinSize,
+                color: { top: this.spinColor, right: this.spinColor, bottom: Color.Transparent, left: Color.Transparent },
+            });
+            Canvas.rotate({ angle: this.angle3 });
+        }, Canvas);
+        Canvas.pop();
+        Stack.pop();
+    }
+    updateStateVars(params) {
+        if (params === undefined) {
+            return;
+        }
+        if ("spinSize" in params) {
+            this.updateParam("spinSize", params.spinSize);
+        }
+        if ("spinColor" in params) {
+            this.updateParam("spinColor", params.spinColor);
+        }
+    }
+    rerender() {
+        this.updateDirtyElements();
+    }
+}
+__decorate([
+    Param
+], SpinU.prototype, "spinSize", void 0);
+__decorate([
+    Param
+], SpinU.prototype, "spinColor", void 0);
+__decorate([
+    Local
+], SpinU.prototype, "angle1", void 0);
+__decorate([
+    Local
+], SpinU.prototype, "angle2", void 0);
+__decorate([
+    Local
+], SpinU.prototype, "angle3", void 0);
+//# sourceMappingURL=SpinU.js.mapÂÙ‘D:\devecostudio-windows-5.1.0.840\YXSport\YXSport\oh_modules\.ohpm\@pura+spinkit@1.0.5\oh_modules\@pura\spinkit\src\main\ets\components\SpinU.etsÔrB˜±isLocalDependency¯isNodeEntryFile§pkgPath§pkgNameªpkgVersion±belongProjectPath±dependencyPkgInfo¬shouldEmitJsÂÂÙoD:\devecostudio-windows-5.1.0.840\YXSport\YXSport\oh_modules\.ohpm\@pura+spinkit@1.0.5\oh_modules\@pura\spinkit­@pura/spinkit¥1.0.5Ù1D:\devecostudio-windows-5.1.0.840\YXSport\YXSportÔrC’§pkgNameªpkgVersion­@pura/spinkit¥1.0.5ÃÃÚ—/*
+ * Copyright (C) 2024 æ¡ƒèŠ±é•‡ç«¥é•¿è€ @pura/spinkit
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+
+/**
+ * TODO SpinKitåŠ¨ç”»ç»„ä»¶
+ * author: æ¡ƒèŠ±é•‡ç«¥é•¿è€
+ * since: 2024/05/01
+ * ä»“åº“ä¸»é¡µï¼šhttps://ohpm.openharmony.cn/#/cn/detail/@pura%2Fspinkit
+ * github: https://github.com/787107497
+ * gitee: https://gitee.com/tongyuyan/spinkit
+ * QQäº¤æµç¾¤: 569512366
+ */
+@ComponentV2
+export struct SpinU {
+  @Require @Param spinSize: number;
+  @Require @Param spinColor: ResourceColor;
+  @Local angle1: number = 0;
+  @Local angle2: number = 0;
+  @Local angle3: number = 0;
+
+  build() {
+    Stack() {
+      Canvas()
+        .width(this.spinSize)
+        .height(this.spinSize)
+        .border({
+          width: this.spinSize * 0.08,
+          radius: this.spinSize,
+          color: { top: this.spinColor, right: this.spinColor, bottom: Color.Transparent, left: Color.Transparent },
+        })
+        .rotate({ angle: this.angle1 })
+
+      Canvas()
+        .width(this.spinSize * 0.65)
+        .height(this.spinSize * 0.65)
+        .border({
+          width: this.spinSize * 0.08,
+          radius: this.spinSize,
+          color: { top: this.spinColor, right: this.spinColor, bottom: Color.Transparent, left: Color.Transparent },
+        })
+        .rotate({ angle: this.angle2 })
+
+      Canvas()
+        .width(this.spinSize * 0.3)
+        .height(this.spinSize * 0.3)
+        .border({
+          width: this.spinSize * 0.08,
+          radius: this.spinSize,
+          color: { top: this.spinColor, right: this.spinColor, bottom: Color.Transparent, left: Color.Transparent },
+        })
+        .rotate({ angle: this.angle3 })
+    }
+    .renderFit(RenderFit.CENTER)
+    .width(this.spinSize)
+    .height(this.spinSize)
+    .onAppear(() => {
+      let keyframes1: Array<KeyframeState> = [
+        {
+          duration: 2000,
+          curve: Curve.Linear,
+          event: () => {
+            this.angle1 = 360
+          }
+        }];
+      let keyframes2: Array<KeyframeState> = [
+        {
+          duration: 1750,
+          curve: Curve.Linear,
+          event: () => {
+            this.angle2 = -360
+          }
+        }];
+      let keyframes3: Array<KeyframeState> = [
+        {
+          duration: 1500,
+          curve: Curve.EaseInOut,
+          event: () => {
+            this.angle3 = 360
+          }
+        }];
+      this.getUIContext().keyframeAnimateTo({ iterations: -1, delay: 0 }, keyframes1);
+      this.getUIContext().keyframeAnimateTo({ iterations: -1, delay: 0 }, keyframes2);
+      this.getUIContext().keyframeAnimateTo({ iterations: -1, delay: 0 }, keyframes3);
+    })
+  }
+}
+
+ÀA“ÔrD–§version¤fileªsourceRoot§sources¥names¨mappings¨SpinU.js ‘©SpinU.etsÜ …””   ” ” ” ‘”  ’” ” ’” ” ’” ” ‘”   ’” ” ’” ” ’” ” ‘” !’” "” "	˜” "” "	” ÌA” ÌA” ÌA”% ÌA”& ÌA”, ÌA˜” "” "	” ÌB” ÌB
+” ÌB” ÌB” ÌB”% ÌB˜” "” "	” ÌC” ÌC” ÌC” ÌC” ÌC”& ÌC—” "” "	” ÌD” ÌD” ÌD” ÌD”  ÌD”” ÌE” ÌE
+” ÌE”! ÌE-‘” ÌF”” ÌG
+”  ÌG”" ÌG”& ÌG–” ÌH
+” ÌH” ÌH”$ ÌH”% ÌH”+ ÌH•” ÌI
+” ÌI” ÌI”" ÌI”$ ÌI—” ÌJ”  ÌJ”! ÌJ”' ÌJ”* ÌJ”- ÌJ”. ÌJ’” ÌK
+” ÌK‘” ÌL	’” ÌL
+” ÌL”” ÌM” ÌM
+” ÌM”! ÌM-‘” ÌN”” ÌO
+”  ÌO”" ÌO”& ÌO–” ÌP
+” ÌP” ÌP”$ ÌP”% ÌP”+ ÌP•” ÌQ
+” ÌQ” ÌQ”" ÌQ”$ ÌQ˜” ÌR”  ÌR”! ÌR”' ÌR”* ÌR”+ ÌR”. ÌR”/ ÌR’” ÌS
+” ÌS‘” ÌT	’” ÌT
+” ÌT”” ÌU” ÌU
+” ÌU”! ÌU-‘” ÌV”” ÌW
+”  ÌW”" ÌW”& ÌW–” ÌX
+” ÌX” ÌX”$ ÌX”% ÌX”. ÌX •” ÌY
+” ÌY” ÌY”" ÌY”$ ÌY—” ÌZ”  ÌZ”! ÌZ”' ÌZ”* ÌZ”- ÌZ”. ÌZ’” Ì[
+” Ì[‘” Ì\	’” Ì\
+” Ì\Ü ” Ì]” Ì]
+” Ì]”! Ì]”# Ì]”$ Ì]”5 Ì]+”6 Ì],”8 Ì].”ÌB Ì]8”ÌD Ì]:”ÌE Ì];”ÌF Ì]<”ÌH Ì]>”ÌM Ì]ÌC”ÌO Ì]ÌE”ÌP Ì]ÌF”ÌR Ì]ÌH”ÌT Ì]ÌJ”Ì^ Ì]ÌT”Ì_ Ì]ÌU”Ì` Ì]ÌVÜ ” Ì^” Ì^
+” Ì^”! Ì^”# Ì^”$ Ì^”5 Ì^+”6 Ì^,”8 Ì^.”ÌB Ì^8”ÌD Ì^:”ÌE Ì^;”ÌF Ì^<”ÌH Ì^>”ÌM Ì^ÌC”ÌO Ì^ÌE”ÌP Ì^ÌF”ÌR Ì^ÌH”ÌT Ì^ÌJ”Ì^ Ì^ÌT”Ì_ Ì^ÌU”Ì` Ì^ÌVÜ ” Ì_” Ì_
+” Ì_”! Ì_”# Ì_”$ Ì_”5 Ì_+”6 Ì_,”8 Ì_.”ÌB Ì_8”ÌD Ì_:”ÌE Ì_;”ÌF Ì_<”ÌH Ì_>”ÌM Ì_ÌC”ÌO Ì_ÌE”ÌP Ì_ÌF”ÌR Ì_ÌH”ÌT Ì_ÌJ”Ì^ Ì_ÌT”Ì_ Ì_ÌU”Ì` Ì_ÌV’” Ì`” Ì`’” #” #˜” #” #” $	” $” $” $” $”& $˜” #” #” %	” %” %” %” %”' %•” #” #” &	” &” &˜” '
+” '” '” '” '”$ '”' '!”+ '%–” (
+” (” (” (” (”% (Ü ” )
+” )” )” )” )” )”" )”# )”, )&”. )(”3 )-”5 )/”9 )3”: )4”ÌC )=”ÌE )?”ÌK )ÌE”ÌM )ÌG”ÌR )ÌL”ÌS )ÌM”Ì^ )ÌX”Ì` )ÌZ”Ìd )Ì^”Ìf )Ì`”Ìk )Ìe”Ìl )Ìf”Ìw )Ìq”Ìy )Ìs‘” *	œ” #” #” +	” +” +” +”! +”# +”' +”( +”. +$”0 +&’” #” #’” -” -š” -” -” .	” .” .” .” .”& .”) .”- .#š” -” -” /	” /” /” /” /”' /”* / ”. /$•” -” -” 0	” 0” 0˜” 1
+” 1” 1” 1” 1”$ 1”' 1!”+ 1%–” 2
+” 2” 2” 2” 2”% 2Ü ” 3
+” 3” 3” 3” 3” 3”" 3”# 3”, 3&”. 3(”3 3-”5 3/”9 33”: 34”ÌC 3=”ÌE 3?”ÌK 3ÌE”ÌM 3ÌG”ÌR 3ÌL”ÌS 3ÌM”Ì^ 3ÌX”Ì` 3ÌZ”Ìd 3Ì^”Ìf 3Ì`”Ìk 3Ìe”Ìl 3Ìf”Ìw 3Ìq”Ìy 3Ìs‘” 4	œ” -” -” 5	” 5” 5” 5”! 5”# 5”' 5”( 5”. 5$”0 5&’” -” -’” 7” 7š” 7” 7” 8	” 8” 8” 8” 8”& 8”) 8”, 8"š” 7” 7” 9	” 9” 9” 9” 9”' 9”* 9 ”- 9#•” 7” 7” :	” :” :˜” ;
+” ;” ;” ;” ;”$ ;”' ;!”+ ;%–” <
+” <” <” <” <”% <Ü ” =
+” =” =” =” =” =”" =”# =”, =&”. =(”3 =-”5 =/”9 =3”: =4”ÌC ==”ÌE =?”ÌK =ÌE”ÌM =ÌG”ÌR =ÌL”ÌS =ÌM”Ì^ =ÌX”Ì` =ÌZ”Ìd =Ì^”Ìf =Ì`”Ìk =Ìe”Ìl =Ìf”Ìw =Ìq”Ìy =Ìs‘” >	œ” 7” 7” ?	” ?” ?” ?”! ?”# ?”' ?”( ?”. ?$”0 ?&’” 7” 7’” "” "	‘” Ìa‘”  ’” ”	 ‘”' #‘”  ’” ”	 ‘”( +‘”  	’” ”	 ‘”% ‘”  	’” ”	 ‘”% ‘”  	’” ”	 ‘”% ÔrE–§version¤file§sources®sourcesContent¥names¨mappingsÀ‘À‘ÀÜ †‘”    ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”  	 ‘”  
+ ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”    ‘”  ! ‘”  " ‘”  # ‘”  $ ‘”  % ‘”  & ‘”  ' ‘”  ( ‘”  ) ‘”  * ‘”  + ‘”  , ‘”  - ‘”  . ‘”  / ‘”  0 ‘”  1 ‘”  2 ‘”  3 ‘”  4 ‘”  5 ‘”  6 ‘”  7 ‘”  8 ‘”  9 ‘”  : ‘”  ; ‘”  < ‘”  = ‘”  > ‘”  ? ‘”  Ì@ ‘”  ÌA ‘”  ÌB ‘”  ÌC ‘”  ÌD ‘”  ÌE ‘”  ÌF ‘”  ÌG ‘”  ÌH ‘”  ÌI ‘”  ÌJ ‘”  ÌK ‘”  ÌL ‘”  ÌM ‘”  ÌN ‘”  ÌO ‘”  ÌP ‘”  ÌQ ‘”  ÌR ‘”  ÌS ‘”  ÌT ‘”  ÌU ‘”  ÌV ‘”  ÌW ‘”  ÌX ‘”  ÌY ‘”  ÌZ ‘”  Ì[ ‘”  Ì\ ‘”  Ì] ‘”  Ì^ ‘”  Ì_ ‘”  Ì` ‘”  Ìa ‘”  Ìb ‘”  Ìc ‘”  Ìd ‘”  Ìe ‘”  Ìf ‘”  Ìg ‘”  Ìh ‘”  Ìi ‘”  Ìj ‘”  Ìk ‘”  Ìl ‘”  Ìm ‘”  Ìn ‘”  Ìo ‘”  Ìp ‘”  Ìq ‘”  Ìr ‘”  Ìs ‘”  Ìt ‘”  Ìu ‘”  Ìv ‘”  Ìw ‘”  Ìx ‘”  Ìy ‘”  Ìz ‘”  Ì{ ‘”  Ì| ‘”  Ì} ‘”  Ì~ ‘”  Ì ‘”  Ì€ ‘”  Ì ‘”  Ì‚ ‘”  Ìƒ ‘”  Ì„ ‘”  Ì… ÔrF’§missing¦pluginÃ¦genAbcÂÔ  ÔrG”²dynamicImportCache¹exportAllDeclarationCache»exportNamedDeclarationCache«importCache‘ÔrH–¤type¥start£end«declarationªspecifiers¦source¶ExportNamedDeclarationÍÂÍÔrI–¤type¥start£end¢idªsuperClass¤body°ClassDeclarationÍÉÍÔrJ”¤type¥start£end¤nameªIdentifierÍÏÍÔ¥SpinUJªIdentifierÍİÍã¦ViewV2ÔrK”¤type¥start£end¤body©ClassBodyÍäÍ•ÔrL˜¤type¥start£end¦static¨computed£key¤kind¥value°MethodDefinitionÍëÍ±ÂÂJªIdentifierÍëÍö«constructor«constructorÔrM™¤type¥start£end¢idªexpression©generator¥async¦params¤body²FunctionExpressionÍöÍ±ÀÂÂÂ–JªIdentifierÍ÷Íı¦parentJªIdentifierÍÿÍ¦paramsJªIdentifierÍÍ®__localStorageÔrN•¤type¥start£end¤left¥right±AssignmentPatternÍÍ"JªIdentifierÍÍ¦elmtIdÔrO–¤type¥start£end¨operator¦prefix¨argument¯UnaryExpressionÍ Í"¡-ÃÔrP•¤type¥start£end¥value£raw§LiteralÍ!Í"¡1JªIdentifierÍ$Í0¬paramsLambdaJªIdentifierÍ2Í;©extraInfoK®BlockStatementÍ=Í±—ÔrQ”¤type¥start£endªexpression³ExpressionStatementÍHÍiÔrR–¤type¥start£end¦callee©arguments¨optional®CallExpressionÍHÍhÔrS“¤type¥start£end¥SuperÍHÍM“JªIdentifierÍNÍT¦parentJªIdentifierÍVÍ\¦elmtIdJªIdentifierÍ^Íg©extraInfoÂQ³ExpressionStatementÍsÍÎR®CallExpressionÍsÍÍÔrT—¤type¥start£end¦object¨property¨computed¨optional°MemberExpressionÍsÍS®ThisExpressionÍsÍwJªIdentifierÍxÍ©initParamÂÂ’P§LiteralÍ‚ÍŒ¨spinSizeª"spinSize"ÔrU–¤type¥start£end¤testªconsequent©alternateµConditionalExpressionÍÍÌÔrV–¤type¥start£end¤left¨operator¥right±LogicalExpressionÍÍ­JªIdentifierÍÍ•¦params¢&&V°BinaryExpressionÍ™Í­P§LiteralÍ™Í£¨spinSizeª"spinSize"¢inJªIdentifierÍ§Í­¦paramsT°MemberExpressionÍ±ÍÀJªIdentifierÍ±Í·¦paramsJªIdentifierÍ¸ÍÀ¨spinSizeÂÂJªIdentifierÍÃÍÌ©undefinedÂQ³ExpressionStatementÍØÍ6R®CallExpressionÍØÍ5T°MemberExpressionÍØÍæS®ThisExpressionÍØÍÜJªIdentifierÍİÍæ©initParamÂÂ’P§LiteralÍçÍò©spinColor«"spinColor"UµConditionalExpressionÍôÍ4V±LogicalExpressionÍõÍJªIdentifierÍõÍû¦params¢&&V°BinaryExpressionÍÿÍP§LiteralÍÿÍ
+©spinColor«"spinColor"¢inJªIdentifierÍÍ¦paramsT°MemberExpressionÍÍ(JªIdentifierÍÍ¦paramsJªIdentifierÍÍ(©spinColorÂÂJªIdentifierÍ+Í4©undefinedÂQ³ExpressionStatementÍ@ÍPÔrW–¤type¥start£end¨operator¤left¥right´AssignmentExpressionÍ@ÍO¡=T°MemberExpressionÍ@ÍKS®ThisExpressionÍ@ÍDJªIdentifierÍEÍK¦angle1ÂÂP§LiteralÍNÍO ¡0Q³ExpressionStatementÍZÍjW´AssignmentExpressionÍZÍi¡=T°MemberExpressionÍZÍeS®ThisExpressionÍZÍ^JªIdentifierÍ_Íe¦angle2ÂÂP§LiteralÍhÍi ¡0Q³ExpressionStatementÍtÍ„W´AssignmentExpressionÍtÍƒ¡=T°MemberExpressionÍtÍS®ThisExpressionÍtÍxJªIdentifierÍyÍ¦angle3ÂÂP§LiteralÍ‚Íƒ ¡0Q³ExpressionStatementÍÍªR®CallExpressionÍÍ©T°MemberExpressionÍÍ§S®ThisExpressionÍÍ’JªIdentifierÍ“Í§´finalizeConstructionÂÂÂL°MethodDefinitionÍ·ÍúÂÂJªIdentifierÍ·ÍÌµresetStateVarsOnReuse¦methodM²FunctionExpressionÍÌÍúÀÂÂÂ‘JªIdentifierÍÍÍÓ¦paramsK®BlockStatementÍÕÍú•Q³ExpressionStatementÍàÍ<R®CallExpressionÍàÍ;T°MemberExpressionÍàÍïS®ThisExpressionÍàÍäJªIdentifierÍåÍïªresetParamÂÂ’P§LiteralÍğÍú¨spinSizeª"spinSize"UµConditionalExpressionÍüÍ:V±LogicalExpressionÍıÍJªIdentifierÍıÍ¦params¢&&V°BinaryExpressionÍÍP§LiteralÍÍ¨spinSizeª"spinSize"¢inJªIdentifierÍÍ¦paramsT°MemberExpressionÍÍ.JªIdentifierÍÍ%¦paramsJªIdentifierÍ&Í.¨spinSizeÂÂJªIdentifierÍ1Í:©undefinedÂQ³ExpressionStatementÍFÍ¥R®CallExpressionÍFÍ¤T°MemberExpressionÍFÍUS®ThisExpressionÍFÍJJªIdentifierÍKÍUªresetParamÂÂ’P§LiteralÍVÍa©spinColor«"spinColor"UµConditionalExpressionÍcÍ£V±LogicalExpressionÍdÍƒJªIdentifierÍdÍj¦params¢&&V°BinaryExpressionÍnÍƒP§LiteralÍnÍy©spinColor«"spinColor"¢inJªIdentifierÍ}Íƒ¦paramsT°MemberExpressionÍ‡Í—JªIdentifierÍ‡Í¦paramsJªIdentifierÍÍ—©spinColorÂÂJªIdentifierÍšÍ£©undefinedÂQ³ExpressionStatementÍ¯Í¿W´AssignmentExpressionÍ¯Í¾¡=T°MemberExpressionÍ¯ÍºS®ThisExpressionÍ¯Í³JªIdentifierÍ´Íº¦angle1ÂÂP§LiteralÍ½Í¾ ¡0Q³ExpressionStatementÍÉÍÙW´AssignmentExpressionÍÉÍØ¡=T°MemberExpressionÍÉÍÔS®ThisExpressionÍÉÍÍJªIdentifierÍÎÍÔ¦angle2ÂÂP§LiteralÍ×ÍØ ¡0Q³ExpressionStatementÍãÍóW´AssignmentExpressionÍãÍò¡=T°MemberExpressionÍãÍîS®ThisExpressionÍãÍçJªIdentifierÍèÍî¦angle3ÂÂP§LiteralÍñÍò ¡0L°MethodDefinitionÍ Í€ÂÂJªIdentifierÍ Í­initialRender¦methodM²FunctionExpressionÍÍ€ÀÂÂÂK®BlockStatementÍÍ€˜Q³ExpressionStatementÍÍûR®CallExpressionÍÍúT°MemberExpressionÍÍ9S®ThisExpressionÍÍJªIdentifierÍ Í9¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ:ÍòÀÂÂÂ’JªIdentifierÍ;ÍA¦elmtIdJªIdentifierÍCÍR¯isInitialRenderK®BlockStatementÍWÍò•Q³ExpressionStatementÍfÍuR®CallExpressionÍfÍtT°MemberExpressionÍfÍrJªIdentifierÍfÍk¥StackJªIdentifierÍlÍr¦createÂÂÂQ³ExpressionStatementÍƒÍ¥R®CallExpressionÍƒÍ¤T°MemberExpressionÍƒÍ’JªIdentifierÍƒÍˆ¥StackJªIdentifierÍ‰Í’©renderFitÂÂ‘T°MemberExpressionÍ“Í£JªIdentifierÍ“Íœ©RenderFitJªIdentifierÍÍ£¦CENTERÂÂÂQ³ExpressionStatementÍ³ÍÎR®CallExpressionÍ³ÍÍT°MemberExpressionÍ³Í¾JªIdentifierÍ³Í¸¥StackJªIdentifierÍ¹Í¾¥widthÂÂ‘T°MemberExpressionÍ¿ÍÌS®ThisExpressionÍ¿ÍÃJªIdentifierÍÄÍÌ¨spinSizeÂÂÂQ³ExpressionStatementÍÜÍøR®CallExpressionÍÜÍ÷T°MemberExpressionÍÜÍèJªIdentifierÍÜÍá¥StackJªIdentifierÍâÍè¦heightÂÂ‘T°MemberExpressionÍéÍöS®ThisExpressionÍéÍíJªIdentifierÍîÍö¨spinSizeÂÂÂQ³ExpressionStatementÍÍçR®CallExpressionÍÍæT°MemberExpressionÍÍJªIdentifierÍÍ¥StackJªIdentifierÍÍ¨onAppearÂÂ‘M·ArrowFunctionExpressionÍÍåÀÂÂÂK®BlockStatementÍÍå–ÔrX•¤type¥start£end¬declarations¤kind³VariableDeclarationÍ.ÍL‘ÔrY•¤type¥start£end¢id¤init²VariableDeclaratorÍ2ÍKJªIdentifierÍ2Í<ªkeyframes1ÔrZ”¤type¥start£end¨elements¯ArrayExpressionÍ?ÍK‘Ôr[”¤type¥start£endªproperties°ObjectExpressionÍVÍ8“Ôr\™¤type¥start£end¦method©shorthand¨computed£key¥value¤kind¨PropertyÍqÍÂÂÂJªIdentifierÍqÍy¨durationP§LiteralÍ{ÍÍĞ¤2000¤init\¨PropertyÍšÍ­ÂÂÂJªIdentifierÍšÍŸ¥curveT°MemberExpressionÍ¡Í­JªIdentifierÍ¡Í¦¥CurveJªIdentifierÍ§Í­¦LinearÂÂ¤init\¨PropertyÍÈÍ!ÂÂÂJªIdentifierÍÈÍÍ¥eventM·ArrowFunctionExpressionÍÏÍ!ÀÂÂÂK®BlockStatementÍÕÍ!‘Q³ExpressionStatementÍôÍW´AssignmentExpressionÍôÍ¡=T°MemberExpressionÍôÍÿS®ThisExpressionÍôÍøJªIdentifierÍùÍÿ¦angle1ÂÂP§LiteralÍÍÍh£360¤init£letX³VariableDeclarationÍ^Í	}‘Y²VariableDeclaratorÍbÍ	|JªIdentifierÍbÍlªkeyframes2Z¯ArrayExpressionÍoÍ	|‘[°ObjectExpressionÍ†Í	i“\¨PropertyÍ¡Í¯ÂÂÂJªIdentifierÍ¡Í©¨durationP§LiteralÍ«Í¯ÍÖ¤1750¤init\¨PropertyÍÊÍİÂÂÂJªIdentifierÍÊÍÏ¥curveT°MemberExpressionÍÑÍİJªIdentifierÍÑÍÖ¥CurveJªIdentifierÍ×Íİ¦LinearÂÂ¤init\¨PropertyÍøÍ	RÂÂÂJªIdentifierÍøÍı¥eventM·ArrowFunctionExpressionÍÿÍ	RÀÂÂÂK®BlockStatementÍ	Í	R‘Q³ExpressionStatementÍ	$Í	7W´AssignmentExpressionÍ	$Í	6¡=T°MemberExpressionÍ	$Í	/S®ThisExpressionÍ	$Í	(JªIdentifierÍ	)Í	/¦angle2ÂÂO¯UnaryExpressionÍ	2Í	6¡-ÃP§LiteralÍ	3Í	6Íh£360¤init£letX³VariableDeclarationÍ	Í
+°‘Y²VariableDeclaratorÍ	“Í
+¯JªIdentifierÍ	“Í	ªkeyframes3Z¯ArrayExpressionÍ	 Í
+¯‘[°ObjectExpressionÍ	·Í
+œ“\¨PropertyÍ	ÒÍ	àÂÂÂJªIdentifierÍ	ÒÍ	Ú¨durationP§LiteralÍ	ÜÍ	àÍÜ¤1500¤init\¨PropertyÍ	ûÍ
+ÂÂÂJªIdentifierÍ	ûÍ
+ ¥curveT°MemberExpressionÍ
+Í
+JªIdentifierÍ
+Í
+¥CurveJªIdentifierÍ
+Í
+©EaseInOutÂÂ¤init\¨PropertyÍ
+,Í
+…ÂÂÂJªIdentifierÍ
+,Í
+1¥eventM·ArrowFunctionExpressionÍ
+3Í
+…ÀÂÂÂK®BlockStatementÍ
+9Í
+…‘Q³ExpressionStatementÍ
+XÍ
+jW´AssignmentExpressionÍ
+XÍ
+i¡=T°MemberExpressionÍ
+XÍ
+cS®ThisExpressionÍ
+XÍ
+\JªIdentifierÍ
+]Í
+c¦angle3ÂÂP§LiteralÍ
+fÍ
+iÍh£360¤init£letQ³ExpressionStatementÍ
+ÂÍR®CallExpressionÍ
+ÂÍT°MemberExpressionÍ
+ÂÍ
+çR®CallExpressionÍ
+ÂÍ
+ÕT°MemberExpressionÍ
+ÂÍ
+ÓS®ThisExpressionÍ
+ÂÍ
+ÆJªIdentifierÍ
+ÇÍ
+Ó¬getUIContextÂÂÂJªIdentifierÍ
+ÖÍ
+ç±keyframeAnimateToÂÂ’[°ObjectExpressionÍ
+èÍ’\¨PropertyÍ
+êÍ
+øÂÂÂJªIdentifierÍ
+êÍ
+ôªiterationsO¯UnaryExpressionÍ
+öÍ
+ø¡-ÃP§LiteralÍ
+÷Í
+ø¡1¤init\¨PropertyÍ
+úÍÂÂÂJªIdentifierÍ
+úÍ
+ÿ¥delayP§LiteralÍÍ ¡0¤initJªIdentifierÍÍªkeyframes1ÂQ³ExpressionStatementÍ$ÍtR®CallExpressionÍ$ÍsT°MemberExpressionÍ$ÍIR®CallExpressionÍ$Í7T°MemberExpressionÍ$Í5S®ThisExpressionÍ$Í(JªIdentifierÍ)Í5¬getUIContextÂÂÂJªIdentifierÍ8ÍI±keyframeAnimateToÂÂ’[°ObjectExpressionÍJÍf’\¨PropertyÍLÍZÂÂÂJªIdentifierÍLÍVªiterationsO¯UnaryExpressionÍXÍZ¡-ÃP§LiteralÍYÍZ¡1¤init\¨PropertyÍ\ÍdÂÂÂJªIdentifierÍ\Ía¥delayP§LiteralÍcÍd ¡0¤initJªIdentifierÍhÍrªkeyframes2ÂQ³ExpressionStatementÍ†ÍÖR®CallExpressionÍ†ÍÕT°MemberExpressionÍ†Í«R®CallExpressionÍ†Í™T°MemberExpressionÍ†Í—S®ThisExpressionÍ†ÍŠJªIdentifierÍ‹Í—¬getUIContextÂÂÂJªIdentifierÍšÍ«±keyframeAnimateToÂÂ’[°ObjectExpressionÍ¬ÍÈ’\¨PropertyÍ®Í¼ÂÂÂJªIdentifierÍ®Í¸ªiterationsO¯UnaryExpressionÍºÍ¼¡-ÃP§LiteralÍ»Í¼¡1¤init\¨PropertyÍ¾ÍÆÂÂÂJªIdentifierÍ¾ÍÃ¥delayP§LiteralÍÅÍÆ ¡0¤initJªIdentifierÍÊÍÔªkeyframes3ÂÂJªIdentifierÍôÍù¥StackÂQ³ExpressionStatementÍÍşR®CallExpressionÍÍıT°MemberExpressionÍÍ#S®ThisExpressionÍÍ	JªIdentifierÍ
+Í#¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ$ÍôÀÂÂÂ’JªIdentifierÍ%Í+¦elmtIdJªIdentifierÍ-Í<¯isInitialRenderK®BlockStatementÍAÍô•Q³ExpressionStatementÍPÍ`R®CallExpressionÍPÍ_T°MemberExpressionÍPÍ]JªIdentifierÍPÍV¦CanvasJªIdentifierÍWÍ]¦createÂÂÂQ³ExpressionStatementÍnÍŠR®CallExpressionÍnÍ‰T°MemberExpressionÍnÍzJªIdentifierÍnÍt¦CanvasJªIdentifierÍuÍz¥widthÂÂ‘T°MemberExpressionÍ{ÍˆS®ThisExpressionÍ{ÍJªIdentifierÍ€Íˆ¨spinSizeÂÂÂQ³ExpressionStatementÍ˜ÍµR®CallExpressionÍ˜Í´T°MemberExpressionÍ˜Í¥JªIdentifierÍ˜Í¦CanvasJªIdentifierÍŸÍ¥¦heightÂÂ‘T°MemberExpressionÍ¦Í³S®ThisExpressionÍ¦ÍªJªIdentifierÍ«Í³¨spinSizeÂÂÂQ³ExpressionStatementÍÃÍµR®CallExpressionÍÃÍ´T°MemberExpressionÍÃÍĞJªIdentifierÍÃÍÉ¦CanvasJªIdentifierÍÊÍĞ¦borderÂÂ‘[°ObjectExpressionÍÑÍ³“\¨PropertyÍäÍÿÂÂÂJªIdentifierÍäÍé¥widthV°BinaryExpressionÍëÍÿT°MemberExpressionÍëÍøS®ThisExpressionÍëÍïJªIdentifierÍğÍø¨spinSizeÂÂ¡*P§LiteralÍûÍÿË?´záG®{¤0.08¤init\¨PropertyÍÍ'ÂÂÂJªIdentifierÍÍ¦radiusT°MemberExpressionÍÍ'S®ThisExpressionÍÍJªIdentifierÍÍ'¨spinSizeÂÂ¤init\¨PropertyÍ:Í£ÂÂÂJªIdentifierÍ:Í?¥color[°ObjectExpressionÍAÍ£”\¨PropertyÍCÍVÂÂÂJªIdentifierÍCÍF£topT°MemberExpressionÍHÍVS®ThisExpressionÍHÍLJªIdentifierÍMÍV©spinColorÂÂ¤init\¨PropertyÍXÍmÂÂÂJªIdentifierÍXÍ]¥rightT°MemberExpressionÍ_ÍmS®ThisExpressionÍ_ÍcJªIdentifierÍdÍm©spinColorÂÂ¤init\¨PropertyÍoÍˆÂÂÂJªIdentifierÍoÍu¦bottomT°MemberExpressionÍwÍˆJªIdentifierÍwÍ|¥ColorJªIdentifierÍ}Íˆ«TransparentÂÂ¤init\¨PropertyÍŠÍ¡ÂÂÂJªIdentifierÍŠÍ¤leftT°MemberExpressionÍÍ¡JªIdentifierÍÍ•¥ColorJªIdentifierÍ–Í¡«TransparentÂÂ¤init¤initÂQ³ExpressionStatementÍÃÍéR®CallExpressionÍÃÍèT°MemberExpressionÍÃÍĞJªIdentifierÍÃÍÉ¦CanvasJªIdentifierÍÊÍĞ¦rotateÂÂ‘[°ObjectExpressionÍÑÍç‘\¨PropertyÍÓÍåÂÂÂJªIdentifierÍÓÍØ¥angleT°MemberExpressionÍÚÍåS®ThisExpressionÍÚÍŞJªIdentifierÍßÍå¦angle1ÂÂ¤initÂJªIdentifierÍöÍü¦CanvasÂQ³ExpressionStatementÍÍR®CallExpressionÍÍT°MemberExpressionÍÍJªIdentifierÍÍ¦CanvasJªIdentifierÍÍ£popÂÂÂQ³ExpressionStatementÍÍ&R®CallExpressionÍÍ%T°MemberExpressionÍÍ=S®ThisExpressionÍÍ#JªIdentifierÍ$Í=¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ>ÍÀÂÂÂ’JªIdentifierÍ?ÍE¦elmtIdJªIdentifierÍGÍV¯isInitialRenderK®BlockStatementÍ[Í•Q³ExpressionStatementÍjÍzR®CallExpressionÍjÍyT°MemberExpressionÍjÍwJªIdentifierÍjÍp¦CanvasJªIdentifierÍqÍw¦createÂÂÂQ³ExpressionStatementÍˆÍ«R®CallExpressionÍˆÍªT°MemberExpressionÍˆÍ”JªIdentifierÍˆÍ¦CanvasJªIdentifierÍÍ”¥widthÂÂ‘V°BinaryExpressionÍ•Í©T°MemberExpressionÍ•Í¢S®ThisExpressionÍ•Í™JªIdentifierÍšÍ¢¨spinSizeÂÂ¡*P§LiteralÍ¥Í©Ë?äÌÌÌÌÌÍ¤0.65ÂQ³ExpressionStatementÍ¹ÍİR®CallExpressionÍ¹ÍÜT°MemberExpressionÍ¹ÍÆJªIdentifierÍ¹Í¿¦CanvasJªIdentifierÍÀÍÆ¦heightÂÂ‘V°BinaryExpressionÍÇÍÛT°MemberExpressionÍÇÍÔS®ThisExpressionÍÇÍËJªIdentifierÍÌÍÔ¨spinSizeÂÂ¡*P§LiteralÍ×ÍÛË?äÌÌÌÌÌÍ¤0.65ÂQ³ExpressionStatementÍëÍİR®CallExpressionÍëÍÜT°MemberExpressionÍëÍøJªIdentifierÍëÍñ¦CanvasJªIdentifierÍòÍø¦borderÂÂ‘[°ObjectExpressionÍùÍÛ“\¨PropertyÍÍ'ÂÂÂJªIdentifierÍÍ¥widthV°BinaryExpressionÍÍ'T°MemberExpressionÍÍ S®ThisExpressionÍÍJªIdentifierÍÍ ¨spinSizeÂÂ¡*P§LiteralÍ#Í'Ë?´záG®{¤0.08¤init\¨PropertyÍ:ÍOÂÂÂJªIdentifierÍ:Í@¦radiusT°MemberExpressionÍBÍOS®ThisExpressionÍBÍFJªIdentifierÍGÍO¨spinSizeÂÂ¤init\¨PropertyÍbÍËÂÂÂJªIdentifierÍbÍg¥color[°ObjectExpressionÍiÍË”\¨PropertyÍkÍ~ÂÂÂJªIdentifierÍkÍn£topT°MemberExpressionÍpÍ~S®ThisExpressionÍpÍtJªIdentifierÍuÍ~©spinColorÂÂ¤init\¨PropertyÍ€Í•ÂÂÂJªIdentifierÍ€Í…¥rightT°MemberExpressionÍ‡Í•S®ThisExpressionÍ‡Í‹JªIdentifierÍŒÍ•©spinColorÂÂ¤init\¨PropertyÍ—Í°ÂÂÂJªIdentifierÍ—Í¦bottomT°MemberExpressionÍŸÍ°JªIdentifierÍŸÍ¤¥ColorJªIdentifierÍ¥Í°«TransparentÂÂ¤init\¨PropertyÍ²ÍÉÂÂÂJªIdentifierÍ²Í¶¤leftT°MemberExpressionÍ¸ÍÉJªIdentifierÍ¸Í½¥ColorJªIdentifierÍ¾ÍÉ«TransparentÂÂ¤init¤initÂQ³ExpressionStatementÍëÍR®CallExpressionÍëÍT°MemberExpressionÍëÍøJªIdentifierÍëÍñ¦CanvasJªIdentifierÍòÍø¦rotateÂÂ‘[°ObjectExpressionÍùÍ‘\¨PropertyÍûÍÂÂÂJªIdentifierÍûÍ ¥angleT°MemberExpressionÍÍS®ThisExpressionÍÍJªIdentifierÍÍ¦angle2ÂÂ¤initÂJªIdentifierÍÍ$¦CanvasÂQ³ExpressionStatementÍ0Í=R®CallExpressionÍ0Í<T°MemberExpressionÍ0Í:JªIdentifierÍ0Í6¦CanvasJªIdentifierÍ7Í:£popÂÂÂQ³ExpressionStatementÍGÍLR®CallExpressionÍGÍKT°MemberExpressionÍGÍeS®ThisExpressionÍGÍKJªIdentifierÍLÍe¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍfÍBÀÂÂÂ’JªIdentifierÍgÍm¦elmtIdJªIdentifierÍoÍ~¯isInitialRenderK®BlockStatementÍƒÍB•Q³ExpressionStatementÍ’Í¢R®CallExpressionÍ’Í¡T°MemberExpressionÍ’ÍŸJªIdentifierÍ’Í˜¦CanvasJªIdentifierÍ™ÍŸ¦createÂÂÂQ³ExpressionStatementÍ°ÍÒR®CallExpressionÍ°ÍÑT°MemberExpressionÍ°Í¼JªIdentifierÍ°Í¶¦CanvasJªIdentifierÍ·Í¼¥widthÂÂ‘V°BinaryExpressionÍ½ÍĞT°MemberExpressionÍ½ÍÊS®ThisExpressionÍ½ÍÁJªIdentifierÍÂÍÊ¨spinSizeÂÂ¡*P§LiteralÍÍÍĞË?Ó333333£0.3ÂQ³ExpressionStatementÍàÍR®CallExpressionÍàÍT°MemberExpressionÍàÍíJªIdentifierÍàÍæ¦CanvasJªIdentifierÍçÍí¦heightÂÂ‘V°BinaryExpressionÍîÍT°MemberExpressionÍîÍûS®ThisExpressionÍîÍòJªIdentifierÍóÍû¨spinSizeÂÂ¡*P§LiteralÍşÍË?Ó333333£0.3ÂQ³ExpressionStatementÍÍR®CallExpressionÍÍT°MemberExpressionÍÍJªIdentifierÍÍ¦CanvasJªIdentifierÍÍ¦borderÂÂ‘[°ObjectExpressionÍÍ“\¨PropertyÍ2ÍMÂÂÂJªIdentifierÍ2Í7¥widthV°BinaryExpressionÍ9ÍMT°MemberExpressionÍ9ÍFS®ThisExpressionÍ9Í=JªIdentifierÍ>ÍF¨spinSizeÂÂ¡*P§LiteralÍIÍMË?´záG®{¤0.08¤init\¨PropertyÍ`ÍuÂÂÂJªIdentifierÍ`Íf¦radiusT°MemberExpressionÍhÍuS®ThisExpressionÍhÍlJªIdentifierÍmÍu¨spinSizeÂÂ¤init\¨PropertyÍˆÍñÂÂÂJªIdentifierÍˆÍ¥color[°ObjectExpressionÍÍñ”\¨PropertyÍ‘Í¤ÂÂÂJªIdentifierÍ‘Í”£topT°MemberExpressionÍ–Í¤S®ThisExpressionÍ–ÍšJªIdentifierÍ›Í¤©spinColorÂÂ¤init\¨PropertyÍ¦Í»ÂÂÂJªIdentifierÍ¦Í«¥rightT°MemberExpressionÍ­Í»S®ThisExpressionÍ­Í±JªIdentifierÍ²Í»©spinColorÂÂ¤init\¨PropertyÍ½ÍÖÂÂÂJªIdentifierÍ½ÍÃ¦bottomT°MemberExpressionÍÅÍÖJªIdentifierÍÅÍÊ¥ColorJªIdentifierÍËÍÖ«TransparentÂÂ¤init\¨PropertyÍØÍïÂÂÂJªIdentifierÍØÍÜ¤leftT°MemberExpressionÍŞÍïJªIdentifierÍŞÍã¥ColorJªIdentifierÍäÍï«TransparentÂÂ¤init¤initÂQ³ExpressionStatementÍÍ7R®CallExpressionÍÍ6T°MemberExpressionÍÍJªIdentifierÍÍ¦CanvasJªIdentifierÍÍ¦rotateÂÂ‘[°ObjectExpressionÍÍ5‘\¨PropertyÍ!Í3ÂÂÂJªIdentifierÍ!Í&¥angleT°MemberExpressionÍ(Í3S®ThisExpressionÍ(Í,JªIdentifierÍ-Í3¦angle3ÂÂ¤initÂJªIdentifierÍDÍJ¦CanvasÂQ³ExpressionStatementÍVÍcR®CallExpressionÍVÍbT°MemberExpressionÍVÍ`JªIdentifierÍVÍ\¦CanvasJªIdentifierÍ]Í`£popÂÂÂQ³ExpressionStatementÍmÍyR®CallExpressionÍmÍxT°MemberExpressionÍmÍvJªIdentifierÍmÍr¥StackJªIdentifierÍsÍv£popÂÂÂL°MethodDefinitionÍ†ÍÆÂÂJªIdentifierÍ†Í•¯updateStateVars¦methodM²FunctionExpressionÍ•ÍÆÀÂÂÂ‘JªIdentifierÍ–Íœ¦paramsK®BlockStatementÍÍÆ“U«IfStatementÍ©ÍäV°BinaryExpressionÍ­ÍÁJªIdentifierÍ­Í³¦params£===JªIdentifierÍ¸ÍÁ©undefinedK®BlockStatementÍÃÍä‘Ôr]”¤type¥start£end¨argument¯ReturnStatementÍÒÍÙÀÀU«IfStatementÍîÍPV°BinaryExpressionÍòÍP§LiteralÍòÍü¨spinSizeª"spinSize"¢inJªIdentifierÍ Í¦paramsK®BlockStatementÍÍP‘Q³ExpressionStatementÍÍER®CallExpressionÍÍDT°MemberExpressionÍÍ'S®ThisExpressionÍÍJªIdentifierÍÍ'«updateParamÂÂ’P§LiteralÍ(Í2¨spinSizeª"spinSize"T°MemberExpressionÍ4ÍCJªIdentifierÍ4Í:¦paramsJªIdentifierÍ;ÍC¨spinSizeÂÂÂÀU«IfStatementÍZÍ¿V°BinaryExpressionÍ^ÍsP§LiteralÍ^Íi©spinColor«"spinColor"¢inJªIdentifierÍmÍs¦paramsK®BlockStatementÍuÍ¿‘Q³ExpressionStatementÍ„Í´R®CallExpressionÍ„Í³T°MemberExpressionÍ„Í”S®ThisExpressionÍ„ÍˆJªIdentifierÍ‰Í”«updateParamÂÂ’P§LiteralÍ•Í ©spinColor«"spinColor"T°MemberExpressionÍ¢Í²JªIdentifierÍ¢Í¨¦paramsJªIdentifierÍ©Í²©spinColorÂÂÂÀL°MethodDefinitionÍÌÍÂÂJªIdentifierÍÌÍÔ¨rerender¦methodM²FunctionExpressionÍÔÍÀÂÂÂK®BlockStatementÍ×Í‘Q³ExpressionStatementÍâÍıR®CallExpressionÍâÍüT°MemberExpressionÍâÍúS®ThisExpressionÍâÍæJªIdentifierÍçÍú³updateDirtyElementsÂÂÂÀ

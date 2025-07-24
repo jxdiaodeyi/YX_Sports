@@ -1,0 +1,905 @@
+Ôr@Ÿªassertions¤code´customTransformCache¬dependencies¢id¤meta±moduleSideEffects¬originalCode±originalSourcemap«resolvedIds®sourcemapChainµsyntheticNamedExportsµtransformDependencies®transformFiles¨cacheAstÔrAÚPif (!("finalizeConstruction" in ViewPU.prototype)) {
+    Reflect.set(ViewPU.prototype, "finalizeConstruction", () => { });
+}
+export class Practice extends ViewPU {
+    constructor(parent, params, __localStorage, elmtId = -1, paramsLambda = undefined, extraInfo) {
+        super(parent, __localStorage, elmtId, extraInfo);
+        if (typeof paramsLambda === "function") {
+            this.paramsGenerator_ = paramsLambda;
+        }
+        this.setInitiallyProvidedValue(params);
+        this.finalizeConstruction();
+    }
+    setInitiallyProvidedValue(params) {
+    }
+    updateStateVars(params) {
+    }
+    purgeVariableDependenciesOnElmtId(rmElmtId) {
+    }
+    aboutToBeDeleted() {
+        SubscriberManager.Get().delete(this.id__());
+        this.aboutToBeDeletedInternal();
+    }
+    initialRender() {
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Column.create();
+            Column.debugLine("entry/src/main/ets/pages/PracticePage.ets(4:5)", "entry");
+            Column.width('100%');
+            Column.height('100%');
+            Column.padding({ left: 10, right: 10 });
+            Column.backgroundImage({ "id": 16777246, "type": 20000, params: [], "bundleName": "com.example.watermalon_sport", "moduleName": "entry" });
+            Column.backgroundImageSize({ width: '100%', height: '100%' });
+        }, Column);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            //æ ‡é¢˜
+            Row.create({ space: 15 });
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(6:7)", "entry");
+            //æ ‡é¢˜
+            Row.padding(15);
+            //æ ‡é¢˜
+            Row.width('100%');
+            //æ ‡é¢˜
+            Row.justifyContent(FlexAlign.SpaceBetween);
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('è®­ç»ƒ');
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(7:9)", "entry");
+            Text.fontSize(24);
+            Text.fontWeight(600);
+            Text.fontColor('#FFFFFF');
+        }, Text);
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Image.create({ "id": 16777223, "type": 20000, params: [], "bundleName": "com.example.watermalon_sport", "moduleName": "entry" });
+            Image.debugLine("entry/src/main/ets/pages/PracticePage.ets(11:9)", "entry");
+            Image.width(24);
+            Image.height(24);
+        }, Image);
+        //æ ‡é¢˜
+        Row.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Scroll.create();
+            Scroll.debugLine("entry/src/main/ets/pages/PracticePage.ets(20:7)", "entry");
+            Scroll.scrollBar(BarState.Off);
+        }, Scroll);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Column.create();
+            Column.debugLine("entry/src/main/ets/pages/PracticePage.ets(21:9)", "entry");
+        }, Column);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            //è®­ç»ƒæ—¶é•¿+å¡è·¯é‡Œ
+            Row.create();
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(23:11)", "entry");
+            //è®­ç»ƒæ—¶é•¿+å¡è·¯é‡Œ
+            Row.width('100%');
+            //è®­ç»ƒæ—¶é•¿+å¡è·¯é‡Œ
+            Row.height(120);
+            //è®­ç»ƒæ—¶é•¿+å¡è·¯é‡Œ
+            Row.justifyContent(FlexAlign.SpaceBetween);
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            // å·¦ä¾§å¡ç‰‡ï¼šä»Šæ—¥è®­ç»ƒæ—¶é•¿
+            Column.create();
+            Column.debugLine("entry/src/main/ets/pages/PracticePage.ets(25:13)", "entry");
+            // å·¦ä¾§å¡ç‰‡ï¼šä»Šæ—¥è®­ç»ƒæ—¶é•¿
+            Column.width('48%');
+            // å·¦ä¾§å¡ç‰‡ï¼šä»Šæ—¥è®­ç»ƒæ—¶é•¿
+            Column.height(100);
+            // å·¦ä¾§å¡ç‰‡ï¼šä»Šæ—¥è®­ç»ƒæ—¶é•¿
+            Column.backgroundColor('#FFFFFF');
+            // å·¦ä¾§å¡ç‰‡ï¼šä»Šæ—¥è®­ç»ƒæ—¶é•¿
+            Column.borderRadius(8);
+        }, Column);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Row.create();
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(26:15)", "entry");
+            Row.width('100%');
+            Row.height(30);
+            Row.justifyContent(FlexAlign.SpaceBetween);
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('ä»Šæ—¥è®­ç»ƒæ—¶é•¿');
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(27:17)", "entry");
+            Text.fontSize(20);
+            Text.fontWeight(400);
+            Text.fontColor('#333333');
+            Text.margin({ left: 10 });
+        }, Text);
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('>');
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(32:17)", "entry");
+            Text.fontColor('#333333');
+            Text.margin({ right: 10 });
+        }, Text);
+        Text.pop();
+        Row.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Row.create();
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(40:15)", "entry");
+            Row.alignItems(VerticalAlign.Bottom);
+            Row.justifyContent(FlexAlign.End);
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('12');
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(41:17)", "entry");
+            Text.fontSize(35);
+            Text.fontWeight(600);
+            Text.fontColor('#6C55E4');
+        }, Text);
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('åˆ†é’Ÿ');
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(45:17)", "entry");
+            Text.fontSize(20);
+            Text.fontColor('#999999');
+        }, Text);
+        Text.pop();
+        Row.pop();
+        // å·¦ä¾§å¡ç‰‡ï¼šä»Šæ—¥è®­ç»ƒæ—¶é•¿
+        Column.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            //.border({
+            //  width: 1,
+            //  color: '#6C55E4', // è¾¹æ¡†é¢œè‰²ä¸ºç´«è‰²
+            //})
+            // å³ä¾§å¡ç‰‡ï¼šç‡ƒçƒ§å¡è·¯é‡Œ
+            Column.create();
+            Column.debugLine("entry/src/main/ets/pages/PracticePage.ets(63:13)", "entry");
+            //.border({
+            //  width: 1,
+            //  color: '#6C55E4', // è¾¹æ¡†é¢œè‰²ä¸ºç´«è‰²
+            //})
+            // å³ä¾§å¡ç‰‡ï¼šç‡ƒçƒ§å¡è·¯é‡Œ
+            Column.width('48%');
+            //.border({
+            //  width: 1,
+            //  color: '#6C55E4', // è¾¹æ¡†é¢œè‰²ä¸ºç´«è‰²
+            //})
+            // å³ä¾§å¡ç‰‡ï¼šç‡ƒçƒ§å¡è·¯é‡Œ
+            Column.height(100);
+            //.border({
+            //  width: 1,
+            //  color: '#6C55E4', // è¾¹æ¡†é¢œè‰²ä¸ºç´«è‰²
+            //})
+            // å³ä¾§å¡ç‰‡ï¼šç‡ƒçƒ§å¡è·¯é‡Œ
+            Column.backgroundColor('#FFFFFF');
+            //.border({
+            //  width: 1,
+            //  color: '#6C55E4', // è¾¹æ¡†é¢œè‰²ä¸ºç´«è‰²
+            //})
+            // å³ä¾§å¡ç‰‡ï¼šç‡ƒçƒ§å¡è·¯é‡Œ
+            Column.borderRadius(8);
+        }, Column);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Row.create();
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(64:15)", "entry");
+            Row.width('100%');
+            Row.height(30);
+            Row.justifyContent(FlexAlign.SpaceBetween);
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('ç‡ƒçƒ§å¡è·¯é‡Œ');
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(65:17)", "entry");
+            Text.fontSize(20);
+            Text.fontWeight(400);
+            Text.fontColor('#333333');
+            Text.margin({ left: 10 });
+        }, Text);
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('>');
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(70:17)", "entry");
+            Text.fontColor('#333333');
+            Text.margin({ right: 10 });
+        }, Text);
+        Text.pop();
+        Row.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Row.create();
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(79:15)", "entry");
+            Row.alignItems(VerticalAlign.Bottom);
+            Row.justifyContent(FlexAlign.End);
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('190');
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(80:17)", "entry");
+            Text.fontSize(35);
+            Text.fontWeight(600);
+            Text.fontColor('#6C55E4');
+        }, Text);
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('åƒå¡');
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(84:17)", "entry");
+            Text.fontSize(20);
+            Text.fontColor('#999999');
+        }, Text);
+        Text.pop();
+        Row.pop();
+        //.border({
+        //  width: 1,
+        //  color: '#6C55E4', // è¾¹æ¡†é¢œè‰²ä¸ºç´«è‰²
+        //})
+        // å³ä¾§å¡ç‰‡ï¼šç‡ƒçƒ§å¡è·¯é‡Œ
+        Column.pop();
+        //è®­ç»ƒæ—¶é•¿+å¡è·¯é‡Œ
+        Row.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            //ä½“é‡è®°å½•
+            Column.create();
+            Column.debugLine("entry/src/main/ets/pages/PracticePage.ets(107:11)", "entry");
+            //ä½“é‡è®°å½•
+            Column.backgroundColor('#FFFFFF');
+            //ä½“é‡è®°å½•
+            Column.padding({ top: 30, bottom: 30 });
+            //ä½“é‡è®°å½•
+            Column.width('100%');
+            //ä½“é‡è®°å½•
+            Column.height(200);
+            //ä½“é‡è®°å½•
+            Column.borderRadius(8);
+        }, Column);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            // æ ‡é¢˜è¡Œ
+            Row.create();
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(109:13)", "entry");
+            // æ ‡é¢˜è¡Œ
+            Row.width('100%');
+            // æ ‡é¢˜è¡Œ
+            Row.justifyContent(FlexAlign.Start);
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('ä½“é‡è®°å½•');
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(110:15)", "entry");
+            Text.fontSize(24);
+            Text.fontColor('#333333');
+            Text.fontWeight(500);
+            Text.margin({ left: 15 });
+        }, Text);
+        Text.pop();
+        // æ ‡é¢˜è¡Œ
+        Row.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            // ä½“é‡æ•°æ®è¡Œ
+            Row.create();
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(121:13)", "entry");
+            // ä½“é‡æ•°æ®è¡Œ
+            Row.width('100%');
+            // ä½“é‡æ•°æ®è¡Œ
+            Row.justifyContent(FlexAlign.Start);
+            // ä½“é‡æ•°æ®è¡Œ
+            Row.margin({ top: 20 });
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('55.5kg');
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(122:15)", "entry");
+            Text.fontSize(35);
+            Text.fontColor('#6C55E4');
+            Text.fontWeight(700);
+            Text.margin({ left: 15 });
+        }, Text);
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('å·²å‡12kg');
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(128:15)", "entry");
+            Text.fontSize(16);
+            Text.fontColor('#999999');
+            Text.margin({ left: 10 });
+        }, Text);
+        Text.pop();
+        // ä½“é‡æ•°æ®è¡Œ
+        Row.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            // æŒ‰é’®
+            Button.createWithLabel('è®°å½•ä½“é‡');
+            Button.debugLine("entry/src/main/ets/pages/PracticePage.ets(138:13)", "entry");
+            // æŒ‰é’®
+            Button.width('40%');
+            // æŒ‰é’®
+            Button.height(48);
+            // æŒ‰é’®
+            Button.backgroundColor('#666EE8');
+            // æŒ‰é’®
+            Button.fontColor('#FFFFFF');
+            // æŒ‰é’®
+            Button.fontSize(18);
+            // æŒ‰é’®
+            Button.borderRadius(24);
+            // æŒ‰é’®
+            Button.margin({ top: 20 });
+            // æŒ‰é’®
+            Button.onClick(() => {
+                // ç‚¹å‡»äº‹ä»¶å¤„ç†é€»è¾‘
+                console.log('ç‚¹å‡»äº†è®°å½•ä½“é‡æŒ‰é’®');
+            });
+        }, Button);
+        // æŒ‰é’®
+        Button.pop();
+        //ä½“é‡è®°å½•
+        Column.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            //é”»ç‚¼æ—¶é•¿ç«–çŠ¶å›¾
+            Column.create();
+            Column.debugLine("entry/src/main/ets/pages/PracticePage.ets(159:11)", "entry");
+            //é”»ç‚¼æ—¶é•¿ç«–çŠ¶å›¾
+            Column.width('100%');
+            //é”»ç‚¼æ—¶é•¿ç«–çŠ¶å›¾
+            Column.height(200);
+            //é”»ç‚¼æ—¶é•¿ç«–çŠ¶å›¾
+            Column.backgroundColor('#FFFFFF');
+            //é”»ç‚¼æ—¶é•¿ç«–çŠ¶å›¾
+            Column.borderRadius(8);
+            //é”»ç‚¼æ—¶é•¿ç«–çŠ¶å›¾
+            Column.margin({ top: 15 });
+        }, Column);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            // æ ‡é¢˜è¡Œ
+            Row.create();
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(161:13)", "entry");
+            // æ ‡é¢˜è¡Œ
+            Row.margin({ top: 15 });
+            // æ ‡é¢˜è¡Œ
+            Row.width('100%');
+            // æ ‡é¢˜è¡Œ
+            Row.justifyContent(FlexAlign.SpaceBetween);
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            //å·¦è¾¹æ ‡é¢˜
+            Text.create('é”»ç‚¼æ—¶é•¿');
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(163:15)", "entry");
+            //å·¦è¾¹æ ‡é¢˜
+            Text.fontSize(24);
+            //å·¦è¾¹æ ‡é¢˜
+            Text.fontColor('#333333');
+            //å·¦è¾¹æ ‡é¢˜
+            Text.fontWeight(500);
+            //å·¦è¾¹æ ‡é¢˜
+            Text.margin({ left: 15 });
+        }, Text);
+        //å·¦è¾¹æ ‡é¢˜
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            //å³è¾¹æ•°æ®
+            Row.create();
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(170:15)", "entry");
+            //å³è¾¹æ•°æ®
+            Row.margin({ right: 15 });
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('102');
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(171:17)", "entry");
+            Text.fontSize(34);
+            Text.fontColor('#6249E3');
+            Text.fontWeight(500);
+            Text.margin({ right: 5 });
+        }, Text);
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('åˆ†é’Ÿ');
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(177:17)", "entry");
+            Text.fontSize(22);
+            Text.fontColor('#939EB5');
+        }, Text);
+        Text.pop();
+        //å³è¾¹æ•°æ®
+        Row.pop();
+        // æ ‡é¢˜è¡Œ
+        Row.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            //å›¾è¡¨                                       //æš‚æ—¶è´´å›¾
+            Image.create({ "id": 16777226, "type": 20000, params: [], "bundleName": "com.example.watermalon_sport", "moduleName": "entry" });
+            Image.debugLine("entry/src/main/ets/pages/PracticePage.ets(188:13)", "entry");
+            //å›¾è¡¨                                       //æš‚æ—¶è´´å›¾
+            Image.margin({ top: 15 });
+            //å›¾è¡¨                                       //æš‚æ—¶è´´å›¾
+            Image.width('100%');
+            //å›¾è¡¨                                       //æš‚æ—¶è´´å›¾
+            Image.height(120);
+        }, Image);
+        //é”»ç‚¼æ—¶é•¿ç«–çŠ¶å›¾
+        Column.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            //å¡è·¯é‡Œç«–çŠ¶å›¾
+            Column.create();
+            Column.debugLine("entry/src/main/ets/pages/PracticePage.ets(201:11)", "entry");
+            //å¡è·¯é‡Œç«–çŠ¶å›¾
+            Column.width('100%');
+            //å¡è·¯é‡Œç«–çŠ¶å›¾
+            Column.height(200);
+            //å¡è·¯é‡Œç«–çŠ¶å›¾
+            Column.backgroundColor('#FFFFFF');
+            //å¡è·¯é‡Œç«–çŠ¶å›¾
+            Column.borderRadius(8);
+            //å¡è·¯é‡Œç«–çŠ¶å›¾
+            Column.margin({ top: 15 });
+        }, Column);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            // æ ‡é¢˜è¡Œ
+            Row.create();
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(203:13)", "entry");
+            // æ ‡é¢˜è¡Œ
+            Row.margin({ top: 15 });
+            // æ ‡é¢˜è¡Œ
+            Row.width('100%');
+            // æ ‡é¢˜è¡Œ
+            Row.justifyContent(FlexAlign.SpaceBetween);
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            //å·¦è¾¹æ ‡é¢˜
+            Text.create('å¡è·¯é‡Œ');
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(205:15)", "entry");
+            //å·¦è¾¹æ ‡é¢˜
+            Text.fontSize(24);
+            //å·¦è¾¹æ ‡é¢˜
+            Text.fontColor('#333333');
+            //å·¦è¾¹æ ‡é¢˜
+            Text.fontWeight(500);
+            //å·¦è¾¹æ ‡é¢˜
+            Text.margin({ left: 15 });
+        }, Text);
+        //å·¦è¾¹æ ‡é¢˜
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            //å³è¾¹æ•°æ®
+            Row.create();
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(212:15)", "entry");
+            //å³è¾¹æ•°æ®
+            Row.margin({ right: 15 });
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('112');
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(213:17)", "entry");
+            Text.fontSize(34);
+            Text.fontColor('#6249E3');
+            Text.fontWeight(500);
+            Text.margin({ right: 5 });
+        }, Text);
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('åƒå¡');
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(219:17)", "entry");
+            Text.fontSize(22);
+            Text.fontColor('#939EB5');
+        }, Text);
+        Text.pop();
+        //å³è¾¹æ•°æ®
+        Row.pop();
+        // æ ‡é¢˜è¡Œ
+        Row.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            //å›¾è¡¨                                       //æš‚æ—¶è´´å›¾
+            Image.create({ "id": 16777221, "type": 20000, params: [], "bundleName": "com.example.watermalon_sport", "moduleName": "entry" });
+            Image.debugLine("entry/src/main/ets/pages/PracticePage.ets(230:13)", "entry");
+            //å›¾è¡¨                                       //æš‚æ—¶è´´å›¾
+            Image.margin({ top: 15 });
+            //å›¾è¡¨                                       //æš‚æ—¶è´´å›¾
+            Image.width('100%');
+            //å›¾è¡¨                                       //æš‚æ—¶è´´å›¾
+            Image.height(120);
+        }, Image);
+        //å¡è·¯é‡Œç«–çŠ¶å›¾
+        Column.pop();
+        Column.pop();
+        Scroll.pop();
+        Column.pop();
+    }
+    rerender() {
+        this.updateDirtyElements();
+    }
+}
+//# sourceMappingURL=PracticePage.js.mapÂÙ\D:\devecostudio-windows-5.1.0.840\Watermalon_Sport\entry\src\main\ets\pages\PracticePage.etsÔrB›ªmoduleName±isLocalDependency¯isNodeEntryFile§pkgPath±belongProjectPath§pkgNameªpkgVersion±dependencyPkgInfo¯hostModulesInfo°belongModulePath¬shouldEmitJs¥entryÃÂÙ8D:\devecostudio-windows-5.1.0.840\Watermalon_Sport\entryÙ2D:\devecostudio-windows-5.1.0.840\Watermalon_Sport¥entry¥1.0.0Ô  ‘ÔrC’²hostDependencyName®hostModuleName®./PracticePage¥entryÙ8D:\devecostudio-windows-5.1.0.840\Watermalon_Sport\entryÃÃÚ@Component
+export struct Practice {
+  build() {
+    Column(){
+      //æ ‡é¢˜
+      Row({space:15}){
+        Text('è®­ç»ƒ')
+          .fontSize(24)
+          .fontWeight(600)
+          .fontColor('#FFFFFF')
+        Image($r('app.media.xunlian1'))
+          .width(24)
+          .height(24)
+
+      }
+      .padding(15)
+      .width('100%')
+      .justifyContent(FlexAlign.SpaceBetween)
+
+      Scroll(){
+        Column(){
+          //è®­ç»ƒæ—¶é•¿+å¡è·¯é‡Œ
+          Row() {
+            // å·¦ä¾§å¡ç‰‡ï¼šä»Šæ—¥è®­ç»ƒæ—¶é•¿
+            Column() {
+              Row() {
+                Text('ä»Šæ—¥è®­ç»ƒæ—¶é•¿')
+                  .fontSize(20)
+                  .fontWeight(400)
+                  .fontColor('#333333') // æ ‡é¢˜é¢œè‰²ä¸ºé»‘è‰²
+                  .margin({ left: 10 })
+                Text('>')
+                  .fontColor('#333333') // ç®­å¤´é¢œè‰²ä¸ºé»‘è‰²
+                  .margin({ right: 10 })
+              }
+              .width('100%')
+              .height(30) // æ ‡é¢˜è¡Œé«˜åº¦
+              .justifyContent(FlexAlign.SpaceBetween)
+
+              Row() {
+                Text('12') // æ•°å­—éƒ¨åˆ†
+                  .fontSize(35)
+                  .fontWeight(600)
+                  .fontColor('#6C55E4') // ç´«è‰²
+                Text('åˆ†é’Ÿ') // å•ä½éƒ¨åˆ†
+                  .fontSize(20)
+                  .fontColor('#999999') // æµ…ç°è‰²
+              }
+              .alignItems(VerticalAlign.Bottom) // å·¦å¯¹é½
+              .justifyContent(FlexAlign.End) // åº•éƒ¨å¯¹é½
+              //.margin({ top: 10 }) // æ•°æ®è¡Œä¸æ ‡é¢˜è¡Œé—´è·
+            }
+            .width('48%') // å æ®ä¸€åŠå®½åº¦
+            .height(100)
+            .backgroundColor('#FFFFFF') // å¡ç‰‡èƒŒæ™¯ä¸ºç™½è‰²
+            .borderRadius(8) // åœ†è§’
+            //.border({
+            //  width: 1,
+            //  color: '#6C55E4', // è¾¹æ¡†é¢œè‰²ä¸ºç´«è‰²
+            //})
+
+            // å³ä¾§å¡ç‰‡ï¼šç‡ƒçƒ§å¡è·¯é‡Œ
+            Column() {
+              Row() {
+                Text('ç‡ƒçƒ§å¡è·¯é‡Œ')
+                  .fontSize(20)
+                  .fontWeight(400)
+                  .fontColor('#333333') // æ ‡é¢˜é¢œè‰²ä¸ºé»‘è‰²
+                  .margin({ left: 10 })
+                Text('>')
+                  .fontColor('#333333') // ç®­å¤´é¢œè‰²ä¸ºé»‘è‰²
+                  .margin({ right: 10 })
+              }
+              .width('100%')
+              .height(30) // æ ‡é¢˜è¡Œé«˜åº¦
+              .justifyContent(FlexAlign.SpaceBetween)
+
+
+              Row() {
+                Text('190') // æ•°å­—éƒ¨åˆ†
+                  .fontSize(35)
+                  .fontWeight(600)
+                  .fontColor('#6C55E4') // ç´«è‰²
+                Text('åƒå¡') // å•ä½éƒ¨åˆ†
+                  .fontSize(20)
+                  .fontColor('#999999') // æµ…ç°è‰²
+              }
+              .alignItems(VerticalAlign.Bottom) // å·¦å¯¹é½
+              .justifyContent(FlexAlign.End) // åº•éƒ¨å¯¹é½
+              //.margin({ top: 10 }) // æ•°æ®è¡Œä¸æ ‡é¢˜è¡Œé—´è·
+            }
+            .width('48%') // å æ®ä¸€åŠå®½åº¦
+            .height(100)
+            .backgroundColor('#FFFFFF') // å¡ç‰‡èƒŒæ™¯ä¸ºç™½è‰²
+            .borderRadius(8) // åœ†è§’
+            //.border({
+            //  width: 1,
+            //  color: '#6C55E4', // è¾¹æ¡†é¢œè‰²ä¸ºç´«è‰²
+            //})
+          }
+          .width('100%')
+          .height(120)
+          .justifyContent(FlexAlign.SpaceBetween)
+
+
+          //ä½“é‡è®°å½•
+          Column() {
+            // æ ‡é¢˜è¡Œ
+            Row(){
+              Text('ä½“é‡è®°å½•')
+                .fontSize(24)
+                .fontColor('#333333')
+                .fontWeight(500)
+                .margin({left:15})
+            }
+            .width('100%')
+            .justifyContent(FlexAlign.Start)
+
+
+            // ä½“é‡æ•°æ®è¡Œ
+            Row(){
+              Text('55.5kg')
+                .fontSize(35)
+                .fontColor('#6C55E4')
+                .fontWeight(700)
+                .margin({left:15})
+
+              Text('å·²å‡12kg')
+                .fontSize(16)
+                .fontColor('#999999')
+                .margin({left:10})
+            }
+            .width('100%')
+            .justifyContent(FlexAlign.Start)
+            .margin({ top: 20 })
+
+            // æŒ‰é’®
+            Button('è®°å½•ä½“é‡')
+              .width('40%')
+              .height(48)
+              .backgroundColor('#666EE8')
+              .fontColor('#FFFFFF')
+              .fontSize(18)
+              .borderRadius(24)
+              .margin({ top: 20 })
+              .onClick(() => {
+                // ç‚¹å‡»äº‹ä»¶å¤„ç†é€»è¾‘
+                console.log('ç‚¹å‡»äº†è®°å½•ä½“é‡æŒ‰é’®');
+              })
+          }
+          .backgroundColor('#FFFFFF')
+          .padding({ top: 30, bottom: 30 }) // æ•´ä½“å†…è¾¹è·
+          .width('100%')
+          .height(200)
+          .borderRadius(8)
+
+
+          //é”»ç‚¼æ—¶é•¿ç«–çŠ¶å›¾
+          Column(){
+            // æ ‡é¢˜è¡Œ
+            Row(){
+              //å·¦è¾¹æ ‡é¢˜
+              Text('é”»ç‚¼æ—¶é•¿')
+                .fontSize(24)
+                .fontColor('#333333')
+                .fontWeight(500)
+                .margin({left:15})
+
+              //å³è¾¹æ•°æ®
+              Row(){
+                Text('102')
+                  .fontSize(34)
+                  .fontColor('#6249E3')
+                  .fontWeight(500)
+                  .margin({right:5})
+
+                Text('åˆ†é’Ÿ')
+                  .fontSize(22)
+                  .fontColor('#939EB5')
+              }
+              .margin({right:15})
+            }
+            .margin({top:15})
+            .width('100%')
+            .justifyContent(FlexAlign.SpaceBetween)
+
+            //å›¾è¡¨                                       //æš‚æ—¶è´´å›¾
+            Image($r('app.media.duanlianshichang'))
+              .margin({top:15})
+              .width('100%')
+              .height(120)
+          }
+          .width('100%')
+          .height(200)
+          .backgroundColor('#FFFFFF')
+          .borderRadius(8)
+          .margin({top:15})
+
+
+          //å¡è·¯é‡Œç«–çŠ¶å›¾
+          Column(){
+            // æ ‡é¢˜è¡Œ
+            Row(){
+              //å·¦è¾¹æ ‡é¢˜
+              Text('å¡è·¯é‡Œ')
+                .fontSize(24)
+                .fontColor('#333333')
+                .fontWeight(500)
+                .margin({left:15})
+
+              //å³è¾¹æ•°æ®
+              Row(){
+                Text('112')
+                  .fontSize(34)
+                  .fontColor('#6249E3')
+                  .fontWeight(500)
+                  .margin({right:5})
+
+                Text('åƒå¡')
+                  .fontSize(22)
+                  .fontColor('#939EB5')
+              }
+              .margin({right:15})
+            }
+            .margin({top:15})
+            .width('100%')
+            .justifyContent(FlexAlign.SpaceBetween)
+
+            //å›¾è¡¨                                       //æš‚æ—¶è´´å›¾
+            Image($r('app.media.kaluli'))
+              .margin({top:15})
+              .width('100%')
+              .height(120)
+          }
+          .width('100%')
+          .height(200)
+          .backgroundColor('#FFFFFF')
+          .borderRadius(8)
+          .margin({top:15})
+
+        }
+      }
+      .scrollBar(BarState.Off)
+
+
+    }
+    .width('100%')
+    .height('100%')
+    .padding({ left: 10, right: 10 })
+    .backgroundImage($r('app.media.duanlianBackGround'))
+    .backgroundImageSize({width:'100%',height:'100%'})
+  }
+}ÀA“ÔrD–§version¤fileªsourceRoot§sources¥names¨mappings¯PracticePage.js ‘°PracticePage.etsÜæ””   ” ” ” ‘”   ‘”   ‘” ’” ” 
+–” ” 
+” Ìö” Ìö
+” Ìö” Ìö–” ” 
+” Ì÷” Ì÷” Ì÷”  Ì÷” ” 
+” Ìø” Ìø” Ìø” Ìø”! Ìø”# Ìø”% Ìø”' Ìø”, Ìø”. Ìø ”0 Ìø"”2 Ìø$”” ” 
+” Ìù”" Ìù” ” 
+” Ìú”& Ìú”' Ìú”) Ìú”. Ìú”0 Ìú ”6 Ìú&”8 Ìú'”> Ìú-”Ì@ Ìú.”ÌF Ìú4”ÌH Ìú5’” ” 
+˜” ” 	” 
+” ” ”  ”" ”$ ’” ” 
+–” ” 	” ” ” ” ’” ” 
+–” ” 	” ” ” ” ’” ” 
+˜” ” 	” ” ” ”( ”)  ”5 ,”” ” ” ” –” ” ” ” ” ” –” ” ” ” ” ” –” ” ” 	” 	” 	”$ 	’” ” ’” 
+” 
+–” 
+” 
+” ” ” ” –” 
+” 
+” ” ” ” ’” ” 
+’” ” 	’” ” ˜” ” ” Ìò” Ìò” Ìò”% Ìò”& Ìò”) Ìò’” ” ’” 
+” ’” 
+” ’” 
+” –” 
+” ” Ìd” Ìd” Ìd” Ìd’” 
+” –” 
+” ” Ìe” Ìe” Ìe” Ìe’” 
+” ˜” 
+” ” Ìf” Ìf” Ìf”( Ìf#”) Ìf$”5 Ìf0’” ” ’” ” ’” ” –” ” ” 4” 4” 4” 4’” ” –” ” ” 5” 5” 5” 5’” ” –” ” ” 6”" 6”# 6”, 6&’” ” –” ” ” 7” 7”  7”! 7’” ” –” ” ” #” #” #” #–” ” ” $” $” $” $˜” ” ” %” %” %”( %'”) %(”5 %4”” ” ” ”  –” ” ” ” ” ” –” ” ” ” ” ” !–” ” ” ” ” ”$ &š” ” ” ” ” ” ”  ”  "”" $”$ &’” ” ”” ” ” ” –” ” ”  ”  ”  ”$  &š” ” ” !” !” !” !” !!”! !#”# !%”% !'’” ” ’” ” ’” '” '˜” '” '” 0” 0” 0”( 0'”) 0(”/ 0.˜” '” '” 1” 1” 1”( 1'”) 1(”, 1+”” (” (” (” (–” (” (” )” )” )” )–” (” (” *” *” *” *!–” (” (” +” +” +”$ +&’” (” (”” ,” ,” ,” ,–” ,” ,” -” -” -” -–” ,” ,” .” .” .”$ .&’” ,” ,’” '” '’” ” ’” ” ’” 8” 8’” 9” 9’” :”, :,’” ;” ;’” =” =’” >” >’” 8” 8’” 9” 9’” :”, :,’” ;” ;’” =” =–” >” >” Ì[” Ì[” Ì[” Ì[’” 8” 8’” 9” 9’” :”, :,’” ;” ;’” =” =–” >” >” Ì\” Ì\” Ì\” Ì\’” 8” 8’” 9” 9’” :”, :,’” ;” ;’” =” =–” >” >” Ì]”" Ì]”# Ì]”, Ì]&’” 8” 8’” 9” 9’” :”, :,’” ;” ;’” =” =–” >” >” Ì^” Ì^”  Ì^”! Ì^’” ?” ?–” ?” ?” ÌI” ÌI” ÌI” ÌI–” ?” ?” ÌJ” ÌJ” ÌJ” ÌJ˜” ?” ?” ÌK” ÌK” ÌK”( ÌK'”) ÌK(”5 ÌK4”” Ì@” Ì@” Ì@” Ì@–” Ì@” Ì@” ÌA” ÌA” ÌA” ÌA–” Ì@” Ì@” ÌB” ÌB” ÌB” ÌB!–” Ì@” Ì@” ÌC” ÌC” ÌC”$ ÌC&š” Ì@” Ì@” ÌD” ÌD” ÌD” ÌD” ÌD ”  ÌD"”" ÌD$”$ ÌD&’” Ì@” Ì@”” ÌE” ÌE” ÌE” ÌE–” ÌE” ÌE” ÌF” ÌF” ÌF”$ ÌF&š” ÌE” ÌE” ÌG” ÌG” ÌG” ÌG” ÌG!”! ÌG#”# ÌG%”% ÌG'’” ÌE” ÌE’” ?” ?’” ÌN” ÌN˜” ÌN” ÌN” ÌW” ÌW” ÌW”( ÌW'”) ÌW(”/ ÌW.˜” ÌN” ÌN” ÌX” ÌX” ÌX”( ÌX'”) ÌX(”, ÌX+”” ÌO” ÌO” ÌO” ÌO–” ÌO” ÌO” ÌP” ÌP” ÌP” ÌP–” ÌO” ÌO” ÌQ” ÌQ” ÌQ” ÌQ!–” ÌO” ÌO” ÌR” ÌR” ÌR”$ ÌR&’” ÌO” ÌO”” ÌS” ÌS” ÌS” ÌS–” ÌS” ÌS” ÌT” ÌT” ÌT” ÌT–” ÌS” ÌS” ÌU” ÌU” ÌU”$ ÌU&’” ÌS” ÌS’” ÌN” ÌN’” 8” 8’” 9” 9’” :”( :,’” ;” ;’” =” =’” >” >’” 
+” ’” 
+” ’” Ìi
+” Ìi’” Ìj
+” Ìj’” Ìi
+” Ìi–” Ìj
+” Ìj” Ì–”" Ì–”# Ì–”, Ì–$’” Ìi
+” Ìi” Ìj
+” Ìj” Ì—” Ì—” Ì—” Ì—”  Ì—”" Ì—”$ Ì—”& Ì—”, Ì—$”. Ì—&”0 Ì—(”2 Ì—*’” Ìi
+” Ìi–” Ìj
+” Ìj” Ì˜” Ì˜” Ì˜” Ì˜’” Ìi
+” Ìi–” Ìj
+” Ìj” Ì™” Ì™” Ì™” Ì™’” Ìi
+” Ìi–” Ìj
+” Ìj” Ìš” Ìš”  Ìš”! Ìš’” Ìk” Ìk’” Ìl” Ìl’” Ìk” Ìk–” Ìl” Ìl” Ìs” Ìs” Ìs” Ìs’” Ìk” Ìk˜” Ìl” Ìl” Ìt” Ìt” Ìt”( Ìt%”) Ìt&”. Ìt+”” Ìm” Ìm” Ìm” Ìm–” Ìm” Ìm” Ìn” Ìn” Ìn” Ìn–” Ìm” Ìm” Ìo” Ìo” Ìo”$ Ìo$–” Ìm” Ìm” Ìp” Ìp” Ìp” Ìpš” Ìm” Ìm” Ìq” Ìq” Ìq” Ìq” Ìq”  Ìq”" Ìq ”$ Ìq!’” Ìm” Ìm’” Ìk” Ìk’” Ìl” Ìl’” Ìw” Ìw’” Ìx” Ìx’” Ìw” Ìw–” Ìx” Ìx” Ì„” Ì„” Ì„” Ì„’” Ìw” Ìw˜” Ìx” Ìx” Ì…” Ì…” Ì…”( Ì…%”) Ì…&”. Ì…+’” Ìw” Ìwš” Ìx” Ìx” Ì†” Ì†” Ì†” Ì†” Ì†” Ì†”  Ì†”" Ì†”” Ìy” Ìy” Ìy”  Ìy–” Ìy” Ìy” Ìz” Ìz” Ìz” Ìz–” Ìy” Ìy” Ì{” Ì{” Ì{”$ Ì{$–” Ìy” Ìy” Ì|” Ì|” Ì|” Ì|š” Ìy” Ìy” Ì}” Ì}” Ì}” Ì}” Ì}”  Ì}”" Ì} ”$ Ì}!’” Ìy” Ìy”” Ì” Ì” Ì”  Ì–” Ì” Ì” Ì€” Ì€” Ì€” Ì€–” Ì” Ì” Ì” Ì” Ì”$ Ì$š” Ì” Ì” Ì‚” Ì‚” Ì‚” Ì‚” Ì‚”  Ì‚”" Ì‚ ”$ Ì‚!’” Ì” Ì’” Ìw” Ìw’” Ìx” Ìx’” Ìˆ” Ìˆ”” Ì‰” Ì‰”# Ì‰”) Ì‰’” Ìˆ” Ìˆ–” Ì‰” Ì‰” ÌŠ” ÌŠ” ÌŠ” ÌŠ’” Ìˆ” Ìˆ–” Ì‰” Ì‰” Ì‹” Ì‹” Ì‹” Ì‹’” Ìˆ” Ìˆ–” Ì‰” Ì‰” ÌŒ”" ÌŒ”# ÌŒ”, ÌŒ(’” Ìˆ” Ìˆ–” Ì‰” Ì‰” Ì” Ì” Ì”& Ì"’” Ìˆ” Ìˆ–” Ì‰” Ì‰” Ì” Ì” Ì” Ì’” Ìˆ” Ìˆ–” Ì‰” Ì‰” Ì” Ì”  Ì”" Ì’” Ìˆ” Ìˆš” Ì‰” Ì‰” Ì” Ì” Ì” Ì” Ì”! Ì”# Ì”% Ì!’” Ìˆ” Ìˆ—” Ì‰” Ì‰” Ì‘” Ì‘” Ì‘” Ì‘”  Ì‘’” Ì’” Ì’˜” Ì“” Ì“” Ì“” Ì“” Ì“”' Ì“'”( Ì“(”) Ì“)’” Ì”” Ì”’” Ìˆ” Ìˆ’” Ì‰” Ì‰’” Ìi
+” Ìi’” Ìj
+” Ìj’” Ì
+” Ì’” Ì
+” Ì’” Ì
+” Ì–” Ì
+” Ì” ÌÀ” ÌÀ” ÌÀ” ÌÀ’” Ì
+” Ì–” Ì
+” Ì” ÌÁ” ÌÁ” ÌÁ” ÌÁ’” Ì
+” Ì–” Ì
+” Ì” ÌÂ”" ÌÂ”# ÌÂ”, ÌÂ$’” Ì
+” Ì–” Ì
+” Ì” ÌÃ” ÌÃ”  ÌÃ”! ÌÃ’” Ì
+” Ìš” Ì
+” Ì” ÌÄ” ÌÄ” ÌÄ” ÌÄ” ÌÄ”! ÌÄ”# ÌÄ”% ÌÄ’” ÌŸ” ÌŸ’” Ì ” Ì ’” ÌŸ” ÌŸš” Ì ” Ì ” Ì¶” Ì¶” Ì¶” Ì¶” Ì¶” Ì¶”  Ì¶”" Ì¶’” ÌŸ” ÌŸ–” Ì ” Ì ” Ì·” Ì·” Ì·” Ì·’” ÌŸ” ÌŸ˜” Ì ” Ì ” Ì¸” Ì¸” Ì¸”( Ì¸%”) Ì¸&”5 Ì¸2’” Ì¡” Ì¡”” Ì¢” Ì¢” Ì¢” Ì¢’” Ì¡” Ì¡–” Ì¢” Ì¢” Ì£” Ì£” Ì£” Ì£’” Ì¡” Ì¡–” Ì¢” Ì¢” Ì¤” Ì¤” Ì¤”$ Ì¤$’” Ì¡” Ì¡–” Ì¢” Ì¢” Ì¥” Ì¥” Ì¥” Ì¥’” Ì¡” Ì¡š” Ì¢” Ì¢” Ì¦” Ì¦” Ì¦” Ì¦” Ì¦”  Ì¦”" Ì¦ ”$ Ì¦!’” Ì¡” Ì¡’” Ì¢” Ì¢’” Ì¨” Ì¨’” Ì©” Ì©’” Ì¨” Ì¨š” Ì©” Ì©” Ì´” Ì´” Ì´” Ì´” Ì´”  Ì´”" Ì´”$ Ì´ ”” Ìª” Ìª” Ìª” Ìª–” Ìª” Ìª” Ì«” Ì«” Ì«” Ì«–” Ìª” Ìª” Ì¬” Ì¬” Ì¬”$ Ì¬&–” Ìª” Ìª” Ì­” Ì­” Ì­” Ì­!š” Ìª” Ìª” Ì®” Ì®” Ì®” Ì®” Ì® ”! Ì®!”" Ì®"”$ Ì®#’” Ìª” Ìª”” Ì°” Ì°” Ì°” Ì°–” Ì°” Ì°” Ì±” Ì±” Ì±” Ì±–” Ì°” Ì°” Ì²” Ì²” Ì²”$ Ì²&’” Ì°” Ì°’” Ì¨” Ì¨’” Ì©” Ì©’” ÌŸ” ÌŸ’” Ì ” Ì ’” Ìº”= Ìº=’” Ì»” Ì»’” Ìº”= Ìº=š” Ì»” Ì»” Ì¼” Ì¼” Ì¼” Ì¼” Ì¼”  Ì¼”" Ì¼”$ Ì¼’” Ìº”= Ìº=–” Ì»” Ì»” Ì½” Ì½” Ì½” Ì½’” Ìº”= Ìº=–” Ì»” Ì»” Ì¾” Ì¾” Ì¾” Ì¾’” Ì
+” Ì’” Ì
+” Ì’” ÌÇ
+” ÌÇ’” ÌÈ
+” ÌÈ’” ÌÇ
+” ÌÇ–” ÌÈ
+” ÌÈ” Ìê” Ìê” Ìê” Ìê’” ÌÇ
+” ÌÇ–” ÌÈ
+” ÌÈ” Ìë” Ìë” Ìë” Ìë’” ÌÇ
+” ÌÇ–” ÌÈ
+” ÌÈ” Ìì”" Ìì”# Ìì”, Ìì$’” ÌÇ
+” ÌÇ–” ÌÈ
+” ÌÈ” Ìí” Ìí”  Ìí”! Ìí’” ÌÇ
+” ÌÇš” ÌÈ
+” ÌÈ” Ìî” Ìî” Ìî” Ìî” Ìî”! Ìî”# Ìî”% Ìî’” ÌÉ” ÌÉ’” ÌÊ” ÌÊ’” ÌÉ” ÌÉš” ÌÊ” ÌÊ” Ìà” Ìà” Ìà” Ìà” Ìà” Ìà”  Ìà”" Ìà’” ÌÉ” ÌÉ–” ÌÊ” ÌÊ” Ìá” Ìá” Ìá” Ìá’” ÌÉ” ÌÉ˜” ÌÊ” ÌÊ” Ìâ” Ìâ” Ìâ”( Ìâ%”) Ìâ&”5 Ìâ2’” ÌË” ÌË”” ÌÌ” ÌÌ” ÌÌ” ÌÌ’” ÌË” ÌË–” ÌÌ” ÌÌ” ÌÍ” ÌÍ” ÌÍ” ÌÍ’” ÌË” ÌË–” ÌÌ” ÌÌ” ÌÎ” ÌÎ” ÌÎ”$ ÌÎ$’” ÌË” ÌË–” ÌÌ” ÌÌ” ÌÏ” ÌÏ” ÌÏ” ÌÏ’” ÌË” ÌËš” ÌÌ” ÌÌ” ÌĞ” ÌĞ” ÌĞ” ÌĞ” ÌĞ”  ÌĞ”" ÌĞ ”$ ÌĞ!’” ÌË” ÌË’” ÌÌ” ÌÌ’” ÌÒ” ÌÒ’” ÌÓ” ÌÓ’” ÌÒ” ÌÒš” ÌÓ” ÌÓ” ÌŞ” ÌŞ” ÌŞ” ÌŞ” ÌŞ”  ÌŞ”" ÌŞ”$ ÌŞ ”” ÌÔ” ÌÔ” ÌÔ” ÌÔ–” ÌÔ” ÌÔ” ÌÕ” ÌÕ” ÌÕ” ÌÕ–” ÌÔ” ÌÔ” ÌÖ” ÌÖ” ÌÖ”$ ÌÖ&–” ÌÔ” ÌÔ” Ì×” Ì×” Ì×” Ì×!š” ÌÔ” ÌÔ” ÌØ” ÌØ” ÌØ” ÌØ” ÌØ ”! ÌØ!”" ÌØ"”$ ÌØ#’” ÌÔ” ÌÔ”” ÌÚ” ÌÚ” ÌÚ” ÌÚ–” ÌÚ” ÌÚ” ÌÛ” ÌÛ” ÌÛ” ÌÛ–” ÌÚ” ÌÚ” ÌÜ” ÌÜ” ÌÜ”$ ÌÜ&’” ÌÚ” ÌÚ’” ÌÒ” ÌÒ’” ÌÓ” ÌÓ’” ÌÉ” ÌÉ’” ÌÊ” ÌÊ’” Ìä”= Ìä=’” Ìå” Ìå’” Ìä”= Ìä=š” Ìå” Ìå” Ìæ” Ìæ” Ìæ” Ìæ” Ìæ”  Ìæ”" Ìæ”$ Ìæ’” Ìä”= Ìä=–” Ìå” Ìå” Ìç” Ìç” Ìç” Ìç’” Ìä”= Ìä=–” Ìå” Ìå” Ìè” Ìè” Ìè” Ìè’” ÌÇ
+” ÌÇ’” ÌÈ
+” ÌÈ’” ” ’” ” ’” ” 
+‘” ÌûÔrE–§version¤file§sources®sourcesContent¥names¨mappingsÀ‘À‘ÀÜë‘”    ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”  	 ‘”  
+ ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”    ‘”  ! ‘”  " ‘”  # ‘”  $ ‘”  % ‘”  & ‘”  ' ‘”  ( ‘”  ) ‘”  * ‘”  + ‘”  , ‘”  - ‘”  . ‘”  / ‘”  0 ‘”  1 ‘”  2 ‘”  3 ‘”  4 ‘”  5 ‘”  6 ‘”  7 ‘”  8 ‘”  9 ‘”  : ‘”  ; ‘”  < ‘”  = ‘”  > ‘”  ? ‘”  Ì@ ‘”  ÌA ‘”  ÌB ‘”  ÌC ‘”  ÌD ‘”  ÌE ‘”  ÌF ‘”  ÌG ‘”  ÌH ‘”  ÌI ‘”  ÌJ ‘”  ÌK ‘”  ÌL ‘”  ÌM ‘”  ÌN ‘”  ÌO ‘”  ÌP ‘”  ÌQ ‘”  ÌR ‘”  ÌS ‘”  ÌT ‘”  ÌU ‘”  ÌV ‘”  ÌW ‘”  ÌX ‘”  ÌY ‘”  ÌZ ‘”  Ì[ ‘”  Ì\ ‘”  Ì] ‘”  Ì^ ‘”  Ì_ ‘”  Ì` ‘”  Ìa ‘”  Ìb ‘”  Ìc ‘”  Ìd ‘”  Ìe ‘”  Ìf ‘”  Ìg ‘”  Ìh ‘”  Ìi ‘”  Ìj ‘”  Ìk ‘”  Ìl ‘”  Ìm ‘”  Ìn ‘”  Ìo ‘”  Ìp ‘”  Ìq ‘”  Ìr ‘”  Ìs ‘”  Ìt ‘”  Ìu ‘”  Ìv ‘”  Ìw ‘”  Ìx ‘”  Ìy ‘”  Ìz ‘”  Ì{ ‘”  Ì| ‘”  Ì} ‘”  Ì~ ‘”  Ì ‘”  Ì€ ‘”  Ì ‘”  Ì‚ ‘”  Ìƒ ‘”  Ì„ ‘”  Ì… ‘”  Ì† ‘”  Ì‡ ‘”  Ìˆ ‘”  Ì‰ ‘”  ÌŠ ‘”  Ì‹ ‘”  ÌŒ ‘”  Ì ‘”  Ì ‘”  Ì ‘”  Ì ‘”  Ì‘ ‘”  Ì’ ‘”  Ì“ ‘”  Ì” ‘”  Ì• ‘”  Ì– ‘”  Ì— ‘”  Ì˜ ‘”  Ì™ ‘”  Ìš ‘”  Ì› ‘”  Ìœ ‘”  Ì ‘”  Ì ‘”  ÌŸ ‘”  Ì  ‘”  Ì¡ ‘”  Ì¢ ‘”  Ì£ ‘”  Ì¤ ‘”  Ì¥ ‘”  Ì¦ ‘”  Ì§ ‘”  Ì¨ ‘”  Ì© ‘”  Ìª ‘”  Ì« ‘”  Ì¬ ‘”  Ì­ ‘”  Ì® ‘”  Ì¯ ‘”  Ì° ‘”  Ì± ‘”  Ì² ‘”  Ì³ ‘”  Ì´ ‘”  Ìµ ‘”  Ì¶ ‘”  Ì· ‘”  Ì¸ ‘”  Ì¹ ‘”  Ìº ‘”  Ì» ‘”  Ì¼ ‘”  Ì½ ‘”  Ì¾ ‘”  Ì¿ ‘”  ÌÀ ‘”  ÌÁ ‘”  ÌÂ ‘”  ÌÃ ‘”  ÌÄ ‘”  ÌÅ ‘”  ÌÆ ‘”  ÌÇ ‘”  ÌÈ ‘”  ÌÉ ‘”  ÌÊ ‘”  ÌË ‘”  ÌÌ ‘”  ÌÍ ‘”  ÌÎ ‘”  ÌÏ ‘”  ÌĞ ‘”  ÌÑ ‘”  ÌÒ ‘”  ÌÓ ‘”  ÌÔ ‘”  ÌÕ ‘”  ÌÖ ‘”  Ì× ‘”  ÌØ ‘”  ÌÙ ‘”  ÌÚ ‘”  ÌÛ ‘”  ÌÜ ‘”  Ìİ ‘”  ÌŞ ‘”  Ìß ‘”  Ìà ‘”  Ìá ‘”  Ìâ ‘”  Ìã ‘”  Ìä ‘”  Ìå ‘”  Ìæ ‘”  Ìç ‘”  Ìè ‘”  Ìé ‘”  Ìê ‘”  Ìë ‘”  Ìì ‘”  Ìí ‘”  Ìî ‘”  Ìï ‘”  Ìğ ‘”  Ìñ ‘”  Ìò ‘”  Ìó ‘”  Ìô ‘”  Ìõ ‘”  Ìö ‘”  Ì÷ ‘”  Ìø ‘”  Ìù ‘”  Ìú ‘”  Ìû ‘”  Ìü ‘”  Ìı ‘”  Ìş ‘”  Ìÿ ‘”  Í  ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í	 ‘”  Í
+ ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í  ‘”  Í! ‘”  Í" ‘”  Í# ‘”  Í$ ‘”  Í% ‘”  Í& ‘”  Í' ‘”  Í( ‘”  Í) ‘”  Í* ‘”  Í+ ‘”  Í, ‘”  Í- ‘”  Í. ‘”  Í/ ‘”  Í0 ‘”  Í1 ‘”  Í2 ‘”  Í3 ‘”  Í4 ‘”  Í5 ‘”  Í6 ‘”  Í7 ‘”  Í8 ‘”  Í9 ‘”  Í: ‘”  Í; ‘”  Í< ‘”  Í= ‘”  Í> ‘”  Í? ‘”  Í@ ‘”  ÍA ‘”  ÍB ‘”  ÍC ‘”  ÍD ‘”  ÍE ‘”  ÍF ‘”  ÍG ‘”  ÍH ‘”  ÍI ‘”  ÍJ ‘”  ÍK ‘”  ÍL ‘”  ÍM ‘”  ÍN ‘”  ÍO ‘”  ÍP ‘”  ÍQ ‘”  ÍR ‘”  ÍS ‘”  ÍT ‘”  ÍU ‘”  ÍV ‘”  ÍW ‘”  ÍX ‘”  ÍY ‘”  ÍZ ‘”  Í[ ‘”  Í\ ‘”  Í] ‘”  Í^ ‘”  Í_ ‘”  Í` ‘”  Ía ‘”  Íb ‘”  Íc ‘”  Íd ‘”  Íe ‘”  Íf ‘”  Íg ‘”  Íh ‘”  Íi ‘”  Íj ‘”  Ík ‘”  Íl ‘”  Ím ‘”  Ín ‘”  Ío ‘”  Íp ‘”  Íq ‘”  Ír ‘”  Ís ‘”  Ít ‘”  Íu ‘”  Ív ‘”  Íw ‘”  Íx ‘”  Íy ‘”  Íz ‘”  Í{ ‘”  Í| ‘”  Í} ‘”  Í~ ‘”  Í ‘”  Í€ ‘”  Í ‘”  Í‚ ‘”  Íƒ ‘”  Í„ ‘”  Í… ‘”  Í† ‘”  Í‡ ‘”  Íˆ ‘”  Í‰ ‘”  ÍŠ ‘”  Í‹ ‘”  ÍŒ ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í‘ ‘”  Í’ ‘”  Í“ ‘”  Í” ‘”  Í• ‘”  Í– ‘”  Í— ‘”  Í˜ ‘”  Í™ ‘”  Íš ‘”  Í› ‘”  Íœ ‘”  Í ‘”  Í ‘”  ÍŸ ‘”  Í  ‘”  Í¡ ‘”  Í¢ ‘”  Í£ ‘”  Í¤ ‘”  Í¥ ‘”  Í¦ ‘”  Í§ ‘”  Í¨ ‘”  Í© ‘”  Íª ‘”  Í« ‘”  Í¬ ‘”  Í­ ‘”  Í® ‘”  Í¯ ‘”  Í° ‘”  Í± ‘”  Í² ‘”  Í³ ‘”  Í´ ‘”  Íµ ‘”  Í¶ ‘”  Í· ‘”  Í¸ ‘”  Í¹ ‘”  Íº ‘”  Í» ‘”  Í¼ ‘”  Í½ ‘”  Í¾ ‘”  Í¿ ‘”  ÍÀ ‘”  ÍÁ ‘”  ÍÂ ‘”  ÍÃ ‘”  ÍÄ ‘”  ÍÅ ‘”  ÍÆ ‘”  ÍÇ ‘”  ÍÈ ‘”  ÍÉ ‘”  ÍÊ ‘”  ÍË ‘”  ÍÌ ‘”  ÍÍ ‘”  ÍÎ ‘”  ÍÏ ‘”  ÍĞ ‘”  ÍÑ ‘”  ÍÒ ‘”  ÍÓ ‘”  ÍÔ ‘”  ÍÕ ‘”  ÍÖ ‘”  Í× ‘”  ÍØ ‘”  ÍÙ ‘”  ÍÚ ‘”  ÍÛ ‘”  ÍÜ ‘”  Íİ ‘”  ÍŞ ‘”  Íß ‘”  Íà ‘”  Íá ‘”  Íâ ‘”  Íã ‘”  Íä ‘”  Íå ‘”  Íæ ‘”  Íç ‘”  Íè ‘”  Íé ‘”  Íê ÔrF’§missing¦pluginÃ¦genAbcÂÔ  ÔrG”²dynamicImportCache¹exportAllDeclarationCache»exportNamedDeclarationCache«importCache‘ÔrH–¤type¥start£end«declarationªspecifiers¦source¶ExportNamedDeclarationÌ€ÍK3ÔrI–¤type¥start£end¢idªsuperClass¤body°ClassDeclarationÌ‡ÍK3ÔrJ”¤type¥start£end¤nameªIdentifierÌÌ•¨PracticeJªIdentifierÌÌ¤¦ViewPUÔrK”¤type¥start£end¤body©ClassBodyÌ¥ÍK3—ÔrL˜¤type¥start£end¦static¨computed£key¤kind¥value°MethodDefinitionÌ¬ÍÂÂJªIdentifierÌ¬Ì·«constructor«constructorÔrM™¤type¥start£end¢idªexpression©generator¥async¦params¤body²FunctionExpressionÌ·ÍÀÂÂÂ–JªIdentifierÌ¸Ì¾¦parentJªIdentifierÌÀÌÆ¦paramsJªIdentifierÌÈÌÖ®__localStorageÔrN•¤type¥start£end¤left¥right±AssignmentPatternÌØÌãJªIdentifierÌØÌŞ¦elmtIdÔrO–¤type¥start£end¨operator¦prefix¨argument¯UnaryExpressionÌáÌã¡-ÃÔrP•¤type¥start£end¥value£raw§LiteralÌâÌã¡1N±AssignmentPatternÌåÌıJªIdentifierÌåÌñ¬paramsLambdaJªIdentifierÌôÌı©undefinedJªIdentifierÌÿÍ©extraInfoK®BlockStatementÍ
+Í”ÔrQ”¤type¥start£endªexpression³ExpressionStatementÍÍFÔrR–¤type¥start£end¦callee©arguments¨optional®CallExpressionÍÍEÔrS“¤type¥start£end¥SuperÍÍ”JªIdentifierÍÍ!¦parentJªIdentifierÍ#Í1®__localStorageJªIdentifierÍ3Í9¦elmtIdJªIdentifierÍ;ÍD©extraInfoÂÔrT–¤type¥start£end¤testªconsequent©alternate«IfStatementÍPÍ·ÔrU–¤type¥start£end¤left¨operator¥right°BinaryExpressionÍTÍvO¯UnaryExpressionÍTÍg¦typeofÃJªIdentifierÍ[Íg¬paramsLambda£===P§LiteralÍlÍv¨functionª"function"K®BlockStatementÍxÍ·‘Q³ExpressionStatementÍ‡Í¬ÔrV–¤type¥start£end¨operator¤left¥right´AssignmentExpressionÍ‡Í«¡=ÔrW—¤type¥start£end¦object¨property¨computed¨optional°MemberExpressionÍ‡ÍœS®ThisExpressionÍ‡Í‹JªIdentifierÍŒÍœ°paramsGenerator_ÂÂJªIdentifierÍŸÍ«¬paramsLambdaÀQ³ExpressionStatementÍÁÍèR®CallExpressionÍÁÍçW°MemberExpressionÍÁÍßS®ThisExpressionÍÁÍÅJªIdentifierÍÆÍß¹setInitiallyProvidedValueÂÂ‘JªIdentifierÍàÍæ¦paramsÂQ³ExpressionStatementÍòÍR®CallExpressionÍòÍW°MemberExpressionÍòÍS®ThisExpressionÍòÍöJªIdentifierÍ÷Í´finalizeConstructionÂÂÂL°MethodDefinitionÍÍEÂÂJªIdentifierÍÍ4¹setInitiallyProvidedValue¦methodM²FunctionExpressionÍ4ÍEÀÂÂÂ‘JªIdentifierÍ5Í;¦paramsK®BlockStatementÍ=ÍEL°MethodDefinitionÍKÍkÂÂJªIdentifierÍKÍZ¯updateStateVars¦methodM²FunctionExpressionÍZÍkÀÂÂÂ‘JªIdentifierÍ[Ía¦paramsK®BlockStatementÍcÍkL°MethodDefinitionÍqÍ¥ÂÂJªIdentifierÍqÍ’Ù!purgeVariableDependenciesOnElmtId¦methodM²FunctionExpressionÍ’Í¥ÀÂÂÂ‘JªIdentifierÍ“Í›¨rmElmtIdK®BlockStatementÍÍ¥L°MethodDefinitionÍ«Í&ÂÂJªIdentifierÍ«Í»°aboutToBeDeleted¦methodM²FunctionExpressionÍ»Í&ÀÂÂÂK®BlockStatementÍ¾Í&’Q³ExpressionStatementÍÉÍõR®CallExpressionÍÉÍôW°MemberExpressionÍÉÍçR®CallExpressionÍÉÍàW°MemberExpressionÍÉÍŞJªIdentifierÍÉÍÚ±SubscriberManagerJªIdentifierÍÛÍŞ£GetÂÂÂJªIdentifierÍáÍç¦deleteÂÂ‘R®CallExpressionÍèÍóW°MemberExpressionÍèÍñS®ThisExpressionÍèÍìJªIdentifierÍíÍñ¤id__ÂÂÂÂQ³ExpressionStatementÍÿÍR®CallExpressionÍÿÍW°MemberExpressionÍÿÍS®ThisExpressionÍÿÍJªIdentifierÍÍ¸aboutToBeDeletedInternalÂÂÂL°MethodDefinitionÍ,ÍJòÂÂJªIdentifierÍ,Í9­initialRender¦methodM²FunctionExpressionÍ9ÍJòÀÂÂÂK®BlockStatementÍ<ÍJòÜ QQ³ExpressionStatementÍGÍsR®CallExpressionÍGÍrW°MemberExpressionÍGÍeS®ThisExpressionÍGÍKJªIdentifierÍLÍe¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍfÍiÀÂÂÂ’JªIdentifierÍgÍm¦elmtIdJªIdentifierÍoÍ~¯isInitialRenderK®BlockStatementÍƒÍi—Q³ExpressionStatementÍ’Í¢R®CallExpressionÍ’Í¡W°MemberExpressionÍ’ÍŸJªIdentifierÍ’Í˜¦ColumnJªIdentifierÍ™ÍŸ¦createÂÂÂQ³ExpressionStatementÍ°ÍüR®CallExpressionÍ°ÍûW°MemberExpressionÍ°ÍÀJªIdentifierÍ°Í¶¦ColumnJªIdentifierÍ·ÍÀ©debugLineÂÂ’P§LiteralÍÁÍñÙ.entry/src/main/ets/pages/PracticePage.ets(4:5)Ù0"entry/src/main/ets/pages/PracticePage.ets(4:5)"P§LiteralÍóÍú¥entry§"entry"ÂQ³ExpressionStatementÍ
+ÍR®CallExpressionÍ
+ÍW°MemberExpressionÍ
+ÍJªIdentifierÍ
+Í¦ColumnJªIdentifierÍÍ¥widthÂÂ‘P§LiteralÍÍ¤100%¦'100%'ÂQ³ExpressionStatementÍ-ÍCR®CallExpressionÍ-ÍBW°MemberExpressionÍ-Í:JªIdentifierÍ-Í3¦ColumnJªIdentifierÍ4Í:¦heightÂÂ‘P§LiteralÍ;ÍA¤100%¦'100%'ÂQ³ExpressionStatementÍQÍyR®CallExpressionÍQÍxW°MemberExpressionÍQÍ_JªIdentifierÍQÍW¦ColumnJªIdentifierÍXÍ_§paddingÂÂ‘ÔrX”¤type¥start£endªproperties°ObjectExpressionÍ`Íw’ÔrY™¤type¥start£end¦method©shorthand¨computed£key¥value¤kind¨PropertyÍbÍjÂÂÂJªIdentifierÍbÍf¤leftP§LiteralÍhÍj
+¢10¤initY¨PropertyÍlÍuÂÂÂJªIdentifierÍlÍq¥rightP§LiteralÍsÍu
+¢10¤initÂQ³ExpressionStatementÍ‡ÍR®CallExpressionÍ‡ÍW°MemberExpressionÍ‡ÍJªIdentifierÍ‡Í¦ColumnJªIdentifierÍÍ¯backgroundImageÂÂ‘X°ObjectExpressionÍÍ•Y¨PropertyÍ Í®ÂÂÂP§LiteralÍ Í¤¢id¤"id"P§LiteralÍ¦Í®Î  ¨16777246¤initY¨PropertyÍ°Í½ÂÂÂP§LiteralÍ°Í¶¤type¦"type"P§LiteralÍ¸Í½ÍN ¥20000¤initY¨PropertyÍ¿ÍÉÂÂÂJªIdentifierÍ¿ÍÅ¦paramsÔrZ”¤type¥start£end¨elements¯ArrayExpressionÍÇÍÉ¤initY¨PropertyÍËÍ÷ÂÂÂP§LiteralÍËÍ×ªbundleName¬"bundleName"P§LiteralÍÙÍ÷¼com.example.watermalon_sport¾"com.example.watermalon_sport"¤initY¨PropertyÍùÍÂÂÂP§LiteralÍùÍªmoduleName¬"moduleName"P§LiteralÍÍ¥entry§"entry"¤initÂQ³ExpressionStatementÍ Í^R®CallExpressionÍ Í]W°MemberExpressionÍ Í:JªIdentifierÍ Í&¦ColumnJªIdentifierÍ'Í:³backgroundImageSizeÂÂ‘X°ObjectExpressionÍ;Í\’Y¨PropertyÍ=ÍJÂÂÂJªIdentifierÍ=ÍB¥widthP§LiteralÍDÍJ¤100%¦'100%'¤initY¨PropertyÍLÍZÂÂÂJªIdentifierÍLÍR¦heightP§LiteralÍTÍZ¤100%¦'100%'¤initÂJªIdentifierÍkÍq¦ColumnÂQ³ExpressionStatementÍ}Í
+R®CallExpressionÍ}Í	W°MemberExpressionÍ}Í›S®ThisExpressionÍ}ÍJªIdentifierÍ‚Í›¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍœÍÀÂÂÂ’JªIdentifierÍÍ£¦elmtIdJªIdentifierÍ¥Í´¯isInitialRenderK®BlockStatementÍ¹Í•Q³ExpressionStatementÍÚÍôR®CallExpressionÍÚÍóW°MemberExpressionÍÚÍäJªIdentifierÍÚÍİ£RowJªIdentifierÍŞÍä¦createÂÂ‘X°ObjectExpressionÍåÍò‘Y¨PropertyÍçÍğÂÂÂJªIdentifierÍçÍì¥spaceP§LiteralÍîÍğ¢15¤initÂQ³ExpressionStatementÍÍKR®CallExpressionÍÍJW°MemberExpressionÍÍJªIdentifierÍÍ£RowJªIdentifierÍÍ©debugLineÂÂ’P§LiteralÍÍ@Ù.entry/src/main/ets/pages/PracticePage.ets(6:7)Ù0"entry/src/main/ets/pages/PracticePage.ets(6:7)"P§LiteralÍBÍI¥entry§"entry"ÂQ³ExpressionStatementÍkÍ{R®CallExpressionÍkÍzW°MemberExpressionÍkÍvJªIdentifierÍkÍn£RowJªIdentifierÍoÍv§paddingÂÂ‘P§LiteralÍwÍy¢15ÂQ³ExpressionStatementÍ›Í­R®CallExpressionÍ›Í¬W°MemberExpressionÍ›Í¤JªIdentifierÍ›Í£RowJªIdentifierÍŸÍ¤¥widthÂÂ‘P§LiteralÍ¥Í«¤100%¦'100%'ÂQ³ExpressionStatementÍÍÍøR®CallExpressionÍÍÍ÷W°MemberExpressionÍÍÍßJªIdentifierÍÍÍĞ£RowJªIdentifierÍÑÍß®justifyContentÂÂ‘W°MemberExpressionÍàÍöJªIdentifierÍàÍé©FlexAlignJªIdentifierÍêÍö¬SpaceBetweenÂÂÂJªIdentifierÍÍ£RowÂQ³ExpressionStatementÍÍGR®CallExpressionÍÍFW°MemberExpressionÍÍ2S®ThisExpressionÍÍJªIdentifierÍÍ2¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ3Í?ÀÂÂÂ’JªIdentifierÍ4Í:¦elmtIdJªIdentifierÍ<ÍK¯isInitialRenderK®BlockStatementÍPÍ?•Q³ExpressionStatementÍ_ÍqR®CallExpressionÍ_ÍpW°MemberExpressionÍ_ÍjJªIdentifierÍ_Íc¤TextJªIdentifierÍdÍj¦createÂÂ‘P§LiteralÍkÍo¦è®­ç»ƒ¨'è®­ç»ƒ'ÂQ³ExpressionStatementÍÍÉR®CallExpressionÍÍÈW°MemberExpressionÍÍJªIdentifierÍÍƒ¤TextJªIdentifierÍ„Í©debugLineÂÂ’P§LiteralÍÍ¾Ù.entry/src/main/ets/pages/PracticePage.ets(7:9)Ù0"entry/src/main/ets/pages/PracticePage.ets(7:9)"P§LiteralÍÀÍÇ¥entry§"entry"ÂQ³ExpressionStatementÍ×ÍéR®CallExpressionÍ×ÍèW°MemberExpressionÍ×ÍäJªIdentifierÍ×ÍÛ¤TextJªIdentifierÍÜÍä¨fontSizeÂÂ‘P§LiteralÍåÍç¢24ÂQ³ExpressionStatementÍ÷ÍR®CallExpressionÍ÷ÍW°MemberExpressionÍ÷ÍJªIdentifierÍ÷Íû¤TextJªIdentifierÍüÍªfontWeightÂÂ‘P§LiteralÍÍ
+ÍX£600ÂQ³ExpressionStatementÍÍ4R®CallExpressionÍÍ3W°MemberExpressionÍÍ(JªIdentifierÍÍ¤TextJªIdentifierÍÍ(©fontColorÂÂ‘P§LiteralÍ)Í2§#FFFFFF©'#FFFFFF'ÂJªIdentifierÍAÍE¤TextÂQ³ExpressionStatementÍQÍ\R®CallExpressionÍQÍ[W°MemberExpressionÍQÍYJªIdentifierÍQÍU¤TextJªIdentifierÍVÍY£popÂÂÂQ³ExpressionStatementÍfÍ	İR®CallExpressionÍfÍ	ÜW°MemberExpressionÍfÍ„S®ThisExpressionÍfÍjJªIdentifierÍkÍ„¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ…Í	ÔÀÂÂÂ’JªIdentifierÍ†ÍŒ¦elmtIdJªIdentifierÍÍ¯isInitialRenderK®BlockStatementÍ¢Í	Ô”Q³ExpressionStatementÍ±Í	2R®CallExpressionÍ±Í	1W°MemberExpressionÍ±Í½JªIdentifierÍ±Í¶¥ImageJªIdentifierÍ·Í½¦createÂÂ‘X°ObjectExpressionÍ¾Í	0•Y¨PropertyÍÀÍÎÂÂÂP§LiteralÍÀÍÄ¢id¤"id"P§LiteralÍÆÍÎÎ  ¨16777223¤initY¨PropertyÍĞÍİÂÂÂP§LiteralÍĞÍÖ¤type¦"type"P§LiteralÍØÍİÍN ¥20000¤initY¨PropertyÍßÍéÂÂÂJªIdentifierÍßÍå¦paramsZ¯ArrayExpressionÍçÍé¤initY¨PropertyÍëÍ	ÂÂÂP§LiteralÍëÍ÷ªbundleName¬"bundleName"P§LiteralÍùÍ	¼com.example.watermalon_sport¾"com.example.watermalon_sport"¤initY¨PropertyÍ	Í	.ÂÂÂP§LiteralÍ	Í	%ªmoduleName¬"moduleName"P§LiteralÍ	'Í	.¥entry§"entry"¤initÂQ³ExpressionStatementÍ	@Í	ŒR®CallExpressionÍ	@Í	‹W°MemberExpressionÍ	@Í	OJªIdentifierÍ	@Í	E¥ImageJªIdentifierÍ	FÍ	O©debugLineÂÂ’P§LiteralÍ	PÍ	Ù/entry/src/main/ets/pages/PracticePage.ets(11:9)Ù1"entry/src/main/ets/pages/PracticePage.ets(11:9)"P§LiteralÍ	ƒÍ	Š¥entry§"entry"ÂQ³ExpressionStatementÍ	šÍ	ªR®CallExpressionÍ	šÍ	©W°MemberExpressionÍ	šÍ	¥JªIdentifierÍ	šÍ	Ÿ¥ImageJªIdentifierÍ	 Í	¥¥widthÂÂ‘P§LiteralÍ	¦Í	¨¢24ÂQ³ExpressionStatementÍ	¸Í	ÉR®CallExpressionÍ	¸Í	ÈW°MemberExpressionÍ	¸Í	ÄJªIdentifierÍ	¸Í	½¥ImageJªIdentifierÍ	¾Í	Ä¦heightÂÂ‘P§LiteralÍ	ÅÍ	Ç¢24ÂJªIdentifierÍ	ÖÍ	Û¥ImageÂQ³ExpressionStatementÍ	õÍ	ÿR®CallExpressionÍ	õÍ	şW°MemberExpressionÍ	õÍ	üJªIdentifierÍ	õÍ	ø£RowJªIdentifierÍ	ùÍ	ü£popÂÂÂQ³ExpressionStatementÍ
+	ÍR®CallExpressionÍ
+	Í W°MemberExpressionÍ
+	Í
+'S®ThisExpressionÍ
+	Í
+JªIdentifierÍ
+Í
+'¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ
+(Í
+÷ÀÂÂÂ’JªIdentifierÍ
+)Í
+/¦elmtIdJªIdentifierÍ
+1Í
+@¯isInitialRenderK®BlockStatementÍ
+EÍ
+÷“Q³ExpressionStatementÍ
+TÍ
+dR®CallExpressionÍ
+TÍ
+cW°MemberExpressionÍ
+TÍ
+aJªIdentifierÍ
+TÍ
+Z¦ScrollJªIdentifierÍ
+[Í
+a¦createÂÂÂQ³ExpressionStatementÍ
+rÍ
+¿R®CallExpressionÍ
+rÍ
+¾W°MemberExpressionÍ
+rÍ
+‚JªIdentifierÍ
+rÍ
+x¦ScrollJªIdentifierÍ
+yÍ
+‚©debugLineÂÂ’P§LiteralÍ
+ƒÍ
+´Ù/entry/src/main/ets/pages/PracticePage.ets(20:7)Ù1"entry/src/main/ets/pages/PracticePage.ets(20:7)"P§LiteralÍ
+¶Í
+½¥entry§"entry"ÂQ³ExpressionStatementÍ
+ÍÍ
+ìR®CallExpressionÍ
+ÍÍ
+ëW°MemberExpressionÍ
+ÍÍ
+İJªIdentifierÍ
+ÍÍ
+Ó¦ScrollJªIdentifierÍ
+ÔÍ
+İ©scrollBarÂÂ‘W°MemberExpressionÍ
+ŞÍ
+êJªIdentifierÍ
+ŞÍ
+æ¨BarStateJªIdentifierÍ
+çÍ
+ê£OffÂÂÂJªIdentifierÍ
+ùÍ
+ÿ¦ScrollÂQ³ExpressionStatementÍÍÖR®CallExpressionÍÍÕW°MemberExpressionÍÍ)S®ThisExpressionÍÍJªIdentifierÍÍ)¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ*ÍÌÀÂÂÂ’JªIdentifierÍ+Í1¦elmtIdJªIdentifierÍ3ÍB¯isInitialRenderK®BlockStatementÍGÍÌ’Q³ExpressionStatementÍVÍfR®CallExpressionÍVÍeW°MemberExpressionÍVÍcJªIdentifierÍVÍ\¦ColumnJªIdentifierÍ]Íc¦createÂÂÂQ³ExpressionStatementÍtÍÁR®CallExpressionÍtÍÀW°MemberExpressionÍtÍ„JªIdentifierÍtÍz¦ColumnJªIdentifierÍ{Í„©debugLineÂÂ’P§LiteralÍ…Í¶Ù/entry/src/main/ets/pages/PracticePage.ets(21:9)Ù1"entry/src/main/ets/pages/PracticePage.ets(21:9)"P§LiteralÍ¸Í¿¥entry§"entry"ÂJªIdentifierÍÎÍÔ¦ColumnÂQ³ExpressionStatementÍàÍzR®CallExpressionÍàÍyW°MemberExpressionÍàÍşS®ThisExpressionÍàÍäJªIdentifierÍåÍş¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍÿÍsÀÂÂÂ’JªIdentifierÍ Í¦elmtIdJªIdentifierÍÍ¯isInitialRenderK®BlockStatementÍÍs•Q³ExpressionStatementÍCÍPR®CallExpressionÍCÍOW°MemberExpressionÍCÍMJªIdentifierÍCÍF£RowJªIdentifierÍGÍM¦createÂÂÂQ³ExpressionStatementÍ^Í©R®CallExpressionÍ^Í¨W°MemberExpressionÍ^ÍkJªIdentifierÍ^Ía£RowJªIdentifierÍbÍk©debugLineÂÂ’P§LiteralÍlÍÙ0entry/src/main/ets/pages/PracticePage.ets(23:11)Ù2"entry/src/main/ets/pages/PracticePage.ets(23:11)"P§LiteralÍ Í§¥entry§"entry"ÂQ³ExpressionStatementÍÏÍáR®CallExpressionÍÏÍàW°MemberExpressionÍÏÍØJªIdentifierÍÏÍÒ£RowJªIdentifierÍÓÍØ¥widthÂÂ‘P§LiteralÍÙÍß¤100%¦'100%'ÂQ³ExpressionStatementÍÍR®CallExpressionÍÍW°MemberExpressionÍÍJªIdentifierÍÍ
+£RowJªIdentifierÍÍ¦heightÂÂ‘P§LiteralÍÍÌx£120ÂQ³ExpressionStatementÍ=ÍhR®CallExpressionÍ=ÍgW°MemberExpressionÍ=ÍOJªIdentifierÍ=Í@£RowJªIdentifierÍAÍO®justifyContentÂÂ‘W°MemberExpressionÍPÍfJªIdentifierÍPÍY©FlexAlignJªIdentifierÍZÍf¬SpaceBetweenÂÂÂJªIdentifierÍuÍx£RowÂQ³ExpressionStatementÍ„ÍtR®CallExpressionÍ„ÍsW°MemberExpressionÍ„Í¢S®ThisExpressionÍ„ÍˆJªIdentifierÍ‰Í¢¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ£ÍjÀÂÂÂ’JªIdentifierÍ¤Íª¦elmtIdJªIdentifierÍ¬Í»¯isInitialRenderK®BlockStatementÍÀÍj–Q³ExpressionStatementÍëÍûR®CallExpressionÍëÍúW°MemberExpressionÍëÍøJªIdentifierÍëÍñ¦ColumnJªIdentifierÍòÍø¦createÂÂÂQ³ExpressionStatementÍ	ÍWR®CallExpressionÍ	ÍVW°MemberExpressionÍ	ÍJªIdentifierÍ	Í¦ColumnJªIdentifierÍÍ©debugLineÂÂ’P§LiteralÍÍLÙ0entry/src/main/ets/pages/PracticePage.ets(25:13)Ù2"entry/src/main/ets/pages/PracticePage.ets(25:13)"P§LiteralÍNÍU¥entry§"entry"ÂQ³ExpressionStatementÍÍ•R®CallExpressionÍÍ”W°MemberExpressionÍÍJªIdentifierÍÍ‡¦ColumnJªIdentifierÍˆÍ¥widthÂÂ‘P§LiteralÍÍ“£48%¥'48%'ÂQ³ExpressionStatementÍ¿ÍÒR®CallExpressionÍ¿ÍÑW°MemberExpressionÍ¿ÍÌJªIdentifierÍ¿ÍÅ¦ColumnJªIdentifierÍÆÍÌ¦heightÂÂ‘P§LiteralÍÍÍĞÌd£100ÂQ³ExpressionStatementÍüÍR®CallExpressionÍüÍW°MemberExpressionÍüÍJªIdentifierÍüÍ¦ColumnJªIdentifierÍÍ¯backgroundColorÂÂ‘P§LiteralÍÍ§#FFFFFF©'#FFFFFF'ÂQ³ExpressionStatementÍHÍ_R®CallExpressionÍHÍ^W°MemberExpressionÍHÍ[JªIdentifierÍHÍN¦ColumnJªIdentifierÍOÍ[¬borderRadiusÂÂ‘P§LiteralÍ\Í]¡8ÂJªIdentifierÍlÍr¦ColumnÂQ³ExpressionStatementÍ~Í·R®CallExpressionÍ~Í¶W°MemberExpressionÍ~ÍœS®ThisExpressionÍ~Í‚JªIdentifierÍƒÍœ¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍÍ°ÀÂÂÂ’JªIdentifierÍÍ¤¦elmtIdJªIdentifierÍ¦Íµ¯isInitialRenderK®BlockStatementÍºÍ°•Q³ExpressionStatementÍÉÍÖR®CallExpressionÍÉÍÕW°MemberExpressionÍÉÍÓJªIdentifierÍÉÍÌ£RowJªIdentifierÍÍÍÓ¦createÂÂÂQ³ExpressionStatementÍäÍ/R®CallExpressionÍäÍ.W°MemberExpressionÍäÍñJªIdentifierÍäÍç£RowJªIdentifierÍèÍñ©debugLineÂÂ’P§LiteralÍòÍ$Ù0entry/src/main/ets/pages/PracticePage.ets(26:15)Ù2"entry/src/main/ets/pages/PracticePage.ets(26:15)"P§LiteralÍ&Í-¥entry§"entry"ÂQ³ExpressionStatementÍ=ÍOR®CallExpressionÍ=ÍNW°MemberExpressionÍ=ÍFJªIdentifierÍ=Í@£RowJªIdentifierÍAÍF¥widthÂÂ‘P§LiteralÍGÍM¤100%¦'100%'ÂQ³ExpressionStatementÍ]ÍlR®CallExpressionÍ]ÍkW°MemberExpressionÍ]ÍgJªIdentifierÍ]Í`£RowJªIdentifierÍaÍg¦heightÂÂ‘P§LiteralÍhÍj¢30ÂQ³ExpressionStatementÍzÍ¥R®CallExpressionÍzÍ¤W°MemberExpressionÍzÍŒJªIdentifierÍzÍ}£RowJªIdentifierÍ~ÍŒ®justifyContentÂÂ‘W°MemberExpressionÍÍ£JªIdentifierÍÍ–©FlexAlignJªIdentifierÍ—Í£¬SpaceBetweenÂÂÂJªIdentifierÍ²Íµ£RowÂQ³ExpressionStatementÍÁÍ"R®CallExpressionÍÁÍ!W°MemberExpressionÍÁÍßS®ThisExpressionÍÁÍÅJªIdentifierÍÆÍß¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍàÍÀÂÂÂ’JªIdentifierÍáÍç¦elmtIdJªIdentifierÍéÍø¯isInitialRenderK®BlockStatementÍıÍ–Q³ExpressionStatementÍÍ"R®CallExpressionÍÍ!W°MemberExpressionÍÍJªIdentifierÍÍ¤TextJªIdentifierÍÍ¦createÂÂ‘P§LiteralÍÍ ²ä»Šæ—¥è®­ç»ƒæ—¶é•¿´'ä»Šæ—¥è®­ç»ƒæ—¶é•¿'ÂQ³ExpressionStatementÍ0Í|R®CallExpressionÍ0Í{W°MemberExpressionÍ0Í>JªIdentifierÍ0Í4¤TextJªIdentifierÍ5Í>©debugLineÂÂ’P§LiteralÍ?ÍqÙ0entry/src/main/ets/pages/PracticePage.ets(27:17)Ù2"entry/src/main/ets/pages/PracticePage.ets(27:17)"P§LiteralÍsÍz¥entry§"entry"ÂQ³ExpressionStatementÍŠÍœR®CallExpressionÍŠÍ›W°MemberExpressionÍŠÍ—JªIdentifierÍŠÍ¤TextJªIdentifierÍÍ—¨fontSizeÂÂ‘P§LiteralÍ˜Íš¢20ÂQ³ExpressionStatementÍªÍ¿R®CallExpressionÍªÍ¾W°MemberExpressionÍªÍ¹JªIdentifierÍªÍ®¤TextJªIdentifierÍ¯Í¹ªfontWeightÂÂ‘P§LiteralÍºÍ½Í£400ÂQ³ExpressionStatementÍÍÍçR®CallExpressionÍÍÍæW°MemberExpressionÍÍÍÛJªIdentifierÍÍÍÑ¤TextJªIdentifierÍÒÍÛ©fontColorÂÂ‘P§LiteralÍÜÍå§#333333©'#333333'ÂQ³ExpressionStatementÍõÍR®CallExpressionÍõÍW°MemberExpressionÍõÍ JªIdentifierÍõÍù¤TextJªIdentifierÍúÍ ¦marginÂÂ‘X°ObjectExpressionÍÍ‘Y¨PropertyÍÍÂÂÂJªIdentifierÍÍ¤leftP§LiteralÍ	Í
+¢10¤initÂJªIdentifierÍÍ ¤TextÂQ³ExpressionStatementÍ,Í7R®CallExpressionÍ,Í6W°MemberExpressionÍ,Í4JªIdentifierÍ,Í0¤TextJªIdentifierÍ1Í4£popÂÂÂQ³ExpressionStatementÍAÍ[R®CallExpressionÍAÍZW°MemberExpressionÍAÍ_S®ThisExpressionÍAÍEJªIdentifierÍFÍ_¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ`ÍSÀÂÂÂ’JªIdentifierÍaÍg¦elmtIdJªIdentifierÍiÍx¯isInitialRenderK®BlockStatementÍ}ÍS”Q³ExpressionStatementÍŒÍR®CallExpressionÍŒÍœW°MemberExpressionÍŒÍ—JªIdentifierÍŒÍ¤TextJªIdentifierÍ‘Í—¦createÂÂ‘P§LiteralÍ˜Í›¡>£'>'ÂQ³ExpressionStatementÍ«Í÷R®CallExpressionÍ«ÍöW°MemberExpressionÍ«Í¹JªIdentifierÍ«Í¯¤TextJªIdentifierÍ°Í¹©debugLineÂÂ’P§LiteralÍºÍìÙ0entry/src/main/ets/pages/PracticePage.ets(32:17)Ù2"entry/src/main/ets/pages/PracticePage.ets(32:17)"P§LiteralÍîÍõ¥entry§"entry"ÂQ³ExpressionStatementÍÍR®CallExpressionÍÍW°MemberExpressionÍÍJªIdentifierÍÍ	¤TextJªIdentifierÍ
+Í©fontColorÂÂ‘P§LiteralÍÍ§#333333©'#333333'ÂQ³ExpressionStatementÍ-ÍHR®CallExpressionÍ-ÍGW°MemberExpressionÍ-Í8JªIdentifierÍ-Í1¤TextJªIdentifierÍ2Í8¦marginÂÂ‘X°ObjectExpressionÍ9ÍF‘Y¨PropertyÍ;ÍDÂÂÂJªIdentifierÍ;Í@¥rightP§LiteralÍBÍD
+¢10¤initÂJªIdentifierÍUÍY¤TextÂQ³ExpressionStatementÍeÍpR®CallExpressionÍeÍoW°MemberExpressionÍeÍmJªIdentifierÍeÍi¤TextJªIdentifierÍjÍm£popÂÂÂQ³ExpressionStatementÍzÍ„R®CallExpressionÍzÍƒW°MemberExpressionÍzÍJªIdentifierÍzÍ}£RowJªIdentifierÍ~Í£popÂÂÂQ³ExpressionStatementÍÍ´R®CallExpressionÍÍ³W°MemberExpressionÍÍ¬S®ThisExpressionÍÍ’JªIdentifierÍ“Í¬¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ­Í­ÀÂÂÂ’JªIdentifierÍ®Í´¦elmtIdJªIdentifierÍ¶ÍÅ¯isInitialRenderK®BlockStatementÍÊÍ­”Q³ExpressionStatementÍÙÍæR®CallExpressionÍÙÍåW°MemberExpressionÍÙÍãJªIdentifierÍÙÍÜ£RowJªIdentifierÍİÍã¦createÂÂÂQ³ExpressionStatementÍôÍ?R®CallExpressionÍôÍ>W°MemberExpressionÍôÍJªIdentifierÍôÍ÷£RowJªIdentifierÍøÍ©debugLineÂÂ’P§LiteralÍÍ4Ù0entry/src/main/ets/pages/PracticePage.ets(40:15)Ù2"entry/src/main/ets/pages/PracticePage.ets(40:15)"P§LiteralÍ6Í=¥entry§"entry"ÂQ³ExpressionStatementÍMÍrR®CallExpressionÍMÍqW°MemberExpressionÍMÍ[JªIdentifierÍMÍP£RowJªIdentifierÍQÍ[ªalignItemsÂÂ‘W°MemberExpressionÍ\ÍpJªIdentifierÍ\Íi­VerticalAlignJªIdentifierÍjÍp¦BottomÂÂÂQ³ExpressionStatementÍ€Í¢R®CallExpressionÍ€Í¡W°MemberExpressionÍ€Í’JªIdentifierÍ€Íƒ£RowJªIdentifierÍ„Í’®justifyContentÂÂ‘W°MemberExpressionÍ“Í JªIdentifierÍ“Íœ©FlexAlignJªIdentifierÍÍ £EndÂÂÂJªIdentifierÍ¯Í²£RowÂQ³ExpressionStatementÍ¾ÍóR®CallExpressionÍ¾ÍòW°MemberExpressionÍ¾ÍÜS®ThisExpressionÍ¾ÍÂJªIdentifierÍÃÍÜ¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍİÍëÀÂÂÂ’JªIdentifierÍŞÍä¦elmtIdJªIdentifierÍæÍõ¯isInitialRenderK®BlockStatementÍúÍë•Q³ExpressionStatementÍ	ÍR®CallExpressionÍ	ÍW°MemberExpressionÍ	ÍJªIdentifierÍ	Í¤TextJªIdentifierÍÍ¦createÂÂ‘P§LiteralÍÍ¢12¤'12'ÂQ³ExpressionStatementÍ)ÍuR®CallExpressionÍ)ÍtW°MemberExpressionÍ)Í7JªIdentifierÍ)Í-¤TextJªIdentifierÍ.Í7©debugLineÂÂ’P§LiteralÍ8ÍjÙ0entry/src/main/ets/pages/PracticePage.ets(41:17)Ù2"entry/src/main/ets/pages/PracticePage.ets(41:17)"P§LiteralÍlÍs¥entry§"entry"ÂQ³ExpressionStatementÍƒÍ•R®CallExpressionÍƒÍ”W°MemberExpressionÍƒÍJªIdentifierÍƒÍ‡¤TextJªIdentifierÍˆÍ¨fontSizeÂÂ‘P§LiteralÍ‘Í“#¢35ÂQ³ExpressionStatementÍ£Í¸R®CallExpressionÍ£Í·W°MemberExpressionÍ£Í²JªIdentifierÍ£Í§¤TextJªIdentifierÍ¨Í²ªfontWeightÂÂ‘P§LiteralÍ³Í¶ÍX£600ÂQ³ExpressionStatementÍÆÍàR®CallExpressionÍÆÍßW°MemberExpressionÍÆÍÔJªIdentifierÍÆÍÊ¤TextJªIdentifierÍËÍÔ©fontColorÂÂ‘P§LiteralÍÕÍŞ§#6C55E4©'#6C55E4'ÂJªIdentifierÍíÍñ¤TextÂQ³ExpressionStatementÍıÍR®CallExpressionÍıÍW°MemberExpressionÍıÍJªIdentifierÍıÍ¤TextJªIdentifierÍÍ£popÂÂÂQ³ExpressionStatementÍÍ$R®CallExpressionÍÍ#W°MemberExpressionÍÍ0S®ThisExpressionÍÍJªIdentifierÍÍ0¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ1ÍÀÂÂÂ’JªIdentifierÍ2Í8¦elmtIdJªIdentifierÍ:ÍI¯isInitialRenderK®BlockStatementÍNÍ”Q³ExpressionStatementÍ]ÍoR®CallExpressionÍ]ÍnW°MemberExpressionÍ]ÍhJªIdentifierÍ]Ía¤TextJªIdentifierÍbÍh¦createÂÂ‘P§LiteralÍiÍm¦åˆ†é’Ÿ¨'åˆ†é’Ÿ'ÂQ³ExpressionStatementÍ}ÍÉR®CallExpressionÍ}ÍÈW°MemberExpressionÍ}Í‹JªIdentifierÍ}Í¤TextJªIdentifierÍ‚Í‹©debugLineÂÂ’P§LiteralÍŒÍ¾Ù0entry/src/main/ets/pages/PracticePage.ets(45:17)Ù2"entry/src/main/ets/pages/PracticePage.ets(45:17)"P§LiteralÍÀÍÇ¥entry§"entry"ÂQ³ExpressionStatementÍ×ÍéR®CallExpressionÍ×ÍèW°MemberExpressionÍ×ÍäJªIdentifierÍ×ÍÛ¤TextJªIdentifierÍÜÍä¨fontSizeÂÂ‘P§LiteralÍåÍç¢20ÂQ³ExpressionStatementÍ÷ÍR®CallExpressionÍ÷ÍW°MemberExpressionÍ÷ÍJªIdentifierÍ÷Íû¤TextJªIdentifierÍüÍ©fontColorÂÂ‘P§LiteralÍÍ§#999999©'#999999'ÂJªIdentifierÍÍ"¤TextÂQ³ExpressionStatementÍ.Í9R®CallExpressionÍ.Í8W°MemberExpressionÍ.Í6JªIdentifierÍ.Í2¤TextJªIdentifierÍ3Í6£popÂÂÂQ³ExpressionStatementÍCÍMR®CallExpressionÍCÍLW°MemberExpressionÍCÍJJªIdentifierÍCÍF£RowJªIdentifierÍGÍJ£popÂÂÂQ³ExpressionStatementÍoÍ|R®CallExpressionÍoÍ{W°MemberExpressionÍoÍyJªIdentifierÍoÍu¦ColumnJªIdentifierÍvÍy£popÂÂÂQ³ExpressionStatementÍ†ÍµR®CallExpressionÍ†Í´W°MemberExpressionÍ†Í¤S®ThisExpressionÍ†ÍŠJªIdentifierÍ‹Í¤¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ¥Í«ÀÂÂÂ’JªIdentifierÍ¦Í¬¦elmtIdJªIdentifierÍ®Í½¯isInitialRenderK®BlockStatementÍÂÍ«–Q³ExpressionStatementÍ`ÍpR®CallExpressionÍ`ÍoW°MemberExpressionÍ`ÍmJªIdentifierÍ`Íf¦ColumnJªIdentifierÍgÍm¦createÂÂÂQ³ExpressionStatementÍ~ÍÌR®CallExpressionÍ~ÍËW°MemberExpressionÍ~ÍJªIdentifierÍ~Í„¦ColumnJªIdentifierÍ…Í©debugLineÂÂ’P§LiteralÍÍÁÙ0entry/src/main/ets/pages/PracticePage.ets(63:13)Ù2"entry/src/main/ets/pages/PracticePage.ets(63:13)"P§LiteralÍÃÍÊ¥entry§"entry"ÂQ³ExpressionStatementÍiÍ}R®CallExpressionÍiÍ|W°MemberExpressionÍiÍuJªIdentifierÍiÍo¦ColumnJªIdentifierÍpÍu¥widthÂÂ‘P§LiteralÍvÍ{£48%¥'48%'ÂQ³ExpressionStatementÍÍ-R®CallExpressionÍÍ,W°MemberExpressionÍÍ'JªIdentifierÍÍ ¦ColumnJªIdentifierÍ!Í'¦heightÂÂ‘P§LiteralÍ(Í+Ìd£100ÂQ³ExpressionStatementÍÊÍìR®CallExpressionÍÊÍëW°MemberExpressionÍÊÍàJªIdentifierÍÊÍĞ¦ColumnJªIdentifierÍÑÍà¯backgroundColorÂÂ‘P§LiteralÍáÍê§#FFFFFF©'#FFFFFF'ÂQ³ExpressionStatementÍ‰Í R®CallExpressionÍ‰ÍŸW°MemberExpressionÍ‰ÍœJªIdentifierÍ‰Í¦ColumnJªIdentifierÍÍœ¬borderRadiusÂÂ‘P§LiteralÍÍ¡8ÂJªIdentifierÍ­Í³¦ColumnÂQ³ExpressionStatementÍ¿ÍøR®CallExpressionÍ¿Í÷W°MemberExpressionÍ¿ÍİS®ThisExpressionÍ¿ÍÃJªIdentifierÍÄÍİ¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍŞÍñÀÂÂÂ’JªIdentifierÍßÍå¦elmtIdJªIdentifierÍçÍö¯isInitialRenderK®BlockStatementÍûÍñ•Q³ExpressionStatementÍ
+ÍR®CallExpressionÍ
+ÍW°MemberExpressionÍ
+ÍJªIdentifierÍ
+Í£RowJªIdentifierÍÍ¦createÂÂÂQ³ExpressionStatementÍ%ÍpR®CallExpressionÍ%ÍoW°MemberExpressionÍ%Í2JªIdentifierÍ%Í(£RowJªIdentifierÍ)Í2©debugLineÂÂ’P§LiteralÍ3ÍeÙ0entry/src/main/ets/pages/PracticePage.ets(64:15)Ù2"entry/src/main/ets/pages/PracticePage.ets(64:15)"P§LiteralÍgÍn¥entry§"entry"ÂQ³ExpressionStatementÍ~ÍR®CallExpressionÍ~ÍW°MemberExpressionÍ~Í‡JªIdentifierÍ~Í£RowJªIdentifierÍ‚Í‡¥widthÂÂ‘P§LiteralÍˆÍ¤100%¦'100%'ÂQ³ExpressionStatementÍÍ­R®CallExpressionÍÍ¬W°MemberExpressionÍÍ¨JªIdentifierÍÍ¡£RowJªIdentifierÍ¢Í¨¦heightÂÂ‘P§LiteralÍ©Í«¢30ÂQ³ExpressionStatementÍ»ÍæR®CallExpressionÍ»ÍåW°MemberExpressionÍ»ÍÍJªIdentifierÍ»Í¾£RowJªIdentifierÍ¿ÍÍ®justifyContentÂÂ‘W°MemberExpressionÍÎÍäJªIdentifierÍÎÍ×©FlexAlignJªIdentifierÍØÍä¬SpaceBetweenÂÂÂJªIdentifierÍóÍö£RowÂQ³ExpressionStatementÍÍbR®CallExpressionÍÍaW°MemberExpressionÍÍ S®ThisExpressionÍÍJªIdentifierÍÍ ¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ!ÍZÀÂÂÂ’JªIdentifierÍ"Í(¦elmtIdJªIdentifierÍ*Í9¯isInitialRenderK®BlockStatementÍ>ÍZ–Q³ExpressionStatementÍMÍbR®CallExpressionÍMÍaW°MemberExpressionÍMÍXJªIdentifierÍMÍQ¤TextJªIdentifierÍRÍX¦createÂÂ‘P§LiteralÍYÍ`¯ç‡ƒçƒ§å¡è·¯é‡Œ±'ç‡ƒçƒ§å¡è·¯é‡Œ'ÂQ³ExpressionStatementÍpÍ¼R®CallExpressionÍpÍ»W°MemberExpressionÍpÍ~JªIdentifierÍpÍt¤TextJªIdentifierÍuÍ~©debugLineÂÂ’P§LiteralÍÍ±Ù0entry/src/main/ets/pages/PracticePage.ets(65:17)Ù2"entry/src/main/ets/pages/PracticePage.ets(65:17)"P§LiteralÍ³Íº¥entry§"entry"ÂQ³ExpressionStatementÍÊÍÜR®CallExpressionÍÊÍÛW°MemberExpressionÍÊÍ×JªIdentifierÍÊÍÎ¤TextJªIdentifierÍÏÍ×¨fontSizeÂÂ‘P§LiteralÍØÍÚ¢20ÂQ³ExpressionStatementÍêÍÿR®CallExpressionÍêÍşW°MemberExpressionÍêÍùJªIdentifierÍêÍî¤TextJªIdentifierÍïÍùªfontWeightÂÂ‘P§LiteralÍúÍıÍ£400ÂQ³ExpressionStatementÍÍ'R®CallExpressionÍÍ&W°MemberExpressionÍÍJªIdentifierÍÍ¤TextJªIdentifierÍÍ©fontColorÂÂ‘P§LiteralÍÍ%§#333333©'#333333'ÂQ³ExpressionStatementÍ5ÍOR®CallExpressionÍ5ÍNW°MemberExpressionÍ5Í@JªIdentifierÍ5Í9¤TextJªIdentifierÍ:Í@¦marginÂÂ‘X°ObjectExpressionÍAÍM‘Y¨PropertyÍCÍKÂÂÂJªIdentifierÍCÍG¤leftP§LiteralÍIÍK
+¢10¤initÂJªIdentifierÍ\Í`¤TextÂQ³ExpressionStatementÍlÍwR®CallExpressionÍlÍvW°MemberExpressionÍlÍtJªIdentifierÍlÍp¤TextJªIdentifierÍqÍt£popÂÂÂQ³ExpressionStatementÍÍ›R®CallExpressionÍÍšW°MemberExpressionÍÍŸS®ThisExpressionÍÍ…JªIdentifierÍ†ÍŸ¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ Í“ÀÂÂÂ’JªIdentifierÍ¡Í§¦elmtIdJªIdentifierÍ©Í¸¯isInitialRenderK®BlockStatementÍ½Í“”Q³ExpressionStatementÍÌÍİR®CallExpressionÍÌÍÜW°MemberExpressionÍÌÍ×JªIdentifierÍÌÍĞ¤TextJªIdentifierÍÑÍ×¦createÂÂ‘P§LiteralÍØÍÛ¡>£'>'ÂQ³ExpressionStatementÍëÍ7R®CallExpressionÍëÍ6W°MemberExpressionÍëÍùJªIdentifierÍëÍï¤TextJªIdentifierÍğÍù©debugLineÂÂ’P§LiteralÍúÍ,Ù0entry/src/main/ets/pages/PracticePage.ets(70:17)Ù2"entry/src/main/ets/pages/PracticePage.ets(70:17)"P§LiteralÍ.Í5¥entry§"entry"ÂQ³ExpressionStatementÍEÍ_R®CallExpressionÍEÍ^W°MemberExpressionÍEÍSJªIdentifierÍEÍI¤TextJªIdentifierÍJÍS©fontColorÂÂ‘P§LiteralÍTÍ]§#333333©'#333333'ÂQ³ExpressionStatementÍmÍˆR®CallExpressionÍmÍ‡W°MemberExpressionÍmÍxJªIdentifierÍmÍq¤TextJªIdentifierÍrÍx¦marginÂÂ‘X°ObjectExpressionÍyÍ†‘Y¨PropertyÍ{Í„ÂÂÂJªIdentifierÍ{Í€¥rightP§LiteralÍ‚Í„
+¢10¤initÂJªIdentifierÍ•Í™¤TextÂQ³ExpressionStatementÍ¥Í°R®CallExpressionÍ¥Í¯W°MemberExpressionÍ¥Í­JªIdentifierÍ¥Í©¤TextJªIdentifierÍªÍ­£popÂÂÂQ³ExpressionStatementÍºÍÄR®CallExpressionÍºÍÃW°MemberExpressionÍºÍÁJªIdentifierÍºÍ½£RowJªIdentifierÍ¾ÍÁ£popÂÂÂQ³ExpressionStatementÍÎÍ ôR®CallExpressionÍÎÍ óW°MemberExpressionÍÎÍìS®ThisExpressionÍÎÍÒJªIdentifierÍÓÍì¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍíÍ íÀÂÂÂ’JªIdentifierÍîÍô¦elmtIdJªIdentifierÍöÍ ¯isInitialRenderK®BlockStatementÍ 
+Í í”Q³ExpressionStatementÍ Í &R®CallExpressionÍ Í %W°MemberExpressionÍ Í #JªIdentifierÍ Í £RowJªIdentifierÍ Í #¦createÂÂÂQ³ExpressionStatementÍ 4Í R®CallExpressionÍ 4Í ~W°MemberExpressionÍ 4Í AJªIdentifierÍ 4Í 7£RowJªIdentifierÍ 8Í A©debugLineÂÂ’P§LiteralÍ BÍ tÙ0entry/src/main/ets/pages/PracticePage.ets(79:15)Ù2"entry/src/main/ets/pages/PracticePage.ets(79:15)"P§LiteralÍ vÍ }¥entry§"entry"ÂQ³ExpressionStatementÍ Í ²R®CallExpressionÍ Í ±W°MemberExpressionÍ Í ›JªIdentifierÍ Í £RowJªIdentifierÍ ‘Í ›ªalignItemsÂÂ‘W°MemberExpressionÍ œÍ °JªIdentifierÍ œÍ ©­VerticalAlignJªIdentifierÍ ªÍ °¦BottomÂÂÂQ³ExpressionStatementÍ ÀÍ âR®CallExpressionÍ ÀÍ áW°MemberExpressionÍ ÀÍ ÒJªIdentifierÍ ÀÍ Ã£RowJªIdentifierÍ ÄÍ Ò®justifyContentÂÂ‘W°MemberExpressionÍ ÓÍ àJªIdentifierÍ ÓÍ Ü©FlexAlignJªIdentifierÍ İÍ à£EndÂÂÂJªIdentifierÍ ïÍ ò£RowÂQ³ExpressionStatementÍ şÍ"4R®CallExpressionÍ şÍ"3W°MemberExpressionÍ şÍ!S®ThisExpressionÍ şÍ!JªIdentifierÍ!Í!¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ!Í",ÀÂÂÂ’JªIdentifierÍ!Í!$¦elmtIdJªIdentifierÍ!&Í!5¯isInitialRenderK®BlockStatementÍ!:Í",•Q³ExpressionStatementÍ!IÍ!\R®CallExpressionÍ!IÍ![W°MemberExpressionÍ!IÍ!TJªIdentifierÍ!IÍ!M¤TextJªIdentifierÍ!NÍ!T¦createÂÂ‘P§LiteralÍ!UÍ!Z£190¥'190'ÂQ³ExpressionStatementÍ!jÍ!¶R®CallExpressionÍ!jÍ!µW°MemberExpressionÍ!jÍ!xJªIdentifierÍ!jÍ!n¤TextJªIdentifierÍ!oÍ!x©debugLineÂÂ’P§LiteralÍ!yÍ!«Ù0entry/src/main/ets/pages/PracticePage.ets(80:17)Ù2"entry/src/main/ets/pages/PracticePage.ets(80:17)"P§LiteralÍ!­Í!´¥entry§"entry"ÂQ³ExpressionStatementÍ!ÄÍ!ÖR®CallExpressionÍ!ÄÍ!ÕW°MemberExpressionÍ!ÄÍ!ÑJªIdentifierÍ!ÄÍ!È¤TextJªIdentifierÍ!ÉÍ!Ñ¨fontSizeÂÂ‘P§LiteralÍ!ÒÍ!Ô#¢35ÂQ³ExpressionStatementÍ!äÍ!ùR®CallExpressionÍ!äÍ!øW°MemberExpressionÍ!äÍ!óJªIdentifierÍ!äÍ!è¤TextJªIdentifierÍ!éÍ!óªfontWeightÂÂ‘P§LiteralÍ!ôÍ!÷ÍX£600ÂQ³ExpressionStatementÍ"Í"!R®CallExpressionÍ"Í" W°MemberExpressionÍ"Í"JªIdentifierÍ"Í"¤TextJªIdentifierÍ"Í"©fontColorÂÂ‘P§LiteralÍ"Í"§#6C55E4©'#6C55E4'ÂJªIdentifierÍ".Í"2¤TextÂQ³ExpressionStatementÍ">Í"IR®CallExpressionÍ">Í"HW°MemberExpressionÍ">Í"FJªIdentifierÍ">Í"B¤TextJªIdentifierÍ"CÍ"F£popÂÂÂQ³ExpressionStatementÍ"SÍ#eR®CallExpressionÍ"SÍ#dW°MemberExpressionÍ"SÍ"qS®ThisExpressionÍ"SÍ"WJªIdentifierÍ"XÍ"q¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ"rÍ#]ÀÂÂÂ’JªIdentifierÍ"sÍ"y¦elmtIdJªIdentifierÍ"{Í"Š¯isInitialRenderK®BlockStatementÍ"Í#]”Q³ExpressionStatementÍ"Í"°R®CallExpressionÍ"Í"¯W°MemberExpressionÍ"Í"©JªIdentifierÍ"Í"¢¤TextJªIdentifierÍ"£Í"©¦createÂÂ‘P§LiteralÍ"ªÍ"®¦åƒå¡¨'åƒå¡'ÂQ³ExpressionStatementÍ"¾Í#
+R®CallExpressionÍ"¾Í#	W°MemberExpressionÍ"¾Í"ÌJªIdentifierÍ"¾Í"Â¤TextJªIdentifierÍ"ÃÍ"Ì©debugLineÂÂ’P§LiteralÍ"ÍÍ"ÿÙ0entry/src/main/ets/pages/PracticePage.ets(84:17)Ù2"entry/src/main/ets/pages/PracticePage.ets(84:17)"P§LiteralÍ#Í#¥entry§"entry"ÂQ³ExpressionStatementÍ#Í#*R®CallExpressionÍ#Í#)W°MemberExpressionÍ#Í#%JªIdentifierÍ#Í#¤TextJªIdentifierÍ#Í#%¨fontSizeÂÂ‘P§LiteralÍ#&Í#(¢20ÂQ³ExpressionStatementÍ#8Í#RR®CallExpressionÍ#8Í#QW°MemberExpressionÍ#8Í#FJªIdentifierÍ#8Í#<¤TextJªIdentifierÍ#=Í#F©fontColorÂÂ‘P§LiteralÍ#GÍ#P§#999999©'#999999'ÂJªIdentifierÍ#_Í#c¤TextÂQ³ExpressionStatementÍ#oÍ#zR®CallExpressionÍ#oÍ#yW°MemberExpressionÍ#oÍ#wJªIdentifierÍ#oÍ#s¤TextJªIdentifierÍ#tÍ#w£popÂÂÂQ³ExpressionStatementÍ#„Í#R®CallExpressionÍ#„Í#W°MemberExpressionÍ#„Í#‹JªIdentifierÍ#„Í#‡£RowJªIdentifierÍ#ˆÍ#‹£popÂÂÂQ³ExpressionStatementÍ$Í$ R®CallExpressionÍ$Í$W°MemberExpressionÍ$Í$JªIdentifierÍ$Í$¦ColumnJªIdentifierÍ$Í$£popÂÂÂQ³ExpressionStatementÍ$>Í$HR®CallExpressionÍ$>Í$GW°MemberExpressionÍ$>Í$EJªIdentifierÍ$>Í$A£RowJªIdentifierÍ$BÍ$E£popÂÂÂQ³ExpressionStatementÍ$RÍ&fR®CallExpressionÍ$RÍ&eW°MemberExpressionÍ$RÍ$pS®ThisExpressionÍ$RÍ$VJªIdentifierÍ$WÍ$p¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ$qÍ&\ÀÂÂÂ’JªIdentifierÍ$rÍ$x¦elmtIdJªIdentifierÍ$zÍ$‰¯isInitialRenderK®BlockStatementÍ$Í&\—Q³ExpressionStatementÍ$±Í$ÁR®CallExpressionÍ$±Í$ÀW°MemberExpressionÍ$±Í$¾JªIdentifierÍ$±Í$·¦ColumnJªIdentifierÍ$¸Í$¾¦createÂÂÂQ³ExpressionStatementÍ$ÏÍ%R®CallExpressionÍ$ÏÍ%W°MemberExpressionÍ$ÏÍ$ßJªIdentifierÍ$ÏÍ$Õ¦ColumnJªIdentifierÍ$ÖÍ$ß©debugLineÂÂ’P§LiteralÍ$àÍ%Ù1entry/src/main/ets/pages/PracticePage.ets(107:11)Ù3"entry/src/main/ets/pages/PracticePage.ets(107:11)"P§LiteralÍ%Í%¥entry§"entry"ÂQ³ExpressionStatementÍ%@Í%bR®CallExpressionÍ%@Í%aW°MemberExpressionÍ%@Í%VJªIdentifierÍ%@Í%F¦ColumnJªIdentifierÍ%GÍ%V¯backgroundColorÂÂ‘P§LiteralÍ%WÍ%`§#FFFFFF©'#FFFFFF'ÂQ³ExpressionStatementÍ%„Í%¬R®CallExpressionÍ%„Í%«W°MemberExpressionÍ%„Í%’JªIdentifierÍ%„Í%Š¦ColumnJªIdentifierÍ%‹Í%’§paddingÂÂ‘X°ObjectExpressionÍ%“Í%ª’Y¨PropertyÍ%•Í%œÂÂÂJªIdentifierÍ%•Í%˜£topP§LiteralÍ%šÍ%œ¢30¤initY¨PropertyÍ%Í%¨ÂÂÂJªIdentifierÍ%Í%¤¦bottomP§LiteralÍ%¦Í%¨¢30¤initÂQ³ExpressionStatementÍ%ÎÍ%ãR®CallExpressionÍ%ÎÍ%âW°MemberExpressionÍ%ÎÍ%ÚJªIdentifierÍ%ÎÍ%Ô¦ColumnJªIdentifierÍ%ÕÍ%Ú¥widthÂÂ‘P§LiteralÍ%ÛÍ%á¤100%¦'100%'ÂQ³ExpressionStatementÍ&Í&R®CallExpressionÍ&Í&W°MemberExpressionÍ&Í&JªIdentifierÍ&Í&¦ColumnJªIdentifierÍ&Í&¦heightÂÂ‘P§LiteralÍ&Í&ÌÈ£200ÂQ³ExpressionStatementÍ&:Í&QR®CallExpressionÍ&:Í&PW°MemberExpressionÍ&:Í&MJªIdentifierÍ&:Í&@¦ColumnJªIdentifierÍ&AÍ&M¬borderRadiusÂÂ‘P§LiteralÍ&NÍ&O¡8ÂJªIdentifierÍ&^Í&d¦ColumnÂQ³ExpressionStatementÍ&pÍ'ÂR®CallExpressionÍ&pÍ'ÁW°MemberExpressionÍ&pÍ&S®ThisExpressionÍ&pÍ&tJªIdentifierÍ&uÍ&¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ&Í'»ÀÂÂÂ’JªIdentifierÍ&Í&–¦elmtIdJªIdentifierÍ&˜Í&§¯isInitialRenderK®BlockStatementÍ&¬Í'»”Q³ExpressionStatementÍ&ÏÍ&ÜR®CallExpressionÍ&ÏÍ&ÛW°MemberExpressionÍ&ÏÍ&ÙJªIdentifierÍ&ÏÍ&Ò£RowJªIdentifierÍ&ÓÍ&Ù¦createÂÂÂQ³ExpressionStatementÍ&êÍ'6R®CallExpressionÍ&êÍ'5W°MemberExpressionÍ&êÍ&÷JªIdentifierÍ&êÍ&í£RowJªIdentifierÍ&îÍ&÷©debugLineÂÂ’P§LiteralÍ&øÍ'+Ù1entry/src/main/ets/pages/PracticePage.ets(109:13)Ù3"entry/src/main/ets/pages/PracticePage.ets(109:13)"P§LiteralÍ'-Í'4¥entry§"entry"ÂQ³ExpressionStatementÍ'XÍ'jR®CallExpressionÍ'XÍ'iW°MemberExpressionÍ'XÍ'aJªIdentifierÍ'XÍ'[£RowJªIdentifierÍ'\Í'a¥widthÂÂ‘P§LiteralÍ'bÍ'h¤100%¦'100%'ÂQ³ExpressionStatementÍ'ŒÍ'°R®CallExpressionÍ'ŒÍ'¯W°MemberExpressionÍ'ŒÍ'JªIdentifierÍ'ŒÍ'£RowJªIdentifierÍ'Í'®justifyContentÂÂ‘W°MemberExpressionÍ'ŸÍ'®JªIdentifierÍ'ŸÍ'¨©FlexAlignJªIdentifierÍ'©Í'®¥StartÂÂÂJªIdentifierÍ'½Í'À£RowÂQ³ExpressionStatementÍ'ÌÍ),R®CallExpressionÍ'ÌÍ)+W°MemberExpressionÍ'ÌÍ'êS®ThisExpressionÍ'ÌÍ'ĞJªIdentifierÍ'ÑÍ'ê¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ'ëÍ)$ÀÂÂÂ’JªIdentifierÍ'ìÍ'ò¦elmtIdJªIdentifierÍ'ôÍ(¯isInitialRenderK®BlockStatementÍ(Í)$–Q³ExpressionStatementÍ(Í(+R®CallExpressionÍ(Í(*W°MemberExpressionÍ(Í("JªIdentifierÍ(Í(¤TextJªIdentifierÍ(Í("¦createÂÂ‘P§LiteralÍ(#Í()¬ä½“é‡è®°å½•®'ä½“é‡è®°å½•'ÂQ³ExpressionStatementÍ(9Í(†R®CallExpressionÍ(9Í(…W°MemberExpressionÍ(9Í(GJªIdentifierÍ(9Í(=¤TextJªIdentifierÍ(>Í(G©debugLineÂÂ’P§LiteralÍ(HÍ({Ù1entry/src/main/ets/pages/PracticePage.ets(110:15)Ù3"entry/src/main/ets/pages/PracticePage.ets(110:15)"P§LiteralÍ(}Í(„¥entry§"entry"ÂQ³ExpressionStatementÍ(”Í(¦R®CallExpressionÍ(”Í(¥W°MemberExpressionÍ(”Í(¡JªIdentifierÍ(”Í(˜¤TextJªIdentifierÍ(™Í(¡¨fontSizeÂÂ‘P§LiteralÍ(¢Í(¤¢24ÂQ³ExpressionStatementÍ(´Í(ÎR®CallExpressionÍ(´Í(ÍW°MemberExpressionÍ(´Í(ÂJªIdentifierÍ(´Í(¸¤TextJªIdentifierÍ(¹Í(Â©fontColorÂÂ‘P§LiteralÍ(ÃÍ(Ì§#333333©'#333333'ÂQ³ExpressionStatementÍ(ÜÍ(ñR®CallExpressionÍ(ÜÍ(ğW°MemberExpressionÍ(ÜÍ(ëJªIdentifierÍ(ÜÍ(à¤TextJªIdentifierÍ(áÍ(ëªfontWeightÂÂ‘P§LiteralÍ(ìÍ(ïÍô£500ÂQ³ExpressionStatementÍ(ÿÍ)R®CallExpressionÍ(ÿÍ)W°MemberExpressionÍ(ÿÍ)
+JªIdentifierÍ(ÿÍ)¤TextJªIdentifierÍ)Í)
+¦marginÂÂ‘X°ObjectExpressionÍ)Í)‘Y¨PropertyÍ)Í)ÂÂÂJªIdentifierÍ)Í)¤leftP§LiteralÍ)Í)¢15¤initÂJªIdentifierÍ)&Í)*¤TextÂQ³ExpressionStatementÍ)6Í)AR®CallExpressionÍ)6Í)@W°MemberExpressionÍ)6Í)>JªIdentifierÍ)6Í):¤TextJªIdentifierÍ);Í)>£popÂÂÂQ³ExpressionStatementÍ)[Í)eR®CallExpressionÍ)[Í)dW°MemberExpressionÍ)[Í)bJªIdentifierÍ)[Í)^£RowJªIdentifierÍ)_Í)b£popÂÂÂQ³ExpressionStatementÍ)oÍ+R®CallExpressionÍ)oÍ+W°MemberExpressionÍ)oÍ)S®ThisExpressionÍ)oÍ)sJªIdentifierÍ)tÍ)¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ)Í*üÀÂÂÂ’JªIdentifierÍ)Í)•¦elmtIdJªIdentifierÍ)—Í)¦¯isInitialRenderK®BlockStatementÍ)«Í*ü•Q³ExpressionStatementÍ)ĞÍ)İR®CallExpressionÍ)ĞÍ)ÜW°MemberExpressionÍ)ĞÍ)ÚJªIdentifierÍ)ĞÍ)Ó£RowJªIdentifierÍ)ÔÍ)Ú¦createÂÂÂQ³ExpressionStatementÍ)ëÍ*7R®CallExpressionÍ)ëÍ*6W°MemberExpressionÍ)ëÍ)øJªIdentifierÍ)ëÍ)î£RowJªIdentifierÍ)ïÍ)ø©debugLineÂÂ’P§LiteralÍ)ùÍ*,Ù1entry/src/main/ets/pages/PracticePage.ets(121:13)Ù3"entry/src/main/ets/pages/PracticePage.ets(121:13)"P§LiteralÍ*.Í*5¥entry§"entry"ÂQ³ExpressionStatementÍ*[Í*mR®CallExpressionÍ*[Í*lW°MemberExpressionÍ*[Í*dJªIdentifierÍ*[Í*^£RowJªIdentifierÍ*_Í*d¥widthÂÂ‘P§LiteralÍ*eÍ*k¤100%¦'100%'ÂQ³ExpressionStatementÍ*‘Í*µR®CallExpressionÍ*‘Í*´W°MemberExpressionÍ*‘Í*£JªIdentifierÍ*‘Í*”£RowJªIdentifierÍ*•Í*£®justifyContentÂÂ‘W°MemberExpressionÍ*¤Í*³JªIdentifierÍ*¤Í*­©FlexAlignJªIdentifierÍ*®Í*³¥StartÂÂÂQ³ExpressionStatementÍ*ÙÍ*ñR®CallExpressionÍ*ÙÍ*ğW°MemberExpressionÍ*ÙÍ*ãJªIdentifierÍ*ÙÍ*Ü£RowJªIdentifierÍ*İÍ*ã¦marginÂÂ‘X°ObjectExpressionÍ*äÍ*ï‘Y¨PropertyÍ*æÍ*íÂÂÂJªIdentifierÍ*æÍ*é£topP§LiteralÍ*ëÍ*í¢20¤initÂJªIdentifierÍ*şÍ+£RowÂQ³ExpressionStatementÍ+Í,oR®CallExpressionÍ+Í,nW°MemberExpressionÍ+Í++S®ThisExpressionÍ+Í+JªIdentifierÍ+Í++¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ+,Í,gÀÂÂÂ’JªIdentifierÍ+-Í+3¦elmtIdJªIdentifierÍ+5Í+D¯isInitialRenderK®BlockStatementÍ+IÍ,g–Q³ExpressionStatementÍ+XÍ+nR®CallExpressionÍ+XÍ+mW°MemberExpressionÍ+XÍ+cJªIdentifierÍ+XÍ+\¤TextJªIdentifierÍ+]Í+c¦createÂÂ‘P§LiteralÍ+dÍ+l¦55.5kg¨'55.5kg'ÂQ³ExpressionStatementÍ+|Í+ÉR®CallExpressionÍ+|Í+ÈW°MemberExpressionÍ+|Í+ŠJªIdentifierÍ+|Í+€¤TextJªIdentifierÍ+Í+Š©debugLineÂÂ’P§LiteralÍ+‹Í+¾Ù1entry/src/main/ets/pages/PracticePage.ets(122:15)Ù3"entry/src/main/ets/pages/PracticePage.ets(122:15)"P§LiteralÍ+ÀÍ+Ç¥entry§"entry"ÂQ³ExpressionStatementÍ+×Í+éR®CallExpressionÍ+×Í+èW°MemberExpressionÍ+×Í+äJªIdentifierÍ+×Í+Û¤TextJªIdentifierÍ+ÜÍ+ä¨fontSizeÂÂ‘P§LiteralÍ+åÍ+ç#¢35ÂQ³ExpressionStatementÍ+÷Í,R®CallExpressionÍ+÷Í,W°MemberExpressionÍ+÷Í,JªIdentifierÍ+÷Í+û¤TextJªIdentifierÍ+üÍ,©fontColorÂÂ‘P§LiteralÍ,Í,§#6C55E4©'#6C55E4'ÂQ³ExpressionStatementÍ,Í,4R®CallExpressionÍ,Í,3W°MemberExpressionÍ,Í,.JªIdentifierÍ,Í,#¤TextJªIdentifierÍ,$Í,.ªfontWeightÂÂ‘P§LiteralÍ,/Í,2Í¼£700ÂQ³ExpressionStatementÍ,BÍ,\R®CallExpressionÍ,BÍ,[W°MemberExpressionÍ,BÍ,MJªIdentifierÍ,BÍ,F¤TextJªIdentifierÍ,GÍ,M¦marginÂÂ‘X°ObjectExpressionÍ,NÍ,Z‘Y¨PropertyÍ,PÍ,XÂÂÂJªIdentifierÍ,PÍ,T¤leftP§LiteralÍ,VÍ,X¢15¤initÂJªIdentifierÍ,iÍ,m¤TextÂQ³ExpressionStatementÍ,yÍ,„R®CallExpressionÍ,yÍ,ƒW°MemberExpressionÍ,yÍ,JªIdentifierÍ,yÍ,}¤TextJªIdentifierÍ,~Í,£popÂÂÂQ³ExpressionStatementÍ,Í-ÍR®CallExpressionÍ,Í-ÌW°MemberExpressionÍ,Í,¬S®ThisExpressionÍ,Í,’JªIdentifierÍ,“Í,¬¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ,­Í-ÅÀÂÂÂ’JªIdentifierÍ,®Í,´¦elmtIdJªIdentifierÍ,¶Í,Å¯isInitialRenderK®BlockStatementÍ,ÊÍ-Å•Q³ExpressionStatementÍ,ÙÍ,ïR®CallExpressionÍ,ÙÍ,îW°MemberExpressionÍ,ÙÍ,äJªIdentifierÍ,ÙÍ,İ¤TextJªIdentifierÍ,ŞÍ,ä¦createÂÂ‘P§LiteralÍ,åÍ,íªå·²å‡12kg¬'å·²å‡12kg'ÂQ³ExpressionStatementÍ,ıÍ-JR®CallExpressionÍ,ıÍ-IW°MemberExpressionÍ,ıÍ-JªIdentifierÍ,ıÍ-¤TextJªIdentifierÍ-Í-©debugLineÂÂ’P§LiteralÍ-Í-?Ù1entry/src/main/ets/pages/PracticePage.ets(128:15)Ù3"entry/src/main/ets/pages/PracticePage.ets(128:15)"P§LiteralÍ-AÍ-H¥entry§"entry"ÂQ³ExpressionStatementÍ-XÍ-jR®CallExpressionÍ-XÍ-iW°MemberExpressionÍ-XÍ-eJªIdentifierÍ-XÍ-\¤TextJªIdentifierÍ-]Í-e¨fontSizeÂÂ‘P§LiteralÍ-fÍ-h¢16ÂQ³ExpressionStatementÍ-xÍ-’R®CallExpressionÍ-xÍ-‘W°MemberExpressionÍ-xÍ-†JªIdentifierÍ-xÍ-|¤TextJªIdentifierÍ-}Í-†©fontColorÂÂ‘P§LiteralÍ-‡Í-§#999999©'#999999'ÂQ³ExpressionStatementÍ- Í-ºR®CallExpressionÍ- Í-¹W°MemberExpressionÍ- Í-«JªIdentifierÍ- Í-¤¤TextJªIdentifierÍ-¥Í-«¦marginÂÂ‘X°ObjectExpressionÍ-¬Í-¸‘Y¨PropertyÍ-®Í-¶ÂÂÂJªIdentifierÍ-®Í-²¤leftP§LiteralÍ-´Í-¶
+¢10¤initÂJªIdentifierÍ-ÇÍ-Ë¤TextÂQ³ExpressionStatementÍ-×Í-âR®CallExpressionÍ-×Í-áW°MemberExpressionÍ-×Í-ßJªIdentifierÍ-×Í-Û¤TextJªIdentifierÍ-ÜÍ-ß£popÂÂÂQ³ExpressionStatementÍ-şÍ.R®CallExpressionÍ-şÍ.W°MemberExpressionÍ-şÍ.JªIdentifierÍ-şÍ.£RowJªIdentifierÍ.Í.£popÂÂÂQ³ExpressionStatementÍ.Í1#R®CallExpressionÍ.Í1"W°MemberExpressionÍ.Í.0S®ThisExpressionÍ.Í.JªIdentifierÍ.Í.0¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ.1Í1ÀÂÂÂ’JªIdentifierÍ.2Í.8¦elmtIdJªIdentifierÍ.:Í.I¯isInitialRenderK®BlockStatementÍ.NÍ1šQ³ExpressionStatementÍ.pÍ.R®CallExpressionÍ.pÍ.W°MemberExpressionÍ.pÍ.†JªIdentifierÍ.pÍ.v¦ButtonJªIdentifierÍ.wÍ.†¯createWithLabelÂÂ‘P§LiteralÍ.‡Í.¬è®°å½•ä½“é‡®'è®°å½•ä½“é‡'ÂQ³ExpressionStatementÍ.Í.ìR®CallExpressionÍ.Í.ëW°MemberExpressionÍ.Í.­JªIdentifierÍ.Í.£¦ButtonJªIdentifierÍ.¤Í.­©debugLineÂÂ’P§LiteralÍ.®Í.áÙ1entry/src/main/ets/pages/PracticePage.ets(138:13)Ù3"entry/src/main/ets/pages/PracticePage.ets(138:13)"P§LiteralÍ.ãÍ.ê¥entry§"entry"ÂQ³ExpressionStatementÍ/Í/!R®CallExpressionÍ/Í/ W°MemberExpressionÍ/Í/JªIdentifierÍ/Í/¦ButtonJªIdentifierÍ/Í/¥widthÂÂ‘P§LiteralÍ/Í/£40%¥'40%'ÂQ³ExpressionStatementÍ/BÍ/TR®CallExpressionÍ/BÍ/SW°MemberExpressionÍ/BÍ/OJªIdentifierÍ/BÍ/H¦ButtonJªIdentifierÍ/IÍ/O¦heightÂÂ‘P§LiteralÍ/PÍ/R0¢48ÂQ³ExpressionStatementÍ/uÍ/—R®CallExpressionÍ/uÍ/–W°MemberExpressionÍ/uÍ/‹JªIdentifierÍ/uÍ/{¦ButtonJªIdentifierÍ/|Í/‹¯backgroundColorÂÂ‘P§LiteralÍ/ŒÍ/•§#666EE8©'#666EE8'ÂQ³ExpressionStatementÍ/¸Í/ÔR®CallExpressionÍ/¸Í/ÓW°MemberExpressionÍ/¸Í/ÈJªIdentifierÍ/¸Í/¾¦ButtonJªIdentifierÍ/¿Í/È©fontColorÂÂ‘P§LiteralÍ/ÉÍ/Ò§#FFFFFF©'#FFFFFF'ÂQ³ExpressionStatementÍ/õÍ0	R®CallExpressionÍ/õÍ0W°MemberExpressionÍ/õÍ0JªIdentifierÍ/õÍ/û¦ButtonJªIdentifierÍ/üÍ0¨fontSizeÂÂ‘P§LiteralÍ0Í0¢18ÂQ³ExpressionStatementÍ0*Í0BR®CallExpressionÍ0*Í0AW°MemberExpressionÍ0*Í0=JªIdentifierÍ0*Í00¦ButtonJªIdentifierÍ01Í0=¬borderRadiusÂÂ‘P§LiteralÍ0>Í0@¢24ÂQ³ExpressionStatementÍ0cÍ0~R®CallExpressionÍ0cÍ0}W°MemberExpressionÍ0cÍ0pJªIdentifierÍ0cÍ0i¦ButtonJªIdentifierÍ0jÍ0p¦marginÂÂ‘X°ObjectExpressionÍ0qÍ0|‘Y¨PropertyÍ0sÍ0zÂÂÂJªIdentifierÍ0sÍ0v£topP§LiteralÍ0xÍ0z¢20¤initÂQ³ExpressionStatementÍ0ŸÍ1R®CallExpressionÍ0ŸÍ1W°MemberExpressionÍ0ŸÍ0­JªIdentifierÍ0ŸÍ0¥¦ButtonJªIdentifierÍ0¦Í0­§onClickÂÂ‘M·ArrowFunctionExpressionÍ0®Í1ÀÂÂÂK®BlockStatementÍ0´Í1‘Q³ExpressionStatementÍ0äÍ0ıR®CallExpressionÍ0äÍ0üW°MemberExpressionÍ0äÍ0ïJªIdentifierÍ0äÍ0ë§consoleJªIdentifierÍ0ìÍ0ï£logÂÂ‘P§LiteralÍ0ğÍ0û»ç‚¹å‡»äº†è®°å½•ä½“é‡æŒ‰é’®½'ç‚¹å‡»äº†è®°å½•ä½“é‡æŒ‰é’®'ÂÂJªIdentifierÍ1Í1!¦ButtonÂQ³ExpressionStatementÍ1<Í1IR®CallExpressionÍ1<Í1HW°MemberExpressionÍ1<Í1FJªIdentifierÍ1<Í1B¦ButtonJªIdentifierÍ1CÍ1F£popÂÂÂQ³ExpressionStatementÍ1cÍ1pR®CallExpressionÍ1cÍ1oW°MemberExpressionÍ1cÍ1mJªIdentifierÍ1cÍ1i¦ColumnJªIdentifierÍ1jÍ1m£popÂÂÂQ³ExpressionStatementÍ1zÍ3“R®CallExpressionÍ1zÍ3’W°MemberExpressionÍ1zÍ1˜S®ThisExpressionÍ1zÍ1~JªIdentifierÍ1Í1˜¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ1™Í3‰ÀÂÂÂ’JªIdentifierÍ1šÍ1 ¦elmtIdJªIdentifierÍ1¢Í1±¯isInitialRenderK®BlockStatementÍ1¶Í3‰—Q³ExpressionStatementÍ1ÜÍ1ìR®CallExpressionÍ1ÜÍ1ëW°MemberExpressionÍ1ÜÍ1éJªIdentifierÍ1ÜÍ1â¦ColumnJªIdentifierÍ1ãÍ1é¦createÂÂÂQ³ExpressionStatementÍ1úÍ2IR®CallExpressionÍ1úÍ2HW°MemberExpressionÍ1úÍ2
+JªIdentifierÍ1úÍ2 ¦ColumnJªIdentifierÍ2Í2
+©debugLineÂÂ’P§LiteralÍ2Í2>Ù1entry/src/main/ets/pages/PracticePage.ets(159:11)Ù3"entry/src/main/ets/pages/PracticePage.ets(159:11)"P§LiteralÍ2@Í2G¥entry§"entry"ÂQ³ExpressionStatementÍ2nÍ2ƒR®CallExpressionÍ2nÍ2‚W°MemberExpressionÍ2nÍ2zJªIdentifierÍ2nÍ2t¦ColumnJªIdentifierÍ2uÍ2z¥widthÂÂ‘P§LiteralÍ2{Í2¤100%¦'100%'ÂQ³ExpressionStatementÍ2¨Í2»R®CallExpressionÍ2¨Í2ºW°MemberExpressionÍ2¨Í2µJªIdentifierÍ2¨Í2®¦ColumnJªIdentifierÍ2¯Í2µ¦heightÂÂ‘P§LiteralÍ2¶Í2¹ÌÈ£200ÂQ³ExpressionStatementÍ2àÍ3R®CallExpressionÍ2àÍ3W°MemberExpressionÍ2àÍ2öJªIdentifierÍ2àÍ2æ¦ColumnJªIdentifierÍ2çÍ2ö¯backgroundColorÂÂ‘P§LiteralÍ2÷Í3 §#FFFFFF©'#FFFFFF'ÂQ³ExpressionStatementÍ3'Í3>R®CallExpressionÍ3'Í3=W°MemberExpressionÍ3'Í3:JªIdentifierÍ3'Í3-¦ColumnJªIdentifierÍ3.Í3:¬borderRadiusÂÂ‘P§LiteralÍ3;Í3<¡8ÂQ³ExpressionStatementÍ3cÍ3~R®CallExpressionÍ3cÍ3}W°MemberExpressionÍ3cÍ3pJªIdentifierÍ3cÍ3i¦ColumnJªIdentifierÍ3jÍ3p¦marginÂÂ‘X°ObjectExpressionÍ3qÍ3|‘Y¨PropertyÍ3sÍ3zÂÂÂJªIdentifierÍ3sÍ3v£topP§LiteralÍ3xÍ3z¢15¤initÂJªIdentifierÍ3‹Í3‘¦ColumnÂQ³ExpressionStatementÍ3Í50R®CallExpressionÍ3Í5/W°MemberExpressionÍ3Í3»S®ThisExpressionÍ3Í3¡JªIdentifierÍ3¢Í3»¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ3¼Í5)ÀÂÂÂ’JªIdentifierÍ3½Í3Ã¦elmtIdJªIdentifierÍ3ÅÍ3Ô¯isInitialRenderK®BlockStatementÍ3ÙÍ5)•Q³ExpressionStatementÍ3üÍ4	R®CallExpressionÍ3üÍ4W°MemberExpressionÍ3üÍ4JªIdentifierÍ3üÍ3ÿ£RowJªIdentifierÍ4 Í4¦createÂÂÂQ³ExpressionStatementÍ4Í4cR®CallExpressionÍ4Í4bW°MemberExpressionÍ4Í4$JªIdentifierÍ4Í4£RowJªIdentifierÍ4Í4$©debugLineÂÂ’P§LiteralÍ4%Í4XÙ1entry/src/main/ets/pages/PracticePage.ets(161:13)Ù3"entry/src/main/ets/pages/PracticePage.ets(161:13)"P§LiteralÍ4ZÍ4a¥entry§"entry"ÂQ³ExpressionStatementÍ4…Í4R®CallExpressionÍ4…Í4œW°MemberExpressionÍ4…Í4JªIdentifierÍ4…Í4ˆ£RowJªIdentifierÍ4‰Í4¦marginÂÂ‘X°ObjectExpressionÍ4Í4›‘Y¨PropertyÍ4’Í4™ÂÂÂJªIdentifierÍ4’Í4•£topP§LiteralÍ4—Í4™¢15¤initÂQ³ExpressionStatementÍ4¿Í4ÑR®CallExpressionÍ4¿Í4ĞW°MemberExpressionÍ4¿Í4ÈJªIdentifierÍ4¿Í4Â£RowJªIdentifierÍ4ÃÍ4È¥widthÂÂ‘P§LiteralÍ4ÉÍ4Ï¤100%¦'100%'ÂQ³ExpressionStatementÍ4óÍ5R®CallExpressionÍ4óÍ5W°MemberExpressionÍ4óÍ5JªIdentifierÍ4óÍ4ö£RowJªIdentifierÍ4÷Í5®justifyContentÂÂ‘W°MemberExpressionÍ5Í5JªIdentifierÍ5Í5©FlexAlignJªIdentifierÍ5Í5¬SpaceBetweenÂÂÂJªIdentifierÍ5+Í5.£RowÂQ³ExpressionStatementÍ5:Í6şR®CallExpressionÍ5:Í6ıW°MemberExpressionÍ5:Í5XS®ThisExpressionÍ5:Í5>JªIdentifierÍ5?Í5X¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ5YÍ6öÀÂÂÂ’JªIdentifierÍ5ZÍ5`¦elmtIdJªIdentifierÍ5bÍ5q¯isInitialRenderK®BlockStatementÍ5vÍ6ö–Q³ExpressionStatementÍ5™Í5­R®CallExpressionÍ5™Í5¬W°MemberExpressionÍ5™Í5¤JªIdentifierÍ5™Í5¤TextJªIdentifierÍ5Í5¤¦createÂÂ‘P§LiteralÍ5¥Í5«¬é”»ç‚¼æ—¶é•¿®'é”»ç‚¼æ—¶é•¿'ÂQ³ExpressionStatementÍ5»Í6R®CallExpressionÍ5»Í6W°MemberExpressionÍ5»Í5ÉJªIdentifierÍ5»Í5¿¤TextJªIdentifierÍ5ÀÍ5É©debugLineÂÂ’P§LiteralÍ5ÊÍ5ıÙ1entry/src/main/ets/pages/PracticePage.ets(163:15)Ù3"entry/src/main/ets/pages/PracticePage.ets(163:15)"P§LiteralÍ5ÿÍ6¥entry§"entry"ÂQ³ExpressionStatementÍ6*Í6<R®CallExpressionÍ6*Í6;W°MemberExpressionÍ6*Í67JªIdentifierÍ6*Í6.¤TextJªIdentifierÍ6/Í67¨fontSizeÂÂ‘P§LiteralÍ68Í6:¢24ÂQ³ExpressionStatementÍ6^Í6xR®CallExpressionÍ6^Í6wW°MemberExpressionÍ6^Í6lJªIdentifierÍ6^Í6b¤TextJªIdentifierÍ6cÍ6l©fontColorÂÂ‘P§LiteralÍ6mÍ6v§#333333©'#333333'ÂQ³ExpressionStatementÍ6šÍ6¯R®CallExpressionÍ6šÍ6®W°MemberExpressionÍ6šÍ6©JªIdentifierÍ6šÍ6¤TextJªIdentifierÍ6ŸÍ6©ªfontWeightÂÂ‘P§LiteralÍ6ªÍ6­Íô£500ÂQ³ExpressionStatementÍ6ÑÍ6ëR®CallExpressionÍ6ÑÍ6êW°MemberExpressionÍ6ÑÍ6ÜJªIdentifierÍ6ÑÍ6Õ¤TextJªIdentifierÍ6ÖÍ6Ü¦marginÂÂ‘X°ObjectExpressionÍ6İÍ6é‘Y¨PropertyÍ6ßÍ6çÂÂÂJªIdentifierÍ6ßÍ6ã¤leftP§LiteralÍ6åÍ6ç¢15¤initÂJªIdentifierÍ6øÍ6ü¤TextÂQ³ExpressionStatementÍ7Í7#R®CallExpressionÍ7Í7"W°MemberExpressionÍ7Í7 JªIdentifierÍ7Í7¤TextJªIdentifierÍ7Í7 £popÂÂÂQ³ExpressionStatementÍ7-Í8AR®CallExpressionÍ7-Í8@W°MemberExpressionÍ7-Í7KS®ThisExpressionÍ7-Í71JªIdentifierÍ72Í7K¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ7LÍ8:ÀÂÂÂ’JªIdentifierÍ7MÍ7S¦elmtIdJªIdentifierÍ7UÍ7d¯isInitialRenderK®BlockStatementÍ7iÍ8:“Q³ExpressionStatementÍ7ŒÍ7™R®CallExpressionÍ7ŒÍ7˜W°MemberExpressionÍ7ŒÍ7–JªIdentifierÍ7ŒÍ7£RowJªIdentifierÍ7Í7–¦createÂÂÂQ³ExpressionStatementÍ7§Í7óR®CallExpressionÍ7§Í7òW°MemberExpressionÍ7§Í7´JªIdentifierÍ7§Í7ª£RowJªIdentifierÍ7«Í7´©debugLineÂÂ’P§LiteralÍ7µÍ7èÙ1entry/src/main/ets/pages/PracticePage.ets(170:15)Ù3"entry/src/main/ets/pages/PracticePage.ets(170:15)"P§LiteralÍ7êÍ7ñ¥entry§"entry"ÂQ³ExpressionStatementÍ8Í8/R®CallExpressionÍ8Í8.W°MemberExpressionÍ8Í8JªIdentifierÍ8Í8£RowJªIdentifierÍ8Í8¦marginÂÂ‘X°ObjectExpressionÍ8 Í8-‘Y¨PropertyÍ8"Í8+ÂÂÂJªIdentifierÍ8"Í8'¥rightP§LiteralÍ8)Í8+¢15¤initÂJªIdentifierÍ8<Í8?£RowÂQ³ExpressionStatementÍ8KÍ9ªR®CallExpressionÍ8KÍ9©W°MemberExpressionÍ8KÍ8iS®ThisExpressionÍ8KÍ8OJªIdentifierÍ8PÍ8i¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ8jÍ9¢ÀÂÂÂ’JªIdentifierÍ8kÍ8q¦elmtIdJªIdentifierÍ8sÍ8‚¯isInitialRenderK®BlockStatementÍ8‡Í9¢–Q³ExpressionStatementÍ8–Í8©R®CallExpressionÍ8–Í8¨W°MemberExpressionÍ8–Í8¡JªIdentifierÍ8–Í8š¤TextJªIdentifierÍ8›Í8¡¦createÂÂ‘P§LiteralÍ8¢Í8§£102¥'102'ÂQ³ExpressionStatementÍ8·Í9R®CallExpressionÍ8·Í9W°MemberExpressionÍ8·Í8ÅJªIdentifierÍ8·Í8»¤TextJªIdentifierÍ8¼Í8Å©debugLineÂÂ’P§LiteralÍ8ÆÍ8ùÙ1entry/src/main/ets/pages/PracticePage.ets(171:17)Ù3"entry/src/main/ets/pages/PracticePage.ets(171:17)"P§LiteralÍ8ûÍ9¥entry§"entry"ÂQ³ExpressionStatementÍ9Í9$R®CallExpressionÍ9Í9#W°MemberExpressionÍ9Í9JªIdentifierÍ9Í9¤TextJªIdentifierÍ9Í9¨fontSizeÂÂ‘P§LiteralÍ9 Í9""¢34ÂQ³ExpressionStatementÍ92Í9LR®CallExpressionÍ92Í9KW°MemberExpressionÍ92Í9@JªIdentifierÍ92Í96¤TextJªIdentifierÍ97Í9@©fontColorÂÂ‘P§LiteralÍ9AÍ9J§#6249E3©'#6249E3'ÂQ³ExpressionStatementÍ9ZÍ9oR®CallExpressionÍ9ZÍ9nW°MemberExpressionÍ9ZÍ9iJªIdentifierÍ9ZÍ9^¤TextJªIdentifierÍ9_Í9iªfontWeightÂÂ‘P§LiteralÍ9jÍ9mÍô£500ÂQ³ExpressionStatementÍ9}Í9—R®CallExpressionÍ9}Í9–W°MemberExpressionÍ9}Í9ˆJªIdentifierÍ9}Í9¤TextJªIdentifierÍ9‚Í9ˆ¦marginÂÂ‘X°ObjectExpressionÍ9‰Í9•‘Y¨PropertyÍ9‹Í9“ÂÂÂJªIdentifierÍ9‹Í9¥rightP§LiteralÍ9’Í9“¡5¤initÂJªIdentifierÍ9¤Í9¨¤TextÂQ³ExpressionStatementÍ9´Í9¿R®CallExpressionÍ9´Í9¾W°MemberExpressionÍ9´Í9¼JªIdentifierÍ9´Í9¸¤TextJªIdentifierÍ9¹Í9¼£popÂÂÂQ³ExpressionStatementÍ9ÉÍ:ÜR®CallExpressionÍ9ÉÍ:ÛW°MemberExpressionÍ9ÉÍ9çS®ThisExpressionÍ9ÉÍ9ÍJªIdentifierÍ9ÎÍ9ç¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ9èÍ:ÔÀÂÂÂ’JªIdentifierÍ9éÍ9ï¦elmtIdJªIdentifierÍ9ñÍ: ¯isInitialRenderK®BlockStatementÍ:Í:Ô”Q³ExpressionStatementÍ:Í:&R®CallExpressionÍ:Í:%W°MemberExpressionÍ:Í:JªIdentifierÍ:Í:¤TextJªIdentifierÍ:Í:¦createÂÂ‘P§LiteralÍ: Í:$¦åˆ†é’Ÿ¨'åˆ†é’Ÿ'ÂQ³ExpressionStatementÍ:4Í:R®CallExpressionÍ:4Í:€W°MemberExpressionÍ:4Í:BJªIdentifierÍ:4Í:8¤TextJªIdentifierÍ:9Í:B©debugLineÂÂ’P§LiteralÍ:CÍ:vÙ1entry/src/main/ets/pages/PracticePage.ets(177:17)Ù3"entry/src/main/ets/pages/PracticePage.ets(177:17)"P§LiteralÍ:xÍ:¥entry§"entry"ÂQ³ExpressionStatementÍ:Í:¡R®CallExpressionÍ:Í: W°MemberExpressionÍ:Í:œJªIdentifierÍ:Í:“¤TextJªIdentifierÍ:”Í:œ¨fontSizeÂÂ‘P§LiteralÍ:Í:Ÿ¢22ÂQ³ExpressionStatementÍ:¯Í:ÉR®CallExpressionÍ:¯Í:ÈW°MemberExpressionÍ:¯Í:½JªIdentifierÍ:¯Í:³¤TextJªIdentifierÍ:´Í:½©fontColorÂÂ‘P§LiteralÍ:¾Í:Ç§#939EB5©'#939EB5'ÂJªIdentifierÍ:ÖÍ:Ú¤TextÂQ³ExpressionStatementÍ:æÍ:ñR®CallExpressionÍ:æÍ:ğW°MemberExpressionÍ:æÍ:îJªIdentifierÍ:æÍ:ê¤TextJªIdentifierÍ:ëÍ:î£popÂÂÂQ³ExpressionStatementÍ;Í;R®CallExpressionÍ;Í;W°MemberExpressionÍ;Í;JªIdentifierÍ;Í;£RowJªIdentifierÍ;Í;£popÂÂÂQ³ExpressionStatementÍ;/Í;9R®CallExpressionÍ;/Í;8W°MemberExpressionÍ;/Í;6JªIdentifierÍ;/Í;2£RowJªIdentifierÍ;3Í;6£popÂÂÂQ³ExpressionStatementÍ;CÍ=åR®CallExpressionÍ;CÍ=äW°MemberExpressionÍ;CÍ;aS®ThisExpressionÍ;CÍ;GJªIdentifierÍ;HÍ;a¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ;bÍ=ÜÀÂÂÂ’JªIdentifierÍ;cÍ;i¦elmtIdJªIdentifierÍ;kÍ;z¯isInitialRenderK®BlockStatementÍ;Í=Ü•Q³ExpressionStatementÍ;ÍÍ<NR®CallExpressionÍ;ÍÍ<MW°MemberExpressionÍ;ÍÍ;ÙJªIdentifierÍ;ÍÍ;Ò¥ImageJªIdentifierÍ;ÓÍ;Ù¦createÂÂ‘X°ObjectExpressionÍ;ÚÍ<L•Y¨PropertyÍ;ÜÍ;êÂÂÂP§LiteralÍ;ÜÍ;à¢id¤"id"P§LiteralÍ;âÍ;êÎ  
+¨16777226¤initY¨PropertyÍ;ìÍ;ùÂÂÂP§LiteralÍ;ìÍ;ò¤type¦"type"P§LiteralÍ;ôÍ;ùÍN ¥20000¤initY¨PropertyÍ;ûÍ<ÂÂÂJªIdentifierÍ;ûÍ<¦paramsZ¯ArrayExpressionÍ<Í<¤initY¨PropertyÍ<Í<3ÂÂÂP§LiteralÍ<Í<ªbundleName¬"bundleName"P§LiteralÍ<Í<3¼com.example.watermalon_sport¾"com.example.watermalon_sport"¤initY¨PropertyÍ<5Í<JÂÂÂP§LiteralÍ<5Í<AªmoduleName¬"moduleName"P§LiteralÍ<CÍ<J¥entry§"entry"¤initÂQ³ExpressionStatementÍ<\Í<ªR®CallExpressionÍ<\Í<©W°MemberExpressionÍ<\Í<kJªIdentifierÍ<\Í<a¥ImageJªIdentifierÍ<bÍ<k©debugLineÂÂ’P§LiteralÍ<lÍ<ŸÙ1entry/src/main/ets/pages/PracticePage.ets(188:13)Ù3"entry/src/main/ets/pages/PracticePage.ets(188:13)"P§LiteralÍ<¡Í<¨¥entry§"entry"ÂQ³ExpressionStatementÍ<÷Í=R®CallExpressionÍ<÷Í=W°MemberExpressionÍ<÷Í=JªIdentifierÍ<÷Í<ü¥ImageJªIdentifierÍ<ıÍ=¦marginÂÂ‘X°ObjectExpressionÍ=Í=‘Y¨PropertyÍ=Í=ÂÂÂJªIdentifierÍ=Í=	£topP§LiteralÍ=Í=¢15¤initÂQ³ExpressionStatementÍ=^Í=rR®CallExpressionÍ=^Í=qW°MemberExpressionÍ=^Í=iJªIdentifierÍ=^Í=c¥ImageJªIdentifierÍ=dÍ=i¥widthÂÂ‘P§LiteralÍ=jÍ=p¤100%¦'100%'ÂQ³ExpressionStatementÍ=¿Í=ÑR®CallExpressionÍ=¿Í=ĞW°MemberExpressionÍ=¿Í=ËJªIdentifierÍ=¿Í=Ä¥ImageJªIdentifierÍ=ÅÍ=Ë¦heightÂÂ‘P§LiteralÍ=ÌÍ=ÏÌx£120ÂJªIdentifierÍ=ŞÍ=ã¥ImageÂQ³ExpressionStatementÍ>Í>R®CallExpressionÍ>Í>W°MemberExpressionÍ>Í>JªIdentifierÍ>Í>¦ColumnJªIdentifierÍ>	Í>£popÂÂÂQ³ExpressionStatementÍ>Í@,R®CallExpressionÍ>Í@+W°MemberExpressionÍ>Í>7S®ThisExpressionÍ>Í>JªIdentifierÍ>Í>7¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ>8Í@"ÀÂÂÂ’JªIdentifierÍ>9Í>?¦elmtIdJªIdentifierÍ>AÍ>P¯isInitialRenderK®BlockStatementÍ>UÍ@"—Q³ExpressionStatementÍ>zÍ>ŠR®CallExpressionÍ>zÍ>‰W°MemberExpressionÍ>zÍ>‡JªIdentifierÍ>zÍ>€¦ColumnJªIdentifierÍ>Í>‡¦createÂÂÂQ³ExpressionStatementÍ>˜Í>çR®CallExpressionÍ>˜Í>æW°MemberExpressionÍ>˜Í>¨JªIdentifierÍ>˜Í>¦ColumnJªIdentifierÍ>ŸÍ>¨©debugLineÂÂ’P§LiteralÍ>©Í>ÜÙ1entry/src/main/ets/pages/PracticePage.ets(201:11)Ù3"entry/src/main/ets/pages/PracticePage.ets(201:11)"P§LiteralÍ>ŞÍ>å¥entry§"entry"ÂQ³ExpressionStatementÍ?Í? R®CallExpressionÍ?Í?W°MemberExpressionÍ?Í?JªIdentifierÍ?Í?¦ColumnJªIdentifierÍ?Í?¥widthÂÂ‘P§LiteralÍ?Í?¤100%¦'100%'ÂQ³ExpressionStatementÍ?DÍ?WR®CallExpressionÍ?DÍ?VW°MemberExpressionÍ?DÍ?QJªIdentifierÍ?DÍ?J¦ColumnJªIdentifierÍ?KÍ?Q¦heightÂÂ‘P§LiteralÍ?RÍ?UÌÈ£200ÂQ³ExpressionStatementÍ?{Í?R®CallExpressionÍ?{Í?œW°MemberExpressionÍ?{Í?‘JªIdentifierÍ?{Í?¦ColumnJªIdentifierÍ?‚Í?‘¯backgroundColorÂÂ‘P§LiteralÍ?’Í?›§#FFFFFF©'#FFFFFF'ÂQ³ExpressionStatementÍ?ÁÍ?ØR®CallExpressionÍ?ÁÍ?×W°MemberExpressionÍ?ÁÍ?ÔJªIdentifierÍ?ÁÍ?Ç¦ColumnJªIdentifierÍ?ÈÍ?Ô¬borderRadiusÂÂ‘P§LiteralÍ?ÕÍ?Ö¡8ÂQ³ExpressionStatementÍ?üÍ@R®CallExpressionÍ?üÍ@W°MemberExpressionÍ?üÍ@	JªIdentifierÍ?üÍ@¦ColumnJªIdentifierÍ@Í@	¦marginÂÂ‘X°ObjectExpressionÍ@
+Í@‘Y¨PropertyÍ@Í@ÂÂÂJªIdentifierÍ@Í@£topP§LiteralÍ@Í@¢15¤initÂJªIdentifierÍ@$Í@*¦ColumnÂQ³ExpressionStatementÍ@6ÍAÉR®CallExpressionÍ@6ÍAÈW°MemberExpressionÍ@6Í@TS®ThisExpressionÍ@6Í@:JªIdentifierÍ@;Í@T¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ@UÍAÂÀÂÂÂ’JªIdentifierÍ@VÍ@\¦elmtIdJªIdentifierÍ@^Í@m¯isInitialRenderK®BlockStatementÍ@rÍAÂ•Q³ExpressionStatementÍ@•Í@¢R®CallExpressionÍ@•Í@¡W°MemberExpressionÍ@•Í@ŸJªIdentifierÍ@•Í@˜£RowJªIdentifierÍ@™Í@Ÿ¦createÂÂÂQ³ExpressionStatementÍ@°Í@üR®CallExpressionÍ@°Í@ûW°MemberExpressionÍ@°Í@½JªIdentifierÍ@°Í@³£RowJªIdentifierÍ@´Í@½©debugLineÂÂ’P§LiteralÍ@¾Í@ñÙ1entry/src/main/ets/pages/PracticePage.ets(203:13)Ù3"entry/src/main/ets/pages/PracticePage.ets(203:13)"P§LiteralÍ@óÍ@ú¥entry§"entry"ÂQ³ExpressionStatementÍAÍA6R®CallExpressionÍAÍA5W°MemberExpressionÍAÍA(JªIdentifierÍAÍA!£RowJªIdentifierÍA"ÍA(¦marginÂÂ‘X°ObjectExpressionÍA)ÍA4‘Y¨PropertyÍA+ÍA2ÂÂÂJªIdentifierÍA+ÍA.£topP§LiteralÍA0ÍA2¢15¤initÂQ³ExpressionStatementÍAXÍAjR®CallExpressionÍAXÍAiW°MemberExpressionÍAXÍAaJªIdentifierÍAXÍA[£RowJªIdentifierÍA\ÍAa¥widthÂÂ‘P§LiteralÍAbÍAh¤100%¦'100%'ÂQ³ExpressionStatementÍAŒÍA·R®CallExpressionÍAŒÍA¶W°MemberExpressionÍAŒÍAJªIdentifierÍAŒÍA£RowJªIdentifierÍAÍA®justifyContentÂÂ‘W°MemberExpressionÍAŸÍAµJªIdentifierÍAŸÍA¨©FlexAlignJªIdentifierÍA©ÍAµ¬SpaceBetweenÂÂÂJªIdentifierÍAÄÍAÇ£RowÂQ³ExpressionStatementÍAÓÍC–R®CallExpressionÍAÓÍC•W°MemberExpressionÍAÓÍAñS®ThisExpressionÍAÓÍA×JªIdentifierÍAØÍAñ¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍAòÍCÀÂÂÂ’JªIdentifierÍAóÍAù¦elmtIdJªIdentifierÍAûÍB
+¯isInitialRenderK®BlockStatementÍBÍC–Q³ExpressionStatementÍB2ÍBER®CallExpressionÍB2ÍBDW°MemberExpressionÍB2ÍB=JªIdentifierÍB2ÍB6¤TextJªIdentifierÍB7ÍB=¦createÂÂ‘P§LiteralÍB>ÍBC©å¡è·¯é‡Œ«'å¡è·¯é‡Œ'ÂQ³ExpressionStatementÍBSÍB R®CallExpressionÍBSÍBŸW°MemberExpressionÍBSÍBaJªIdentifierÍBSÍBW¤TextJªIdentifierÍBXÍBa©debugLineÂÂ’P§LiteralÍBbÍB•Ù1entry/src/main/ets/pages/PracticePage.ets(205:15)Ù3"entry/src/main/ets/pages/PracticePage.ets(205:15)"P§LiteralÍB—ÍB¥entry§"entry"ÂQ³ExpressionStatementÍBÂÍBÔR®CallExpressionÍBÂÍBÓW°MemberExpressionÍBÂÍBÏJªIdentifierÍBÂÍBÆ¤TextJªIdentifierÍBÇÍBÏ¨fontSizeÂÂ‘P§LiteralÍBĞÍBÒ¢24ÂQ³ExpressionStatementÍBöÍCR®CallExpressionÍBöÍCW°MemberExpressionÍBöÍCJªIdentifierÍBöÍBú¤TextJªIdentifierÍBûÍC©fontColorÂÂ‘P§LiteralÍCÍC§#333333©'#333333'ÂQ³ExpressionStatementÍC2ÍCGR®CallExpressionÍC2ÍCFW°MemberExpressionÍC2ÍCAJªIdentifierÍC2ÍC6¤TextJªIdentifierÍC7ÍCAªfontWeightÂÂ‘P§LiteralÍCBÍCEÍô£500ÂQ³ExpressionStatementÍCiÍCƒR®CallExpressionÍCiÍC‚W°MemberExpressionÍCiÍCtJªIdentifierÍCiÍCm¤TextJªIdentifierÍCnÍCt¦marginÂÂ‘X°ObjectExpressionÍCuÍC‘Y¨PropertyÍCwÍCÂÂÂJªIdentifierÍCwÍC{¤leftP§LiteralÍC}ÍC¢15¤initÂJªIdentifierÍCÍC”¤TextÂQ³ExpressionStatementÍC°ÍC»R®CallExpressionÍC°ÍCºW°MemberExpressionÍC°ÍC¸JªIdentifierÍC°ÍC´¤TextJªIdentifierÍCµÍC¸£popÂÂÂQ³ExpressionStatementÍCÅÍDÙR®CallExpressionÍCÅÍDØW°MemberExpressionÍCÅÍCãS®ThisExpressionÍCÅÍCÉJªIdentifierÍCÊÍCã¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍCäÍDÒÀÂÂÂ’JªIdentifierÍCåÍCë¦elmtIdJªIdentifierÍCíÍCü¯isInitialRenderK®BlockStatementÍDÍDÒ“Q³ExpressionStatementÍD$ÍD1R®CallExpressionÍD$ÍD0W°MemberExpressionÍD$ÍD.JªIdentifierÍD$ÍD'£RowJªIdentifierÍD(ÍD.¦createÂÂÂQ³ExpressionStatementÍD?ÍD‹R®CallExpressionÍD?ÍDŠW°MemberExpressionÍD?ÍDLJªIdentifierÍD?ÍDB£RowJªIdentifierÍDCÍDL©debugLineÂÂ’P§LiteralÍDMÍD€Ù1entry/src/main/ets/pages/PracticePage.ets(212:15)Ù3"entry/src/main/ets/pages/PracticePage.ets(212:15)"P§LiteralÍD‚ÍD‰¥entry§"entry"ÂQ³ExpressionStatementÍD­ÍDÇR®CallExpressionÍD­ÍDÆW°MemberExpressionÍD­ÍD·JªIdentifierÍD­ÍD°£RowJªIdentifierÍD±ÍD·¦marginÂÂ‘X°ObjectExpressionÍD¸ÍDÅ‘Y¨PropertyÍDºÍDÃÂÂÂJªIdentifierÍDºÍD¿¥rightP§LiteralÍDÁÍDÃ¢15¤initÂJªIdentifierÍDÔÍD×£RowÂQ³ExpressionStatementÍDãÍFBR®CallExpressionÍDãÍFAW°MemberExpressionÍDãÍES®ThisExpressionÍDãÍDçJªIdentifierÍDèÍE¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍEÍF:ÀÂÂÂ’JªIdentifierÍEÍE	¦elmtIdJªIdentifierÍEÍE¯isInitialRenderK®BlockStatementÍEÍF:–Q³ExpressionStatementÍE.ÍEAR®CallExpressionÍE.ÍE@W°MemberExpressionÍE.ÍE9JªIdentifierÍE.ÍE2¤TextJªIdentifierÍE3ÍE9¦createÂÂ‘P§LiteralÍE:ÍE?£112¥'112'ÂQ³ExpressionStatementÍEOÍEœR®CallExpressionÍEOÍE›W°MemberExpressionÍEOÍE]JªIdentifierÍEOÍES¤TextJªIdentifierÍETÍE]©debugLineÂÂ’P§LiteralÍE^ÍE‘Ù1entry/src/main/ets/pages/PracticePage.ets(213:17)Ù3"entry/src/main/ets/pages/PracticePage.ets(213:17)"P§LiteralÍE“ÍEš¥entry§"entry"ÂQ³ExpressionStatementÍEªÍE¼R®CallExpressionÍEªÍE»W°MemberExpressionÍEªÍE·JªIdentifierÍEªÍE®¤TextJªIdentifierÍE¯ÍE·¨fontSizeÂÂ‘P§LiteralÍE¸ÍEº"¢34ÂQ³ExpressionStatementÍEÊÍEäR®CallExpressionÍEÊÍEãW°MemberExpressionÍEÊÍEØJªIdentifierÍEÊÍEÎ¤TextJªIdentifierÍEÏÍEØ©fontColorÂÂ‘P§LiteralÍEÙÍEâ§#6249E3©'#6249E3'ÂQ³ExpressionStatementÍEòÍFR®CallExpressionÍEòÍFW°MemberExpressionÍEòÍFJªIdentifierÍEòÍEö¤TextJªIdentifierÍE÷ÍFªfontWeightÂÂ‘P§LiteralÍFÍFÍô£500ÂQ³ExpressionStatementÍFÍF/R®CallExpressionÍFÍF.W°MemberExpressionÍFÍF JªIdentifierÍFÍF¤TextJªIdentifierÍFÍF ¦marginÂÂ‘X°ObjectExpressionÍF!ÍF-‘Y¨PropertyÍF#ÍF+ÂÂÂJªIdentifierÍF#ÍF(¥rightP§LiteralÍF*ÍF+¡5¤initÂJªIdentifierÍF<ÍF@¤TextÂQ³ExpressionStatementÍFLÍFWR®CallExpressionÍFLÍFVW°MemberExpressionÍFLÍFTJªIdentifierÍFLÍFP¤TextJªIdentifierÍFQÍFT£popÂÂÂQ³ExpressionStatementÍFaÍGtR®CallExpressionÍFaÍGsW°MemberExpressionÍFaÍFS®ThisExpressionÍFaÍFeJªIdentifierÍFfÍF¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍF€ÍGlÀÂÂÂ’JªIdentifierÍFÍF‡¦elmtIdJªIdentifierÍF‰ÍF˜¯isInitialRenderK®BlockStatementÍFÍGl”Q³ExpressionStatementÍF¬ÍF¾R®CallExpressionÍF¬ÍF½W°MemberExpressionÍF¬ÍF·JªIdentifierÍF¬ÍF°¤TextJªIdentifierÍF±ÍF·¦createÂÂ‘P§LiteralÍF¸ÍF¼¦åƒå¡¨'åƒå¡'ÂQ³ExpressionStatementÍFÌÍGR®CallExpressionÍFÌÍGW°MemberExpressionÍFÌÍFÚJªIdentifierÍFÌÍFĞ¤TextJªIdentifierÍFÑÍFÚ©debugLineÂÂ’P§LiteralÍFÛÍGÙ1entry/src/main/ets/pages/PracticePage.ets(219:17)Ù3"entry/src/main/ets/pages/PracticePage.ets(219:17)"P§LiteralÍGÍG¥entry§"entry"ÂQ³ExpressionStatementÍG'ÍG9R®CallExpressionÍG'ÍG8W°MemberExpressionÍG'ÍG4JªIdentifierÍG'ÍG+¤TextJªIdentifierÍG,ÍG4¨fontSizeÂÂ‘P§LiteralÍG5ÍG7¢22ÂQ³ExpressionStatementÍGGÍGaR®CallExpressionÍGGÍG`W°MemberExpressionÍGGÍGUJªIdentifierÍGGÍGK¤TextJªIdentifierÍGLÍGU©fontColorÂÂ‘P§LiteralÍGVÍG_§#939EB5©'#939EB5'ÂJªIdentifierÍGnÍGr¤TextÂQ³ExpressionStatementÍG~ÍG‰R®CallExpressionÍG~ÍGˆW°MemberExpressionÍG~ÍG†JªIdentifierÍG~ÍG‚¤TextJªIdentifierÍGƒÍG†£popÂÂÂQ³ExpressionStatementÍG£ÍG­R®CallExpressionÍG£ÍG¬W°MemberExpressionÍG£ÍGªJªIdentifierÍG£ÍG¦£RowJªIdentifierÍG§ÍGª£popÂÂÂQ³ExpressionStatementÍGÇÍGÑR®CallExpressionÍGÇÍGĞW°MemberExpressionÍGÇÍGÎJªIdentifierÍGÇÍGÊ£RowJªIdentifierÍGËÍGÎ£popÂÂÂQ³ExpressionStatementÍGÛÍJ}R®CallExpressionÍGÛÍJ|W°MemberExpressionÍGÛÍGùS®ThisExpressionÍGÛÍGßJªIdentifierÍGàÍGù¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍGúÍJtÀÂÂÂ’JªIdentifierÍGûÍH¦elmtIdJªIdentifierÍHÍH¯isInitialRenderK®BlockStatementÍHÍJt•Q³ExpressionStatementÍHeÍHæR®CallExpressionÍHeÍHåW°MemberExpressionÍHeÍHqJªIdentifierÍHeÍHj¥ImageJªIdentifierÍHkÍHq¦createÂÂ‘X°ObjectExpressionÍHrÍHä•Y¨PropertyÍHtÍH‚ÂÂÂP§LiteralÍHtÍHx¢id¤"id"P§LiteralÍHzÍH‚Î  ¨16777221¤initY¨PropertyÍH„ÍH‘ÂÂÂP§LiteralÍH„ÍHŠ¤type¦"type"P§LiteralÍHŒÍH‘ÍN ¥20000¤initY¨PropertyÍH“ÍHÂÂÂJªIdentifierÍH“ÍH™¦paramsZ¯ArrayExpressionÍH›ÍH¤initY¨PropertyÍHŸÍHËÂÂÂP§LiteralÍHŸÍH«ªbundleName¬"bundleName"P§LiteralÍH­ÍHË¼com.example.watermalon_sport¾"com.example.watermalon_sport"¤initY¨PropertyÍHÍÍHâÂÂÂP§LiteralÍHÍÍHÙªmoduleName¬"moduleName"P§LiteralÍHÛÍHâ¥entry§"entry"¤initÂQ³ExpressionStatementÍHôÍIBR®CallExpressionÍHôÍIAW°MemberExpressionÍHôÍIJªIdentifierÍHôÍHù¥ImageJªIdentifierÍHúÍI©debugLineÂÂ’P§LiteralÍIÍI7Ù1entry/src/main/ets/pages/PracticePage.ets(230:13)Ù3"entry/src/main/ets/pages/PracticePage.ets(230:13)"P§LiteralÍI9ÍI@¥entry§"entry"ÂQ³ExpressionStatementÍIÍI©R®CallExpressionÍIÍI¨W°MemberExpressionÍIÍI›JªIdentifierÍIÍI”¥ImageJªIdentifierÍI•ÍI›¦marginÂÂ‘X°ObjectExpressionÍIœÍI§‘Y¨PropertyÍIÍI¥ÂÂÂJªIdentifierÍIÍI¡£topP§LiteralÍI£ÍI¥¢15¤initÂQ³ExpressionStatementÍIöÍJ
+R®CallExpressionÍIöÍJ	W°MemberExpressionÍIöÍJJªIdentifierÍIöÍIû¥ImageJªIdentifierÍIüÍJ¥widthÂÂ‘P§LiteralÍJÍJ¤100%¦'100%'ÂQ³ExpressionStatementÍJWÍJiR®CallExpressionÍJWÍJhW°MemberExpressionÍJWÍJcJªIdentifierÍJWÍJ\¥ImageJªIdentifierÍJ]ÍJc¦heightÂÂ‘P§LiteralÍJdÍJgÌx£120ÂJªIdentifierÍJvÍJ{¥ImageÂQ³ExpressionStatementÍJ™ÍJ¦R®CallExpressionÍJ™ÍJ¥W°MemberExpressionÍJ™ÍJ£JªIdentifierÍJ™ÍJŸ¦ColumnJªIdentifierÍJ ÍJ££popÂÂÂQ³ExpressionStatementÍJ°ÍJ½R®CallExpressionÍJ°ÍJ¼W°MemberExpressionÍJ°ÍJºJªIdentifierÍJ°ÍJ¶¦ColumnJªIdentifierÍJ·ÍJº£popÂÂÂQ³ExpressionStatementÍJÇÍJÔR®CallExpressionÍJÇÍJÓW°MemberExpressionÍJÇÍJÑJªIdentifierÍJÇÍJÍ¦ScrollJªIdentifierÍJÎÍJÑ£popÂÂÂQ³ExpressionStatementÍJŞÍJëR®CallExpressionÍJŞÍJêW°MemberExpressionÍJŞÍJèJªIdentifierÍJŞÍJä¦ColumnJªIdentifierÍJåÍJè£popÂÂÂL°MethodDefinitionÍJøÍK0ÂÂJªIdentifierÍJøÍK ¨rerender¦methodM²FunctionExpressionÍK ÍK0ÀÂÂÂK®BlockStatementÍKÍK0‘Q³ExpressionStatementÍKÍK)R®CallExpressionÍKÍK(W°MemberExpressionÍKÍK&S®ThisExpressionÍKÍKJªIdentifierÍKÍK&³updateDirtyElementsÂÂÂÀ

@@ -1,0 +1,715 @@
+Ôr@Ÿªassertions¤code´customTransformCache¬dependencies¢id¤meta±moduleSideEffects¬originalCode±originalSourcemap«resolvedIds®sourcemapChainµsyntheticNamedExportsµtransformDependencies®transformFiles¨cacheAstÔrAÚQ.if (!("finalizeConstruction" in ViewPU.prototype)) {
+    Reflect.set(ViewPU.prototype, "finalizeConstruction", () => { });
+}
+import router from "@ohos.router";
+class TrainRecordPage extends ViewPU {
+    constructor(parent, params, __localStorage, elmtId = -1, paramsLambda = undefined, extraInfo) {
+        super(parent, __localStorage, elmtId, extraInfo);
+        if (typeof paramsLambda === "function") {
+            this.paramsGenerator_ = paramsLambda;
+        }
+        this.__message = new ObservedPropertySimplePU('Hello World', this, "message");
+        this.__curIndex = new ObservedPropertySimplePU(0, this, "curIndex");
+        this.__trainType = new ObservedPropertySimplePU(false, this, "trainType");
+        this.__todayDuration = new ObservedPropertySimplePU(102, this, "todayDuration");
+        this.__thisWeekDuration = new ObservedPropertySimplePU(300, this, "thisWeekDuration");
+        this.__thisMonthDuration = new ObservedPropertySimplePU(2830, this, "thisMonthDuration");
+        this.__thisYearDuration = new ObservedPropertySimplePU(2830, this, "thisYearDuration");
+        this.__todayCalorie = new ObservedPropertySimplePU(112, this, "todayCalorie");
+        this.__thisWeekCalorie = new ObservedPropertySimplePU(2030, this, "thisWeekCalorie");
+        this.__thisMonthCalorie = new ObservedPropertySimplePU(32353, this, "thisMonthCalorie");
+        this.__thisYearCalorie = new ObservedPropertySimplePU(32353, this, "thisYearCalorie");
+        this.setInitiallyProvidedValue(params);
+        this.finalizeConstruction();
+    }
+    setInitiallyProvidedValue(params) {
+        if (params.message !== undefined) {
+            this.message = params.message;
+        }
+        if (params.curIndex !== undefined) {
+            this.curIndex = params.curIndex;
+        }
+        if (params.trainType !== undefined) {
+            this.trainType = params.trainType;
+        }
+        if (params.todayDuration !== undefined) {
+            this.todayDuration = params.todayDuration;
+        }
+        if (params.thisWeekDuration !== undefined) {
+            this.thisWeekDuration = params.thisWeekDuration;
+        }
+        if (params.thisMonthDuration !== undefined) {
+            this.thisMonthDuration = params.thisMonthDuration;
+        }
+        if (params.thisYearDuration !== undefined) {
+            this.thisYearDuration = params.thisYearDuration;
+        }
+        if (params.todayCalorie !== undefined) {
+            this.todayCalorie = params.todayCalorie;
+        }
+        if (params.thisWeekCalorie !== undefined) {
+            this.thisWeekCalorie = params.thisWeekCalorie;
+        }
+        if (params.thisMonthCalorie !== undefined) {
+            this.thisMonthCalorie = params.thisMonthCalorie;
+        }
+        if (params.thisYearCalorie !== undefined) {
+            this.thisYearCalorie = params.thisYearCalorie;
+        }
+    }
+    updateStateVars(params) {
+    }
+    purgeVariableDependenciesOnElmtId(rmElmtId) {
+        this.__message.purgeDependencyOnElmtId(rmElmtId);
+        this.__curIndex.purgeDependencyOnElmtId(rmElmtId);
+        this.__trainType.purgeDependencyOnElmtId(rmElmtId);
+        this.__todayDuration.purgeDependencyOnElmtId(rmElmtId);
+        this.__thisWeekDuration.purgeDependencyOnElmtId(rmElmtId);
+        this.__thisMonthDuration.purgeDependencyOnElmtId(rmElmtId);
+        this.__thisYearDuration.purgeDependencyOnElmtId(rmElmtId);
+        this.__todayCalorie.purgeDependencyOnElmtId(rmElmtId);
+        this.__thisWeekCalorie.purgeDependencyOnElmtId(rmElmtId);
+        this.__thisMonthCalorie.purgeDependencyOnElmtId(rmElmtId);
+        this.__thisYearCalorie.purgeDependencyOnElmtId(rmElmtId);
+    }
+    aboutToBeDeleted() {
+        this.__message.aboutToBeDeleted();
+        this.__curIndex.aboutToBeDeleted();
+        this.__trainType.aboutToBeDeleted();
+        this.__todayDuration.aboutToBeDeleted();
+        this.__thisWeekDuration.aboutToBeDeleted();
+        this.__thisMonthDuration.aboutToBeDeleted();
+        this.__thisYearDuration.aboutToBeDeleted();
+        this.__todayCalorie.aboutToBeDeleted();
+        this.__thisWeekCalorie.aboutToBeDeleted();
+        this.__thisMonthCalorie.aboutToBeDeleted();
+        this.__thisYearCalorie.aboutToBeDeleted();
+        SubscriberManager.Get().delete(this.id__());
+        this.aboutToBeDeletedInternal();
+    }
+    get message() {
+        return this.__message.get();
+    }
+    set message(newValue) {
+        this.__message.set(newValue);
+    }
+    get curIndex() {
+        return this.__curIndex.get();
+    }
+    set curIndex(newValue) {
+        this.__curIndex.set(newValue);
+    }
+    get trainType() {
+        return this.__trainType.get();
+    }
+    set trainType(newValue) {
+        this.__trainType.set(newValue);
+    }
+    get todayDuration() {
+        return this.__todayDuration.get();
+    }
+    set todayDuration(newValue) {
+        this.__todayDuration.set(newValue);
+    }
+    get thisWeekDuration() {
+        return this.__thisWeekDuration.get();
+    }
+    set thisWeekDuration(newValue) {
+        this.__thisWeekDuration.set(newValue);
+    }
+    get thisMonthDuration() {
+        return this.__thisMonthDuration.get();
+    }
+    set thisMonthDuration(newValue) {
+        this.__thisMonthDuration.set(newValue);
+    }
+    get thisYearDuration() {
+        return this.__thisYearDuration.get();
+    }
+    set thisYearDuration(newValue) {
+        this.__thisYearDuration.set(newValue);
+    }
+    get todayCalorie() {
+        return this.__todayCalorie.get();
+    }
+    set todayCalorie(newValue) {
+        this.__todayCalorie.set(newValue);
+    }
+    get thisWeekCalorie() {
+        return this.__thisWeekCalorie.get();
+    }
+    set thisWeekCalorie(newValue) {
+        this.__thisWeekCalorie.set(newValue);
+    }
+    get thisMonthCalorie() {
+        return this.__thisMonthCalorie.get();
+    }
+    set thisMonthCalorie(newValue) {
+        this.__thisMonthCalorie.set(newValue);
+    }
+    get thisYearCalorie() {
+        return this.__thisYearCalorie.get();
+    }
+    set thisYearCalorie(newValue) {
+        this.__thisYearCalorie.set(newValue);
+    }
+    //å¯¼èˆªæ æ ·å¼
+    navBar(tex, index, parent = null) {
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Column.create({ space: 5 });
+        }, Column);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create(tex);
+            Text.fontColor(index == this.curIndex ? "#6C55E4" : "#CCCCCC");
+            Text.fontSize(20);
+        }, Text);
+        Text.pop();
+        Column.pop();
+    }
+    showRecord(type, image, record, parent = null) {
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            If.create();
+            if (type == false) {
+                this.ifElseBranchUpdateFunction(0, () => {
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        Column.create();
+                        Column.width('100%');
+                        Column.height(200);
+                        Column.backgroundColor('#FFFFFF');
+                        Column.borderRadius(8);
+                        Column.margin({ top: 15 });
+                        Column.onClick(() => {
+                            router.pushUrl({ url: 'pages/TrainTimePage' });
+                        });
+                    }, Column);
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        // æ ‡é¢˜è¡Œ
+                        Row.create();
+                        // æ ‡é¢˜è¡Œ
+                        Row.margin({ top: 15 });
+                        // æ ‡é¢˜è¡Œ
+                        Row.width('100%');
+                        // æ ‡é¢˜è¡Œ
+                        Row.justifyContent(FlexAlign.SpaceBetween);
+                    }, Row);
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        //å·¦è¾¹æ ‡é¢˜
+                        Text.create('é”»ç‚¼æ—¶é•¿');
+                        //å·¦è¾¹æ ‡é¢˜
+                        Text.fontSize(24);
+                        //å·¦è¾¹æ ‡é¢˜
+                        Text.fontColor('#333333');
+                        //å·¦è¾¹æ ‡é¢˜
+                        Text.fontWeight(500);
+                        //å·¦è¾¹æ ‡é¢˜
+                        Text.margin({ left: 15 });
+                    }, Text);
+                    //å·¦è¾¹æ ‡é¢˜
+                    Text.pop();
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        //å³è¾¹æ•°æ®
+                        Row.create();
+                        //å³è¾¹æ•°æ®
+                        Row.margin({ right: 15 });
+                    }, Row);
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        Text.create(record.toString());
+                        Text.fontSize(34);
+                        Text.fontColor('#6249E3');
+                        Text.fontWeight(500);
+                        Text.margin({ right: 5 });
+                    }, Text);
+                    Text.pop();
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        Text.create('åˆ†é’Ÿ');
+                        Text.fontSize(22);
+                        Text.fontColor('#939EB5');
+                    }, Text);
+                    Text.pop();
+                    //å³è¾¹æ•°æ®
+                    Row.pop();
+                    // æ ‡é¢˜è¡Œ
+                    Row.pop();
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        //å›¾è¡¨                                       //æš‚æ—¶è´´å›¾
+                        Image.create(image);
+                        //å›¾è¡¨                                       //æš‚æ—¶è´´å›¾
+                        Image.margin({ top: 15 });
+                        //å›¾è¡¨                                       //æš‚æ—¶è´´å›¾
+                        Image.width('100%');
+                        //å›¾è¡¨                                       //æš‚æ—¶è´´å›¾
+                        Image.height(120);
+                    }, Image);
+                    Column.pop();
+                });
+            }
+            else {
+                this.ifElseBranchUpdateFunction(1, () => {
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        Column.create();
+                        Column.width('100%');
+                        Column.height(200);
+                        Column.backgroundColor('#FFFFFF');
+                        Column.borderRadius(8);
+                        Column.margin({ top: 15 });
+                        Column.onClick(() => {
+                            router.pushUrl({ url: 'pages/CaloriePage' });
+                        });
+                    }, Column);
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        // æ ‡é¢˜è¡Œ
+                        Row.create();
+                        // æ ‡é¢˜è¡Œ
+                        Row.margin({ top: 15 });
+                        // æ ‡é¢˜è¡Œ
+                        Row.width('100%');
+                        // æ ‡é¢˜è¡Œ
+                        Row.justifyContent(FlexAlign.SpaceBetween);
+                    }, Row);
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        //å·¦è¾¹æ ‡é¢˜
+                        Text.create('å¡è·¯é‡Œ');
+                        //å·¦è¾¹æ ‡é¢˜
+                        Text.fontSize(24);
+                        //å·¦è¾¹æ ‡é¢˜
+                        Text.fontColor('#333333');
+                        //å·¦è¾¹æ ‡é¢˜
+                        Text.fontWeight(500);
+                        //å·¦è¾¹æ ‡é¢˜
+                        Text.margin({ left: 15 });
+                    }, Text);
+                    //å·¦è¾¹æ ‡é¢˜
+                    Text.pop();
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        //å³è¾¹æ•°æ®
+                        Row.create();
+                        //å³è¾¹æ•°æ®
+                        Row.margin({ right: 15 });
+                    }, Row);
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        Text.create(record.toString());
+                        Text.fontSize(34);
+                        Text.fontColor('#6249E3');
+                        Text.fontWeight(500);
+                        Text.margin({ right: 5 });
+                    }, Text);
+                    Text.pop();
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        Text.create('åƒå¡');
+                        Text.fontSize(22);
+                        Text.fontColor('#939EB5');
+                    }, Text);
+                    Text.pop();
+                    //å³è¾¹æ•°æ®
+                    Row.pop();
+                    // æ ‡é¢˜è¡Œ
+                    Row.pop();
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        //å›¾è¡¨                                       //æš‚æ—¶è´´å›¾
+                        Image.create(image);
+                        //å›¾è¡¨                                       //æš‚æ—¶è´´å›¾
+                        Image.margin({ top: 15 });
+                        //å›¾è¡¨                                       //æš‚æ—¶è´´å›¾
+                        Image.width('100%');
+                        //å›¾è¡¨                                       //æš‚æ—¶è´´å›¾
+                        Image.height(120);
+                    }, Image);
+                    Column.pop();
+                });
+            }
+        }, If);
+        If.pop();
+    }
+    //ä¸»é¡µé¢
+    initialRender() {
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Column.create();
+        }, Column);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create();
+            Text.height(40);
+        }, Text);
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            //æ ‡é¢˜éƒ¨åˆ†
+            Row.create();
+            //æ ‡é¢˜éƒ¨åˆ†
+            Row.justifyContent(FlexAlign.SpaceBetween);
+            //æ ‡é¢˜éƒ¨åˆ†
+            Row.width('100%');
+            //æ ‡é¢˜éƒ¨åˆ†
+            Row.height(30);
+            //æ ‡é¢˜éƒ¨åˆ†
+            Row.padding(5);
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Image.create({ "id": 16777243, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
+            Image.width(30);
+            Image.height(30);
+            Image.onClick(() => {
+                router.back();
+            });
+        }, Image);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('è®­ç»ƒè®°å½•');
+            Text.fontColor('#333333');
+            Text.fontSize(24);
+            Text.fontWeight(700);
+        }, Text);
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('     ');
+            Text.fontSize(24);
+        }, Text);
+        Text.pop();
+        //æ ‡é¢˜éƒ¨åˆ†
+        Row.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            //å¯¼èˆªæ 
+            Column.create();
+            //å¯¼èˆªæ 
+            Column.height('100%');
+            //å¯¼èˆªæ 
+            Column.width('100%');
+            //å¯¼èˆªæ 
+            Column.margin({ top: 20 });
+        }, Column);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Tabs.create({ barPosition: BarPosition.Start });
+            Tabs.onChange((index) => { this.curIndex = index; });
+        }, Tabs);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            TabContent.create(() => {
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Column.create({ space: 20 });
+                    Column.justifyContent(FlexAlign.Start);
+                    Column.width('100%');
+                    Column.height('100%');
+                }, Column);
+                this.showRecord.bind(this)(false, { "id": 16777282, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" }, this.todayDuration);
+                this.showRecord.bind(this)(true, { "id": 16777283, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" }, this.todayCalorie);
+                Column.pop();
+            });
+            TabContent.tabBar({ builder: () => {
+                    this.navBar.call(this, "æ—¥", 0);
+                } });
+        }, TabContent);
+        TabContent.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            TabContent.create(() => {
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Column.create({ space: 20 });
+                    Column.justifyContent(FlexAlign.Start);
+                    Column.width('100%');
+                    Column.height('100%');
+                }, Column);
+                this.showRecord.bind(this)(false, { "id": 16777282, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" }, this.thisWeekDuration);
+                this.showRecord.bind(this)(true, { "id": 16777283, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" }, this.thisWeekCalorie);
+                Column.pop();
+            });
+            TabContent.tabBar({ builder: () => {
+                    this.navBar.call(this, "å‘¨", 1);
+                } });
+        }, TabContent);
+        TabContent.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            TabContent.create(() => {
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Column.create({ space: 20 });
+                    Column.justifyContent(FlexAlign.Start);
+                    Column.width('100%');
+                    Column.height('100%');
+                }, Column);
+                this.showRecord.bind(this)(false, { "id": 16777282, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" }, this.thisMonthDuration);
+                this.showRecord.bind(this)(true, { "id": 16777283, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" }, this.thisMonthCalorie);
+                Column.pop();
+            });
+            TabContent.tabBar({ builder: () => {
+                    this.navBar.call(this, "æœˆ", 2);
+                } });
+        }, TabContent);
+        TabContent.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            TabContent.create(() => {
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Column.create({ space: 20 });
+                    Column.justifyContent(FlexAlign.Start);
+                    Column.width('100%');
+                    Column.height('100%');
+                }, Column);
+                this.showRecord.bind(this)(false, { "id": 16777282, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" }, this.thisYearDuration);
+                this.showRecord.bind(this)(true, { "id": 16777283, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" }, this.thisYearCalorie);
+                Column.pop();
+            });
+            TabContent.tabBar({ builder: () => {
+                    this.navBar.call(this, "æ€»", 3);
+                } });
+        }, TabContent);
+        TabContent.pop();
+        Tabs.pop();
+        //å¯¼èˆªæ 
+        Column.pop();
+        Column.pop();
+    }
+    rerender() {
+        this.updateDirtyElements();
+    }
+    static getEntryName() {
+        return "TrainRecordPage";
+    }
+}
+registerNamedRoute(() => new TrainRecordPage(undefined, {}), "", { bundleName: "com.example.yxsport", moduleName: "entry", pagePath: "pages/TrainRecordPage", pageFullPath: "entry/src/main/ets/pages/TrainRecordPage", integratedHsp: "false", moduleType: "followWithHap" });
+//# sourceMappingURL=TrainRecordPage.js.mapÂ‘Ùp hvigor_ignore_D:_devecostudio-windows-5.1.0.840_DevEco Studio_sdk_default_openharmony_ets_api_@ohos.router.d.tsÙ^D:\devecostudio-windows-5.1.0.840\YXSport\YXSport\entry\src\main\ets\pages\TrainRecordPage.etsÔrBšªmoduleName±isLocalDependency¯isNodeEntryFile§pkgPath±belongProjectPath§pkgNameªpkgVersion±dependencyPkgInfo°belongModulePath¬shouldEmitJs¥entryÃÂÙ7D:\devecostudio-windows-5.1.0.840\YXSport\YXSport\entryÙ1D:\devecostudio-windows-5.1.0.840\YXSport\YXSport¥entry¥1.0.0Ô  Ù7D:\devecostudio-windows-5.1.0.840\YXSport\YXSport\entryÃÃÚmimport { router } from '@kit.ArkUI';
+
+@Entry
+@Component
+
+
+struct TrainRecordPage {
+  @State message: string = 'Hello World';
+  @State curIndex: number = 0;
+  @State trainType:boolean=false;
+  @State todayDuration: number = 102;       // å½“æ—¥è®­ç»ƒæ—¶é•¿
+  @State thisWeekDuration: number = 300;    // æœ¬å‘¨è®­ç»ƒæ—¶é•¿
+  @State thisMonthDuration: number = 2830;   // æœ¬æœˆè®­ç»ƒæ—¶é•¿
+  @State thisYearDuration: number = 2830;    // æœ¬å¹´è®­ç»ƒæ—¶é•¿
+  @State todayCalorie: number = 112;       // å½“æ—¥å¡è·¯é‡Œ
+  @State thisWeekCalorie: number = 2030;    // æœ¬å‘¨å¡è·¯é‡Œ
+  @State thisMonthCalorie: number = 32353;   // æœ¬æœˆå¡è·¯é‡Œ
+  @State thisYearCalorie: number = 32353;    // æœ¬å¹´å¡è·¯é‡Œ
+
+  //å¯¼èˆªæ æ ·å¼
+  @Builder
+  navBar(tex:string, index:number){
+    Column({space:5}){
+
+      Text(tex)
+        .fontColor(index == this.curIndex ? "#6C55E4" : "#CCCCCC")
+        .fontSize(20)
+    }
+  }
+  @Builder
+  showRecord(type:boolean,image:Resource,record:number){
+    if(type == false){
+      Column(){
+        // æ ‡é¢˜è¡Œ
+        Row(){
+          //å·¦è¾¹æ ‡é¢˜
+          Text('é”»ç‚¼æ—¶é•¿')
+            .fontSize(24)
+            .fontColor('#333333')
+            .fontWeight(500)
+            .margin({left:15})
+
+          //å³è¾¹æ•°æ®
+          Row(){
+            Text(record.toString())
+              .fontSize(34)
+              .fontColor('#6249E3')
+              .fontWeight(500)
+              .margin({right:5})
+
+            Text('åˆ†é’Ÿ')
+              .fontSize(22)
+              .fontColor('#939EB5')
+          }
+          .margin({right:15})
+        }
+        .margin({top:15})
+        .width('100%')
+        .justifyContent(FlexAlign.SpaceBetween)
+
+        //å›¾è¡¨                                       //æš‚æ—¶è´´å›¾
+        Image(image)
+          .margin({top:15})
+          .width('100%')
+          .height(120)
+      }
+      .width('100%')
+      .height(200)
+      .backgroundColor('#FFFFFF')
+      .borderRadius(8)
+      .margin({top:15})
+      .onClick(()=>{
+        router.pushUrl({url:'pages/TrainTimePage'})
+      })
+    }else{
+      Column(){
+        // æ ‡é¢˜è¡Œ
+        Row(){
+          //å·¦è¾¹æ ‡é¢˜
+          Text('å¡è·¯é‡Œ')
+            .fontSize(24)
+            .fontColor('#333333')
+            .fontWeight(500)
+            .margin({left:15})
+
+          //å³è¾¹æ•°æ®
+          Row(){
+            Text(record.toString())
+              .fontSize(34)
+              .fontColor('#6249E3')
+              .fontWeight(500)
+              .margin({right:5})
+
+            Text('åƒå¡')
+              .fontSize(22)
+              .fontColor('#939EB5')
+          }
+          .margin({right:15})
+        }
+        .margin({top:15})
+        .width('100%')
+        .justifyContent(FlexAlign.SpaceBetween)
+
+        //å›¾è¡¨                                       //æš‚æ—¶è´´å›¾
+        Image(image)
+          .margin({top:15})
+          .width('100%')
+          .height(120)
+      }
+      .width('100%')
+      .height(200)
+      .backgroundColor('#FFFFFF')
+      .borderRadius(8)
+      .margin({top:15})
+      .onClick(()=>{
+        router.pushUrl({url:'pages/CaloriePage'})
+      })
+    }
+  }
+
+  //ä¸»é¡µé¢
+  build() {
+    Column(){
+      Text().height(40)
+      //æ ‡é¢˜éƒ¨åˆ†
+      Row(){
+        Image($r('app.media.return'))
+          .width(30)
+          .height(30)
+          .onClick(()=>{
+            router.back()
+          })
+        Text('è®­ç»ƒè®°å½•')
+          .fontColor('#333333')
+          .fontSize(24)
+          .fontWeight(700)
+        Text('     ')
+          .fontSize(24)
+      }
+      .justifyContent(FlexAlign.SpaceBetween)
+      .width('100%')
+      .height(30)
+      .padding(5)
+
+
+      //å¯¼èˆªæ 
+      Column(){
+        Tabs({barPosition:BarPosition.Start}){
+          TabContent(){
+            Column({space:20}){
+              this.showRecord(false,$r("app.media.duanlianshichang"),this.todayDuration)
+              this.showRecord(true,$r("app.media.kaluli"),this.todayCalorie)
+            }
+            .justifyContent(FlexAlign.Start)
+            .width('100%')
+            .height('100%')
+            //.margin({top:10})
+          }.tabBar(this.navBar("æ—¥",0))
+          TabContent(){
+            Column({space:20}){
+              this.showRecord(false,$r("app.media.duanlianshichang"),this.thisWeekDuration)
+              this.showRecord(true,$r("app.media.kaluli"),this.thisWeekCalorie)
+            }
+            .justifyContent(FlexAlign.Start)
+            .width('100%')
+            .height('100%')
+            //.margin({top:10})
+          }.tabBar(this.navBar("å‘¨",1))
+          TabContent(){
+            Column({space:20}){
+              this.showRecord(false,$r("app.media.duanlianshichang"),this.thisMonthDuration)
+              this.showRecord(true,$r("app.media.kaluli"),this.thisMonthCalorie)
+            }
+            .justifyContent(FlexAlign.Start)
+            .width('100%')
+            .height('100%')
+            //.margin({top:10})
+          }.tabBar(this.navBar("æœˆ",2))
+          TabContent(){
+            Column({space:20}){
+              this.showRecord(false,$r("app.media.duanlianshichang"),this.thisYearDuration)
+              this.showRecord(true,$r("app.media.kaluli"),this.thisYearCalorie)
+            }
+            .justifyContent(FlexAlign.Start)
+            .width('100%')
+            .height('100%')
+            //.margin({top:10})
+          }.tabBar(this.navBar("æ€»",3))
+        }
+        .onChange((index : number) => {this.curIndex = index;})
+      }
+      .height('100%')
+      .width('100%')
+      .margin({top:20})
+    }
+  }
+}ÀÔrC‘¬@ohos.routerÔrD—ªassertions¨external¢id¤meta±moduleSideEffectsªresolvedByµsyntheticNamedExportsAÃÙp hvigor_ignore_D:_devecostudio-windows-5.1.0.840_DevEco Studio_sdk_default_openharmony_ets_api_@ohos.router.d.tsAÃªoh-resolveÂ“ÔrE–§version¤fileªsourceRoot§sources¥names¨mappings²TrainRecordPage.js ‘³TrainRecordPage.etsÜÅ–”    ”  	”  ”  ”!  #”"  $’” ” ‘”  ’”6 ”ÌC (’”7 ”8 ’”8 	”= 	 ’”< 
+!”? 
+$’”? $”ÌB '’”Ì@ %”ÌD )’”? $”ÌC (’”;  ”> #’”> #”ÌB '’”? $”ÌD )’”> #”ÌC (‘”  $’” 	” ’” 	” ’” 	” ’” 	” ’” 		” 	’” 		” 	’” 
+	” 
+’” 
+	” 
+’” 	” ’” 	” ’” 	” ’” 	” ’” 	” ’” 	” ’” 	” ’” 	” ’” 	” ’” 	” ’” 	” ’” 	” ’” 	” ’” 	” ’” ” 	–” ”
+ ” 	” ” ” !˜” ” 
+” ” ”! ”# ”$ ”& ”” ” 
+” ” Ü ” ” 
+” 	” ” ”  ”$ ”(  ”) !”1 )”2 *”3 +”4 ,”= 5”> 6”? 7”Ì@ 8”ÌI ÌA–” ” 
+” 	” ” ” ’” ” 
+’” ” 
+‘” ˜” ” ” ” ” ” (” )”" 6–” ” ” ” ” ” ’”  ”  –”  ”  ” ÌB”$ ÌB”% ÌB”+ ÌB–”  ”  ” ÌC”% ÌC”& ÌC”) ÌC–”  ”  ” ÌD”. ÌD”/ ÌD”8 ÌD –”  ”  ” ÌE”+ ÌE”, ÌE”- ÌEš”  ”  ” ÌF”% ÌF”& ÌF”( ÌF”+ ÌF”- ÌF”/ ÌF”1 ÌF—”  ”  ” ÌG”& ÌG”' ÌG”* ÌG”, ÌGœ” ÌH”" ÌH”# ÌH”* ÌH”+ ÌH”- ÌH”0 ÌH”2 ÌH”ÌG ÌH1”ÌI ÌH2”ÌJ ÌH3”ÌK ÌH3’” ÌI” ÌI’” !” !’” "” "’” !” !š” "” "” 8	”" 8”# 8”% 8”( 8”* 8”, 8”. 8’” !” !–” "” "” 9	”! 9”" 9”( 9’” !” !˜” "” "” :	”* :”+ :”4 :!”5 :"”ÌA :.’” #
+” #”” $
+” $”$ $”* $’” #
+” #–” $
+” $” %”% %”& %”( %’” #
+” #–” $
+” $” &”& &”' &”0 & ’” #
+” #–” $
+” $” '”' '”( '”+ '’” #
+” #š” $
+” $” (”# (”$ (”& (”* (”, (”. (”0 (’” #
+” #’” $
+” $’” *
+” *’” +
+” +’” *
+” *š” +
+” +” 6”" 6”# 6”% 6”* 6”, 6”. 6”0 6—” ,” ,”$ ,”* ,”+ ,”3 , ”5 ,"–” ,” ,” -”% -”& -”( -–” ,” ,” .”& .”' .”0 ."–” ,” ,” /”' /”( /”+ /š” ,” ,” 0”# 0”$ 0”& 0”+ 0”- 0”. 0”0 0’” ,” ,”” 2” 2”$ 2”( 2–” 2” 2” 3”% 3”& 3”( 3–” 2” 2” 4”& 4”' 4”0 4"’” 2” 2’” *
+” *’” +
+” +’” !” !’” "” "’” <”ÌI <9”” =” =”% =”* =’” <”ÌI <9š” =” =” >”$ >”% >”' >”* >”, >”. >”0 >’” <”ÌI <9–” =” =” ?”# ?”$ ?”* ?’” <”ÌI <9–” =” =” Ì@”$ Ì@”% Ì@”( Ì@’”  ”  ‘” ÌJ‘” ÌJ	’” ÌK” ÌK–” ÌK” ÌK” Ìm”$ Ìm”% Ìm”+ Ìm–” ÌK” ÌK” Ìn”% Ìn”& Ìn”) Ìn–” ÌK” ÌK” Ìo”. Ìo”/ Ìo”8 Ìo –” ÌK” ÌK” Ìp”+ Ìp”, Ìp”- Ìpš” ÌK” ÌK” Ìq”% Ìq”& Ìq”( Ìq”+ Ìq”- Ìq”/ Ìq”1 Ìq—” ÌK” ÌK” Ìr”& Ìr”' Ìr”* Ìr”, Ìrœ” Ìs”" Ìs”# Ìs”* Ìs”+ Ìs”- Ìs”0 Ìs”2 Ìs”ÌE Ìs/”ÌG Ìs0”ÌH Ìs1”ÌI Ìs1’” Ìt” Ìt’” ÌL” ÌL’” ÌM” ÌM’” ÌL” ÌLš” ÌM” ÌM” Ìc	”" Ìc”# Ìc”% Ìc”( Ìc”* Ìc”, Ìc”. Ìc’” ÌL” ÌL–” ÌM” ÌM” Ìd	”! Ìd”" Ìd”( Ìd’” ÌL” ÌL˜” ÌM” ÌM” Ìe	”* Ìe”+ Ìe”4 Ìe!”5 Ìe"”ÌA Ìe.’” ÌN
+” ÌN”” ÌO
+” ÌO”$ ÌO”) ÌO’” ÌN
+” ÌN–” ÌO
+” ÌO” ÌP”% ÌP”& ÌP”( ÌP’” ÌN
+” ÌN–” ÌO
+” ÌO” ÌQ”& ÌQ”' ÌQ”0 ÌQ ’” ÌN
+” ÌN–” ÌO
+” ÌO” ÌR”' ÌR”( ÌR”+ ÌR’” ÌN
+” ÌNš” ÌO
+” ÌO” ÌS”# ÌS”$ ÌS”& ÌS”* ÌS”, ÌS”. ÌS”0 ÌS’” ÌN
+” ÌN’” ÌO
+” ÌO’” ÌU
+” ÌU’” ÌV
+” ÌV’” ÌU
+” ÌUš” ÌV
+” ÌV” Ìa”" Ìa”# Ìa”% Ìa”* Ìa”, Ìa”. Ìa”0 Ìa—” ÌW” ÌW”$ ÌW”* ÌW”+ ÌW”3 ÌW ”5 ÌW"–” ÌW” ÌW” ÌX”% ÌX”& ÌX”( ÌX–” ÌW” ÌW” ÌY”& ÌY”' ÌY”0 ÌY"–” ÌW” ÌW” ÌZ”' ÌZ”( ÌZ”+ ÌZš” ÌW” ÌW” Ì[”# Ì[”$ Ì[”& Ì[”+ Ì[”- Ì[”. Ì[”0 Ì[’” ÌW” ÌW”” Ì]” Ì]”$ Ì]”( Ì]–” Ì]” Ì]” Ì^”% Ì^”& Ì^”( Ì^–” Ì]” Ì]” Ì_”& Ì_”' Ì_”0 Ì_"’” Ì]” Ì]’” ÌU
+” ÌU’” ÌV
+” ÌV’” ÌL” ÌL’” ÌM” ÌM’” Ìg”ÌI Ìg9”” Ìh” Ìh”% Ìh”* Ìh’” Ìg”ÌI Ìg9š” Ìh” Ìh” Ìi”$ Ìi”% Ìi”' Ìi”* Ìi”, Ìi”. Ìi”0 Ìi’” Ìg”ÌI Ìg9–” Ìh” Ìh” Ìj”# Ìj”$ Ìj”* Ìj’” Ìg”ÌI Ìg9–” Ìh” Ìh” Ìk”$ Ìk”% Ìk”( Ìk’” ÌK” ÌK‘” Ìu‘” Ìv’” Ìx”	 Ìx‘” Ìy’” Ìz” Ìz
+’” Ì{” Ì{
+–” Ì{” Ì{
+” Ì{” Ì{” Ì{” Ì{’” Ì{” Ì{
+’” Ì|” Ì|’” Ì}” Ì}	’” Ì|” Ì|˜” Ì}” Ì}	” Ì‹” Ì‹” Ì‹”( Ì‹”) Ì‹ ”5 Ì‹,’” Ì|” Ì|–” Ì}” Ì}	” ÌŒ” ÌŒ” ÌŒ” ÌŒ’” Ì|” Ì|–” Ì}” Ì}	” Ì” Ì” Ì” Ì’” Ì|” Ì|–” Ì}” Ì}	” ÌŽ” ÌŽ” ÌŽ” ÌŽ’” Ì~” Ì~–” Ì~” Ì~” Ì” Ì” Ì” Ì–” Ì~” Ì~” Ì€” Ì€” Ì€” Ì€—” Ì~” Ì~” Ì” Ì” Ì” Ì” Ì–” Ì‚” Ì‚” Ì‚” Ì‚” Ì‚” Ì‚’” Ìƒ
+” Ìƒ”” Ì„” Ì„” Ì„” Ì„–” Ì„” Ì„” Ì…” Ì…” Ì…”$ Ì…–” Ì„” Ì„” Ì†” Ì†” Ì†” Ì†–” Ì„” Ì„” Ì‡” Ì‡” Ì‡” Ì‡’” Ì„” Ì„”” Ìˆ” Ìˆ” Ìˆ” Ìˆ–” Ìˆ” Ìˆ” Ì‰” Ì‰” Ì‰” Ì‰’” Ìˆ” Ìˆ’” Ì|” Ì|’” Ì}” Ì}	’” Ì‘” Ì‘’” Ì’” Ì’’” Ì‘” Ì‘–” Ì’” Ì’” Ì¿” Ì¿” Ì¿”  Ì¿’” Ì‘” Ì‘–” Ì’” Ì’” ÌÀ” ÌÀ” ÌÀ” ÌÀ’” Ì‘” Ì‘š” Ì’” Ì’” ÌÁ” ÌÁ” ÌÁ” ÌÁ” ÌÁ”! ÌÁ”# ÌÁ”% ÌÁš” Ì“” Ì“” Ì“” Ì“”% Ì“”' Ì“”2 Ì“%”3 Ì“&”8 Ì“+”: Ì“,Ü ” Ì“” Ì“” Ì½	” Ì½” Ì½” Ì½”  Ì½!”" Ì½#”$ Ì½%”' Ì½'”+ Ì½+”, Ì½,”4 Ì½4”7 Ì½7”< Ì½<”= Ì½=”> Ì½=”? Ì½>˜” Ì•” Ì•”" Ì•”$ Ì•”) Ì•”+ Ì•”- Ì•”/ Ì•˜” Ì•” Ì•” Ì™”) Ì™”* Ì™”3 Ì™%”4 Ì™&”9 Ì™+–” Ì•” Ì•” Ìš”  Ìš”! Ìš”' Ìš–” Ì•” Ì•” Ì›”! Ì›”" Ì›”( Ì››” Ì–” Ì–” Ì–” Ì–”+ Ì–”0 Ì–#”Ì Ì–ÌE”Ì¡ Ì–ÌI”Ì¢ Ì–ÌJ”Ì¯ Ì–ÌW”Ì° Ì–ÌX›” Ì—” Ì—” Ì—” Ì—”+ Ì—”/ Ì—"”Ìœ Ì—:”Ì  Ì—>”Ì¡ Ì—?”Ì­ Ì—ÌK”Ì® Ì—ÌL’” Ì•” Ì•’” Ì” Ì˜” Ì” Ì” Ì” Ì”+ Ì”. Ì"”0 Ì#”1 Ì$˜” ÌŸ” ÌŸ”" ÌŸ”$ ÌŸ”) ÌŸ”+ ÌŸ”- ÌŸ”/ ÌŸ˜” ÌŸ” ÌŸ” Ì£”) Ì£”* Ì£”3 Ì£%”4 Ì£&”9 Ì£+–” ÌŸ” ÌŸ” Ì¤”  Ì¤”! Ì¤”' Ì¤–” ÌŸ” ÌŸ” Ì¥”! Ì¥”" Ì¥”( Ì¥›” Ì ” Ì ” Ì ” Ì ”+ Ì ”0 Ì #”Ì Ì ÌE”Ì¡ Ì ÌI”Ì¢ Ì ÌJ”Ì² Ì ÌZ”Ì³ Ì Ì[›” Ì¡” Ì¡” Ì¡” Ì¡”+ Ì¡”/ Ì¡"”Ìœ Ì¡:”Ì  Ì¡>”Ì¡ Ì¡?”Ì° Ì¡ÌN”Ì± Ì¡ÌO’” ÌŸ” ÌŸ’” Ì§” Ì§˜” Ì§” Ì§” Ì§” Ì§”+ Ì§”. Ì§"”0 Ì§#”1 Ì§$˜” Ì©” Ì©”" Ì©”$ Ì©”) Ì©”+ Ì©”- Ì©”/ Ì©˜” Ì©” Ì©” Ì­”) Ì­”* Ì­”3 Ì­%”4 Ì­&”9 Ì­+–” Ì©” Ì©” Ì®”  Ì®”! Ì®”' Ì®–” Ì©” Ì©” Ì¯”! Ì¯”" Ì¯”( Ì¯›” Ìª” Ìª” Ìª” Ìª”+ Ìª”0 Ìª#”Ì ÌªÌE”Ì¡ ÌªÌI”Ì¢ ÌªÌJ”Ì³ ÌªÌ[”Ì´ ÌªÌ\›” Ì«” Ì«” Ì«” Ì«”+ Ì«”/ Ì«"”Ìœ Ì«:”Ì  Ì«>”Ì¡ Ì«?”Ì± Ì«ÌO”Ì² Ì«ÌP’” Ì©” Ì©’” Ì±” Ì±˜” Ì±” Ì±” Ì±” Ì±”+ Ì±”. Ì±"”0 Ì±#”1 Ì±$˜” Ì³” Ì³”" Ì³”$ Ì³”) Ì³”+ Ì³”- Ì³”/ Ì³˜” Ì³” Ì³” Ì·”) Ì·”* Ì·”3 Ì·%”4 Ì·&”9 Ì·+–” Ì³” Ì³” Ì¸”  Ì¸”! Ì¸”' Ì¸–” Ì³” Ì³” Ì¹”! Ì¹”" Ì¹”( Ì¹›” Ì´” Ì´” Ì´” Ì´”+ Ì´”0 Ì´#”Ì Ì´ÌE”Ì¡ Ì´ÌI”Ì¢ Ì´ÌJ”Ì² Ì´ÌZ”Ì³ Ì´Ì[›” Ìµ” Ìµ” Ìµ” Ìµ”+ Ìµ”/ Ìµ"”Ìœ Ìµ:”Ì  Ìµ>”Ì¡ Ìµ?”Ì° ÌµÌN”Ì± ÌµÌO’” Ì³” Ì³’” Ì»” Ì»˜” Ì»” Ì»” Ì»” Ì»”+ Ì»”. Ì»"”0 Ì»#”1 Ì»$’” Ì“” Ì“’” Ì‘” Ì‘’” Ì’” Ì’’” Ìz” Ìz
+‘” ÌÃÔrF–§version¤file§sources®sourcesContent¥names¨mappingsÀ‘À‘ÀÜÎ‘”    ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”  	 ‘”  
+ ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”    ‘”  ! ‘”  " ‘”  # ‘”  $ ‘”  % ‘”  & ‘”  ' ‘”  ( ‘”  ) ‘”  * ‘”  + ‘”  , ‘”  - ‘”  . ‘”  / ‘”  0 ‘”  1 ‘”  2 ‘”  3 ‘”  4 ‘”  5 ‘”  6 ‘”  7 ‘”  8 ‘”  9 ‘”  : ‘”  ; ‘”  < ‘”  = ‘”  > ‘”  ? ‘”  Ì@ ‘”  ÌA ‘”  ÌB ‘”  ÌC ‘”  ÌD ‘”  ÌE ‘”  ÌF ‘”  ÌG ‘”  ÌH ‘”  ÌI ‘”  ÌJ ‘”  ÌK ‘”  ÌL ‘”  ÌM ‘”  ÌN ‘”  ÌO ‘”  ÌP ‘”  ÌQ ‘”  ÌR ‘”  ÌS ‘”  ÌT ‘”  ÌU ‘”  ÌV ‘”  ÌW ‘”  ÌX ‘”  ÌY ‘”  ÌZ ‘”  Ì[ ‘”  Ì\ ‘”  Ì] ‘”  Ì^ ‘”  Ì_ ‘”  Ì` ‘”  Ìa ‘”  Ìb ‘”  Ìc ‘”  Ìd ‘”  Ìe ‘”  Ìf ‘”  Ìg ‘”  Ìh ‘”  Ìi ‘”  Ìj ‘”  Ìk ‘”  Ìl ‘”  Ìm ‘”  Ìn ‘”  Ìo ‘”  Ìp ‘”  Ìq ‘”  Ìr ‘”  Ìs ‘”  Ìt ‘”  Ìu ‘”  Ìv ‘”  Ìw ‘”  Ìx ‘”  Ìy ‘”  Ìz ‘”  Ì{ ‘”  Ì| ‘”  Ì} ‘”  Ì~ ‘”  Ì ‘”  Ì€ ‘”  Ì ‘”  Ì‚ ‘”  Ìƒ ‘”  Ì„ ‘”  Ì… ‘”  Ì† ‘”  Ì‡ ‘”  Ìˆ ‘”  Ì‰ ‘”  ÌŠ ‘”  Ì‹ ‘”  ÌŒ ‘”  Ì ‘”  ÌŽ ‘”  Ì ‘”  Ì ‘”  Ì‘ ‘”  Ì’ ‘”  Ì“ ‘”  Ì” ‘”  Ì• ‘”  Ì– ‘”  Ì— ‘”  Ì˜ ‘”  Ì™ ‘”  Ìš ‘”  Ì› ‘”  Ìœ ‘”  Ì ‘”  Ìž ‘”  ÌŸ ‘”  Ì  ‘”  Ì¡ ‘”  Ì¢ ‘”  Ì£ ‘”  Ì¤ ‘”  Ì¥ ‘”  Ì¦ ‘”  Ì§ ‘”  Ì¨ ‘”  Ì© ‘”  Ìª ‘”  Ì« ‘”  Ì¬ ‘”  Ì­ ‘”  Ì® ‘”  Ì¯ ‘”  Ì° ‘”  Ì± ‘”  Ì² ‘”  Ì³ ‘”  Ì´ ‘”  Ìµ ‘”  Ì¶ ‘”  Ì· ‘”  Ì¸ ‘”  Ì¹ ‘”  Ìº ‘”  Ì» ‘”  Ì¼ ‘”  Ì½ ‘”  Ì¾ ‘”  Ì¿ ‘”  ÌÀ ‘”  ÌÁ ‘”  ÌÂ ‘”  ÌÃ ‘”  ÌÄ ‘”  ÌÅ ‘”  ÌÆ ‘”  ÌÇ ‘”  ÌÈ ‘”  ÌÉ ‘”  ÌÊ ‘”  ÌË ‘”  ÌÌ ‘”  ÌÍ ‘”  ÌÎ ‘”  ÌÏ ‘”  ÌÐ ‘”  ÌÑ ‘”  ÌÒ ‘”  ÌÓ ‘”  ÌÔ ‘”  ÌÕ ‘”  ÌÖ ‘”  Ì× ‘”  ÌØ ‘”  ÌÙ ‘”  ÌÚ ‘”  ÌÛ ‘”  ÌÜ ‘”  ÌÝ ‘”  ÌÞ ‘”  Ìß ‘”  Ìà ‘”  Ìá ‘”  Ìâ ‘”  Ìã ‘”  Ìä ‘”  Ìå ‘”  Ìæ ‘”  Ìç ‘”  Ìè ‘”  Ìé ‘”  Ìê ‘”  Ìë ‘”  Ìì ‘”  Ìí ‘”  Ìî ‘”  Ìï ‘”  Ìð ‘”  Ìñ ‘”  Ìò ‘”  Ìó ‘”  Ìô ‘”  Ìõ ‘”  Ìö ‘”  Ì÷ ‘”  Ìø ‘”  Ìù ‘”  Ìú ‘”  Ìû ‘”  Ìü ‘”  Ìý ‘”  Ìþ ‘”  Ìÿ ‘”  Í  ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í	 ‘”  Í
+ ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í  ‘”  Í! ‘”  Í" ‘”  Í# ‘”  Í$ ‘”  Í% ‘”  Í& ‘”  Í' ‘”  Í( ‘”  Í) ‘”  Í* ‘”  Í+ ‘”  Í, ‘”  Í- ‘”  Í. ‘”  Í/ ‘”  Í0 ‘”  Í1 ‘”  Í2 ‘”  Í3 ‘”  Í4 ‘”  Í5 ‘”  Í6 ‘”  Í7 ‘”  Í8 ‘”  Í9 ‘”  Í: ‘”  Í; ‘”  Í< ‘”  Í= ‘”  Í> ‘”  Í? ‘”  Í@ ‘”  ÍA ‘”  ÍB ‘”  ÍC ‘”  ÍD ‘”  ÍE ‘”  ÍF ‘”  ÍG ‘”  ÍH ‘”  ÍI ‘”  ÍJ ‘”  ÍK ‘”  ÍL ‘”  ÍM ‘”  ÍN ‘”  ÍO ‘”  ÍP ‘”  ÍQ ‘”  ÍR ‘”  ÍS ‘”  ÍT ‘”  ÍU ‘”  ÍV ‘”  ÍW ‘”  ÍX ‘”  ÍY ‘”  ÍZ ‘”  Í[ ‘”  Í\ ‘”  Í] ‘”  Í^ ‘”  Í_ ‘”  Í` ‘”  Ía ‘”  Íb ‘”  Íc ‘”  Íd ‘”  Íe ‘”  Íf ‘”  Íg ‘”  Íh ‘”  Íi ‘”  Íj ‘”  Ík ‘”  Íl ‘”  Ím ‘”  Ín ‘”  Ío ‘”  Íp ‘”  Íq ‘”  Ír ‘”  Ís ‘”  Ít ‘”  Íu ‘”  Ív ‘”  Íw ‘”  Íx ‘”  Íy ‘”  Íz ‘”  Í{ ‘”  Í| ‘”  Í} ‘”  Í~ ‘”  Í ‘”  Í€ ‘”  Í ‘”  Í‚ ‘”  Íƒ ‘”  Í„ ‘”  Í… ‘”  Í† ‘”  Í‡ ‘”  Íˆ ‘”  Í‰ ‘”  ÍŠ ‘”  Í‹ ‘”  ÍŒ ‘”  Í ‘”  ÍŽ ‘”  Í ‘”  Í ‘”  Í‘ ‘”  Í’ ‘”  Í“ ‘”  Í” ‘”  Í• ‘”  Í– ‘”  Í— ‘”  Í˜ ‘”  Í™ ‘”  Íš ‘”  Í› ‘”  Íœ ‘”  Í ‘”  Íž ‘”  ÍŸ ‘”  Í  ‘”  Í¡ ‘”  Í¢ ‘”  Í£ ‘”  Í¤ ‘”  Í¥ ‘”  Í¦ ‘”  Í§ ‘”  Í¨ ‘”  Í© ‘”  Íª ‘”  Í« ‘”  Í¬ ‘”  Í­ ‘”  Í® ‘”  Í¯ ‘”  Í° ‘”  Í± ‘”  Í² ‘”  Í³ ‘”  Í´ ‘”  Íµ ‘”  Í¶ ‘”  Í· ‘”  Í¸ ‘”  Í¹ ‘”  Íº ‘”  Í» ‘”  Í¼ ‘”  Í½ ‘”  Í¾ ‘”  Í¿ ‘”  ÍÀ ‘”  ÍÁ ‘”  ÍÂ ‘”  ÍÃ ‘”  ÍÄ ‘”  ÍÅ ‘”  ÍÆ ‘”  ÍÇ ‘”  ÍÈ ‘”  ÍÉ ‘”  ÍÊ ‘”  ÍË ‘”  ÍÌ ‘”  ÍÍ ÔrG’§missing¦pluginÃ¦genAbcÂÔ  ÔrH”²dynamicImportCache¹exportAllDeclarationCache»exportNamedDeclarationCache«importCache‘ÔrI•¤type¥start£endªspecifiers¦source±ImportDeclarationÌ€Ì¢‘ÔrJ”¤type¥start£end¥local¶ImportDefaultSpecifierÌ‡ÌÔrK”¤type¥start£end¤nameªIdentifierÌ‡Ì¦routerÔrL•¤type¥start£end¥value£raw§LiteralÌ“Ì¡¬@ohos.router®"@ohos.router"

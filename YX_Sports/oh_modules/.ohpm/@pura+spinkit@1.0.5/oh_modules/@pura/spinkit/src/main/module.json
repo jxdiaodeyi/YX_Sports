@@ -1,0 +1,29 @@
+{
+	"app": {
+		"bundleName": "com.harmony.utils",
+		"debug": true,
+		"versionCode": 1000001,
+		"versionName": "1.0.1",
+		"minAPIVersion": 50000012,
+		"targetAPIVersion": 50001013,
+		"apiReleaseType": "Release",
+		"compileSdkVersion": "5.0.1.115",
+		"compileSdkType": "HarmonyOS",
+		"appEnvironments": [],
+		"bundleType": "app"
+	},
+	"module": {
+		"name": "spinkit",
+		"type": "har",
+		"deviceTypes": [
+			"default",
+			"tablet",
+			"2in1"
+		],
+		"packageName": "@pura/spinkit",
+		"installationFree": false,
+		"virtualMachine": "ark12.0.2.0",
+		"compileMode": "esmodule",
+		"dependencies": []
+	}
+}

@@ -1,0 +1,134 @@
+/*
+ * Copyright (c) 2023 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef RESOURCE_TABLE_H
+#define RESOURCE_TABLE_H
+
+#include<stdint.h>
+
+namespace OHOS {
+const int32_t STRING_ENTRYABILITY_DESC = 0x01000004;
+const int32_t STRING_ENTRYABILITY_LABEL = 0x01000005;
+const int32_t STRING_AGCIT_ABNER_KEYBOARD = 0x0100004b;
+const int32_t STRING_APP_NAME = 0x01000000;
+const int32_t STRING_MODULE_DESC = 0x01000006;
+const int32_t STRING_PAGE_SHOW = 0x0100001c;
+const int32_t STRING_PINCODETEXTINPUT_DESC = 0x01000060;
+const int32_t COLOR_HARMONY_DIALOG_DIVIDER_COLOR = 0x0100001d;
+const int32_t COLOR_HARMONY_DIALOG_TEXT_COLOR = 0x0100001e;
+const int32_t COLOR_HARMONY_DIALOG_TITLE_BACKGROUND = 0x0100001f;
+const int32_t COLOR_HARMONY_DIALOG_TITLE_COLOR = 0x01000020;
+const int32_t COLOR_START_WINDOW_BACKGROUND = 0x01000007;
+const int32_t FLOAT_PAGE_TEXT_FONT_SIZE = 0x01000008;
+const int32_t MEDIA_BACKSPACE = 0x01000037;
+const int32_t MEDIA_CAROLIE1 = 0x01000038;
+const int32_t MEDIA_CAROLIE2 = 0x01000039;
+const int32_t MEDIA_CAROLIE3 = 0x0100003a;
+const int32_t MEDIA_RIGHTARROW = 0x0100003b;
+const int32_t MEDIA_TRAINTIME1 = 0x0100003c;
+const int32_t MEDIA_TRAINTIME2 = 0x0100003d;
+const int32_t MEDIA_TRAINTIME3 = 0x0100003e;
+const int32_t MEDIA_WEIGHTRECORDBACKGROUND = 0x0100003f;
+const int32_t MEDIA_A = 0x0100004d;
+const int32_t MEDIA_APP_BACKGROUND = 0x01000001;
+const int32_t MEDIA_APP_FOREGROUND = 0x01000002;
+const int32_t MEDIA_APP_LAYERED_IMAGE = 0x01000003;
+const int32_t MEDIA_ARROW_DOWN = 0x0100006d;
+const int32_t MEDIA_ARROW_UP = 0x0100006e;
+const int32_t MEDIA_B = 0x0100004e;
+const int32_t MEDIA_BACKGROUND = 0x01000009;
+const int32_t MEDIA_BOTTOMLINE = 0x0100004f;
+const int32_t MEDIA_C = 0x01000050;
+const int32_t MEDIA_CHA = 0x01000040;
+const int32_t MEDIA_CIRCLE = 0x01000051;
+const int32_t MEDIA_CLASS1 = 0x01000063;
+const int32_t MEDIA_CLASS10 = 0x01000064;
+const int32_t MEDIA_CLASS2 = 0x01000065;
+const int32_t MEDIA_CLASS3 = 0x01000066;
+const int32_t MEDIA_CLASS4 = 0x01000067;
+const int32_t MEDIA_CLASS5 = 0x01000068;
+const int32_t MEDIA_CLASS6 = 0x01000069;
+const int32_t MEDIA_CLASS7 = 0x0100006a;
+const int32_t MEDIA_CLASS8 = 0x0100006b;
+const int32_t MEDIA_CLASS9 = 0x0100006c;
+const int32_t MEDIA_D = 0x01000052;
+const int32_t MEDIA_DUANLIANBACKGROUND = 0x01000041;
+const int32_t MEDIA_DUANLIANSHICHANG = 0x01000042;
+const int32_t MEDIA_E = 0x01000053;
+const int32_t MEDIA_F = 0x01000054;
+const int32_t MEDIA_FOREGROUND = 0x0100000a;
+const int32_t MEDIA_GOU = 0x01000022;
+const int32_t MEDIA_HOME = 0x0100000b;
+const int32_t MEDIA_IMG_0 = 0x0100000c;
+const int32_t MEDIA_IMG_1 = 0x0100000d;
+const int32_t MEDIA_IMG_2 = 0x0100000e;
+const int32_t MEDIA_IMG_3 = 0x0100000f;
+const int32_t MEDIA_KALULI = 0x01000043;
+const int32_t MEDIA_LAYERED_IMAGE = 0x01000010;
+const int32_t MEDIA_LEFTBACK = 0x01000055;
+const int32_t MEDIA_LOADING = 0x01000023;
+const int32_t MEDIA_LUNBO1 = 0x01000024;
+const int32_t MEDIA_MAJIAXIAN = 0x01000025;
+const int32_t MEDIA_MEMBERSHIP = 0x01000056;
+const int32_t MEDIA_MINE = 0x01000011;
+const int32_t MEDIA_MSG = 0x01000057;
+const int32_t MEDIA_MUSICBRANK = 0x01000026;
+const int32_t MEDIA_MUSICPLAY = 0x01000058;
+const int32_t MEDIA_NANDU = 0x01000018;
+const int32_t MEDIA_PAMEILA = 0x01000027;
+const int32_t MEDIA_PHO = 0x01000044;
+const int32_t MEDIA_PHONENUM = 0x01000059;
+const int32_t MEDIA_PINCODETEXTINPUT_LIB_ICON_ARROW_DOWN = 0x01000061;
+const int32_t MEDIA_PINCODETEXTINPUT_LIB_ICON_DELETE_KEY = 0x01000062;
+const int32_t MEDIA_PLAN = 0x01000012;
+const int32_t MEDIA_PRACTICE = 0x01000013;
+const int32_t MEDIA_QIDONG = 0x01000028;
+const int32_t MEDIA_QQ = 0x01000029;
+const int32_t MEDIA_QUANBU = 0x0100002a;
+const int32_t MEDIA_REFLASH = 0x01000021;
+const int32_t MEDIA_RESULT1 = 0x0100002b;
+const int32_t MEDIA_RESULT2 = 0x0100002c;
+const int32_t MEDIA_RESULT3 = 0x0100002d;
+const int32_t MEDIA_RESULT4 = 0x0100002e;
+const int32_t MEDIA_RESULT5 = 0x0100002f;
+const int32_t MEDIA_RESULT6 = 0x01000030;
+const int32_t MEDIA_RETURN = 0x0100001b;
+const int32_t MEDIA_RIGHTBACK = 0x0100005a;
+const int32_t MEDIA_RILI = 0x01000045;
+const int32_t MEDIA_RUNING = 0x01000019;
+const int32_t MEDIA_SEARCH = 0x01000031;
+const int32_t MEDIA_SET = 0x0100005b;
+const int32_t MEDIA_SHANCHU = 0x01000032;
+const int32_t MEDIA_SHARE = 0x01000017;
+const int32_t MEDIA_SOUSUO1 = 0x01000033;
+const int32_t MEDIA_STARTICON = 0x01000014;
+const int32_t MEDIA_STARTPHO = 0x0100005c;
+const int32_t MEDIA_SYSINFOIMG = 0x0100005d;
+const int32_t MEDIA_TIME = 0x0100001a;
+const int32_t MEDIA_VIEW_IC_KEY_DELETE = 0x0100004c;
+const int32_t MEDIA_VIP = 0x0100005f;
+const int32_t MEDIA_VOLUME = 0x0100005e;
+const int32_t MEDIA_WECHAT = 0x01000034;
+const int32_t MEDIA_WEIBO = 0x01000035;
+const int32_t MEDIA_XAIZAI = 0x01000036;
+const int32_t MEDIA_XUNLIAN1 = 0x01000046;
+const int32_t MEDIA_YINDAO1 = 0x01000047;
+const int32_t MEDIA_YINDAO2 = 0x01000048;
+const int32_t MEDIA_YINDAO3 = 0x01000049;
+const int32_t MEDIA_YINDAO4 = 0x0100004a;
+const int32_t PROFILE_BACKUP_CONFIG = 0x01000015;
+const int32_t PROFILE_MAIN_PAGES = 0x01000016;
+}
+#endif

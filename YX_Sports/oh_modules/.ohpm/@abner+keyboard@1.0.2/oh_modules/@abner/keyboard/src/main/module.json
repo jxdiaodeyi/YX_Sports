@@ -1,0 +1,28 @@
+{
+	"app": {
+		"bundleName": "com.abner.keyboard",
+		"debug": false,
+		"versionCode": 1000000,
+		"versionName": "1.0.0",
+		"minAPIVersion": 50000012,
+		"targetAPIVersion": 50002014,
+		"apiReleaseType": "Release",
+		"compileSdkVersion": "5.0.2.123",
+		"compileSdkType": "HarmonyOS",
+		"appEnvironments": [],
+		"bundleType": "app",
+		"buildMode": "release"
+	},
+	"module": {
+		"name": "keyboard",
+		"type": "har",
+		"deviceTypes": [
+			"default"
+		],
+		"packageName": "@abner/keyboard",
+		"installationFree": false,
+		"virtualMachine": "ark12.0.2.0",
+		"compileMode": "esmodule",
+		"dependencies": []
+	}
+}

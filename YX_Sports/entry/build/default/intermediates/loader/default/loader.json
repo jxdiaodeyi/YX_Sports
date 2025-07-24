@@ -1,0 +1,31 @@
+{
+  "modulePathMap": {
+    "entry": "D:\\devecostudio-windows-5.1.0.840\\YXSport\\YXSport\\entry"
+  },
+  "compileMode": "esmodule",
+  "projectRootPath": "D:\\devecostudio-windows-5.1.0.840\\YXSport\\YXSport",
+  "nodeModulesPath": "D:\\devecostudio-windows-5.1.0.840\\YXSport\\YXSport\\entry\\build\\default\\intermediates\\loader_out\\default\\node_modules",
+  "byteCodeHarInfo": {
+    "@abner/keyboard": {
+      "abcPath": "D:\\devecostudio-windows-5.1.0.840\\YXSport\\YXSport\\oh_modules\\.ohpm\\@abner+keyboard@1.0.2\\oh_modules\\@abner\\keyboard\\ets\\modules.abc"
+    }
+  },
+  "declarationEntry": [],
+  "moduleName": "entry",
+  "hspNameOhmMap": {},
+  "harNameOhmMap": {},
+  "packageManagerType": "ohpm",
+  "compileEntry": [],
+  "otherCompileFiles": [],
+  "dynamicImportLibInfo": {},
+  "routerMap": [],
+  "hspResourcesMap": {},
+  "updateVersionInfo": {
+    "@abner/keyboard": {}
+  },
+  "anBuildOutPut": "D:\\devecostudio-windows-5.1.0.840\\YXSport\\YXSport\\entry\\build\\default\\intermediates\\loader_out\\default\\an\\arm64-v8a",
+  "anBuildMode": "type",
+  "patchConfig": {
+    "changedFileList": "D:\\devecostudio-windows-5.1.0.840\\YXSport\\YXSport\\entry\\build\\default\\intermediates\\patch\\default\\changedFileList.json"
+  }
+}

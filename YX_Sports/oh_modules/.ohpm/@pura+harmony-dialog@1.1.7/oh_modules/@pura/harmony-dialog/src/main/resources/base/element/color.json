@@ -1,0 +1,20 @@
+{
+  "color": [
+    {
+      "name": "harmony_dialog_title_color",
+      "value": "#333333"
+    },
+    {
+      "name": "harmony_dialog_title_background",
+      "value": "#F3F3F3"
+    },
+    {
+      "name": "harmony_dialog_text_color",
+      "value": "#333333"
+    },
+    {
+      "name": "harmony_dialog_divider_color",
+      "value": "#E8E8E8"
+    }
+  ]
+}

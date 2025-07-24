@@ -1,0 +1,5 @@
+string page_show 0x04000000
+color harmony_dialog_divider_color 0x04000001
+color harmony_dialog_text_color 0x04000002
+color harmony_dialog_title_background 0x04000003
+color harmony_dialog_title_color 0x04000004
