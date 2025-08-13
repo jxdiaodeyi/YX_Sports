@@ -510,7 +510,7 @@ class NumberKeyboardPage extends ViewPU {
             Row.padding(5);
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Image.create({ "id": 16777243, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
+            Image.create({ "id": 16777240, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
             Image.width(40);
             Image.height(40);
             Image.onClick(() => {

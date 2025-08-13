@@ -9,7 +9,7 @@
 		"SELECT_BUILD_PRODUCT":"default",
 		"BUNDLE_NAME":"com.example.yxsport",
 		"BUILD_PATH":{
-			"OUTPUT_PATH":"D:\\devecostudio-windows-5.1.0.840\\YXSport\\YXSport\\build\\outputs\\default"
+			"OUTPUT_PATH":"D:\\huaweiProject\\YXSport\\build\\outputs\\default"
 		},
 		"SELECT_BUILD_MODE":""
 	}

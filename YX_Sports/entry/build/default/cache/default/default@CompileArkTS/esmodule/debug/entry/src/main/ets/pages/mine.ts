@@ -156,9 +156,6 @@ export class mine extends ViewPU {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Image.create({ "id": 16777284, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
             Image.size({ width: 60, height: 60 });
-            Image.onClick(() => {
-                router.pushUrl({ url: 'pages/EditInfoPage' });
-            });
         }, Image);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Column.create();

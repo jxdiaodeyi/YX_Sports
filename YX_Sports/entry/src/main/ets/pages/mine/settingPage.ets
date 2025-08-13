@@ -1,0 +1,245 @@
+import { router } from '@kit.ArkUI'
+import {DialogHelper} from '@pura/harmony-dialog'
+import {DialogAction} from '@pura/harmony-dialog'
+import { sharedTitle } from './title'
+
+
+@Entry
+@Component
+struct SettingPage {
+
+  @State sex:string = "女"
+  @State second:number = 30
+  @State myIndex:number = 3
+
+  @Styles
+  rowCommon(){
+    .width('100%')
+    .height(50)
+    .backgroundColor('#ffff')
+  }
+  @Styles
+  imgCommon(){
+    .width(15)
+    .height(15)
+    .margin({right:10})
+  }
+
+  //小标题，运动，隐私，其他
+  @Builder
+  title(t:string){
+    Row(){
+      Text(t)
+        .fontColor('#C0A5C0')
+        .textAlign(TextAlign.Start)
+        .margin({left:10})
+    }
+    .width('100%')
+    .height(50)
+    .alignItems(VerticalAlign.Center)
+  }
+
+  //运动部分
+  @Builder
+  sportBuilder() {
+    Column() {
+      this.title("运动")
+      Column() {
+        Row() {
+          Text("运动音乐")
+            .fontSize(20)
+            .margin({ left: 10 })
+          Image('/image/mine/rightBack.png').imgCommon()
+        }
+        .justifyContent(FlexAlign.SpaceBetween)
+        .alignItems(VerticalAlign.Center)
+        .rowCommon()
+        .onClick(() => {
+          router.pushUrl({ url: 'pages/mine/music' })
+        })
+
+        Image('/image/mine/bottomLine.png').size({ width: '90%', height: 0.5 })
+
+        Row() {
+          Text("锻炼休息时间")
+            .fontSize(20)
+            .margin({ left: 10 })
+          Row() {
+            Text(this.second + "秒")
+            Image('/image/mine/rightBack.png').imgCommon()
+          }
+        }
+        .justifyContent(FlexAlign.SpaceBetween)
+        .alignItems(VerticalAlign.Center)
+        .rowCommon()
+        .onClick(() => {
+          let nums: string[] = []
+          for (let i = 1; i <= 2025; i++) {
+            nums.push(i.toString())
+          }
+          DialogHelper.showTextPickerDialog({
+            title: "",
+            range: nums,
+            canLoop:false,
+            onAction: (action: number, dialogId:string,value: string | string[]) => {
+              if (action == DialogAction.SURE) {
+                this.second = parseInt(value as string)
+              }
+            }
+          })
+        })
+
+        Image('/image/mine/bottomLine.png').size({ width: '90%', height: 0.3 })
+
+        Row() {
+          Text("健身视频示范教练")
+            .fontSize(20)
+            .margin({ left: 10 })
+          Row() {
+            Text(this.sex)
+            Image('/image/mine/rightBack.png').imgCommon()
+          }
+        }
+        .justifyContent(FlexAlign.SpaceBetween)
+        .alignItems(VerticalAlign.Center)
+        .rowCommon()
+        .onClick(() => {
+          let sexes: string[] = ["男教练", "女教练"]
+          DialogHelper.showActionSheetDialog({
+            title: "",
+            sheets: sexes,
+            onAction: (index) => {
+              this.sex = sexes[index][0]
+            }
+          })
+        })
+
+        Image('/image/mine/bottomLine.png').size({ width: '90%', height: 0.5 })
+
+        Row() {
+          Text("健身目标与基础")
+            .fontSize(20)
+            .margin({ left: 10 })
+          Image('/image/mine/rightBack.png').imgCommon()
+        }
+        .justifyContent(FlexAlign.SpaceBetween)
+        .alignItems(VerticalAlign.Center)
+        .rowCommon()
+        .onClick(() => {
+          router.pushUrl({ url: 'pages/mine/fitnessGoal' })
+        })
+      }
+    }
+  }
+  //隐私部分
+  @Builder
+  privateBuilder() {
+
+    Column() {
+      this.title("隐私")
+      Column() {
+        Row() {
+          Text("账号管理")
+            .fontSize(20)
+            .margin({ left: 10 })
+          Image('/image/mine/rightBack.png').imgCommon()
+        }
+        .justifyContent(FlexAlign.SpaceBetween)
+        .alignItems(VerticalAlign.Center)
+        .rowCommon()
+        .onClick(() => {
+          router.pushUrl({ url: 'pages/mine/manageBind' })
+        })
+
+        Image('/image/mine/bottomLine.png').size({ width: '90%', height: 0.5 })
+
+        Row() {
+          Text("隐私设置")
+            .fontSize(20)
+            .margin({ left: 10 })
+          Image('/image/mine/rightBack.png').imgCommon()
+        }
+        .justifyContent(FlexAlign.SpaceBetween)
+        .alignItems(VerticalAlign.Center)
+        .rowCommon()
+        .onClick(() => {
+          router.pushUrl({ url: 'pages/mine/private' })
+        })
+      }
+    }
+  }
+  //其他
+  @Builder
+  otherBuilder() {
+
+    Column() {
+      this.title("其他")
+      Column() {
+        Row() {
+          Text("消息通知")
+            .fontSize(20)
+            .margin({ left: 10 })
+          Image('/image/mine/rightBack.png').imgCommon()
+        }
+        .justifyContent(FlexAlign.SpaceBetween)
+        .alignItems(VerticalAlign.Center)
+        .rowCommon()
+        .onClick(() => {
+          router.pushUrl({ url: 'pages/mine/information' })
+        })
+
+        Image('/image/mine/bottomLine.png').size({ width: '90%', height: 0.5 })
+
+        Row() {
+          Text("清除缓存")
+            .fontSize(20)
+            .margin({ left: 10 })
+          Image('/image/mine/rightBack.png').imgCommon()
+        }
+        .justifyContent(FlexAlign.SpaceBetween)
+        .alignItems(VerticalAlign.Center)
+        .rowCommon()
+        .onClick(() => {
+          router.pushUrl({ url: 'pages/mine/clearCache' })
+        })
+      }
+    }
+  }
+  //退出
+  @Builder
+  quitLoginBuilder() {
+    Row() {
+      Text("退出登录")
+        .fontColor('#ff0000')
+        .textAlign(TextAlign.Center)
+        .fontSize(22)
+    }
+    .width('100%')
+    .height(50)
+    .margin({ top: 20 })
+    .justifyContent(FlexAlign.Center)
+    .backgroundColor('#ffff')
+    .onClick(() => {
+      router.replaceUrl({ url: 'pages/login_register/login' })
+    })
+    .borderRadius(10)
+  }
+
+  build() {
+      Column(){
+        //标题
+       sharedTitle({title:"设置"})
+        //运动部分
+        this.sportBuilder()
+        //隐私部分
+        this.privateBuilder()
+        //其他
+        this.otherBuilder()
+        //退出
+        this.quitLoginBuilder()
+      }
+      .width('100%')
+      .height('100%')
+      .backgroundColor('#F5F5F5')
+    }
+}

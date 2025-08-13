@@ -186,7 +186,7 @@ class TrainTimePage extends ViewPU {
             });
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Image.create({ "id": 16777243, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
+            Image.create({ "id": 16777240, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
             Image.width(20);
             Image.height(20);
             Image.onClick(() => {

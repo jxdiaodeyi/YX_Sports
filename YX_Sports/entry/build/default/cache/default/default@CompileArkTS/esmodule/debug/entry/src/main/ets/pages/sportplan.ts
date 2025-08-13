@@ -84,7 +84,7 @@ class Sportplan extends ViewPU {
             Row.width('100%');
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Image.create({ "id": 16777243, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
+            Image.create({ "id": 16777240, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
             Image.width(20);
             Image.height(20);
             Image.onClick(() => {
@@ -102,31 +102,11 @@ class Sportplan extends ViewPU {
             Text.fontColor('#6249E3');
             Text.fontSize(20);
             Text.onClick(() => {
-                // DialogHelper.showLoadingDialog({
-                //   loadType:SpinType.spinC,
-                //   loadColor:Color.White,
-                //   loadSize:50,
-                //   backgroundColor:'#bb000000',
-                //   content:"重新制定计划中",
-                //   fontSize:30,
-                // })
-                // DialogHelper.showLoadingDialog({
-                //   loadType: SpinType.spinP,
-                //   loadColor: Color.White,
-                //   loadSize: 70,
-                //   backgroundColor: '#BB000000',
-                //   content: "加载中…",
-                //   fontSize: 18,
-                //   padding: { top: 30, right: 50, bottom: 30, left: 50 },
-                //   autoCancel: true
-                // })
                 DialogHelper.showToastTip({
                     message: "保存成功",
                     imageRes: { "id": 125830038, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" }
                 });
                 router.back();
-                //进度条加载弹框
-                //DialogHelper.showLoadingProgress({ progress: this.progress })
             });
         }, Text);
         Text.pop();

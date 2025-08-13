@@ -5,18 +5,18 @@
 	"BuildOptions":{
 		"SELECT_BUILD_TARGET":"default",
 		"BUILD_PATH":{
-			"OUTPUT_METADATA_JSON":"D:\\devecostudio-windows-5.1.0.840\\YXSport\\YXSport\\entry\\build\\default\\intermediates\\hap_metadata\\default\\output_metadata.json",
-			"OUTPUT_PATH":"D:\\devecostudio-windows-5.1.0.840\\YXSport\\YXSport\\entry\\build\\default\\outputs\\default",
-			"RES_PATH":"D:\\devecostudio-windows-5.1.0.840\\YXSport\\YXSport\\entry\\build\\default\\intermediates\\res\\default",
-			"ETS_SUPER_VISUAL_PATH":"D:\\devecostudio-windows-5.1.0.840\\YXSport\\YXSport\\entry\\build\\default\\cache\\default\\default@CompileArkTS\\esmodule",
-			"JS_ASSETS_PATH":"D:\\devecostudio-windows-5.1.0.840\\YXSport\\YXSport\\entry\\build\\default\\intermediates\\loader_out\\default",
-			"SOURCE_MAP_DIR":"D:\\devecostudio-windows-5.1.0.840\\YXSport\\YXSport\\entry\\build\\default\\intermediates\\source_map\\default",
-			"INTERMEDIA_PATH":"D:\\devecostudio-windows-5.1.0.840\\YXSport\\YXSport\\entry\\build\\default\\intermediates",
-			"RES_PROFILE_PATH":"D:\\devecostudio-windows-5.1.0.840\\YXSport\\YXSport\\entry\\build\\default\\intermediates\\res\\default\\resources\\base\\profile",
-			"WORKER_LOADER":"D:\\devecostudio-windows-5.1.0.840\\YXSport\\YXSport\\entry\\build\\default\\intermediates\\loader\\default\\loader.json",
-			"MANIFEST_JSON":"D:\\devecostudio-windows-5.1.0.840\\YXSport\\YXSport\\entry\\build\\default\\intermediates\\manifest\\default",
-			"JS_LITE_ASSETS_PATH":"D:\\devecostudio-windows-5.1.0.840\\YXSport\\YXSport\\entry\\build\\default\\intermediates\\loader_out_lite\\default",
-			"JS_SUPER_VISUAL_PATH":"D:\\devecostudio-windows-5.1.0.840\\YXSport\\YXSport\\entry\\build\\default\\cache\\default\\default@CompileJS\\jsbundle"
+			"OUTPUT_METADATA_JSON":"D:\\huaweiProject\\YXSport\\entry\\build\\default\\intermediates\\hap_metadata\\default\\output_metadata.json",
+			"OUTPUT_PATH":"D:\\huaweiProject\\YXSport\\entry\\build\\default\\outputs\\default",
+			"RES_PATH":"D:\\huaweiProject\\YXSport\\entry\\build\\default\\intermediates\\res\\default",
+			"ETS_SUPER_VISUAL_PATH":"D:\\huaweiProject\\YXSport\\entry\\build\\default\\cache\\default\\default@CompileArkTS\\esmodule",
+			"JS_ASSETS_PATH":"D:\\huaweiProject\\YXSport\\entry\\build\\default\\intermediates\\loader_out\\default",
+			"SOURCE_MAP_DIR":"D:\\huaweiProject\\YXSport\\entry\\build\\default\\intermediates\\source_map\\default",
+			"INTERMEDIA_PATH":"D:\\huaweiProject\\YXSport\\entry\\build\\default\\intermediates",
+			"RES_PROFILE_PATH":"D:\\huaweiProject\\YXSport\\entry\\build\\default\\intermediates\\res\\default\\resources\\base\\profile",
+			"WORKER_LOADER":"D:\\huaweiProject\\YXSport\\entry\\build\\default\\intermediates\\loader\\default\\loader.json",
+			"MANIFEST_JSON":"D:\\huaweiProject\\YXSport\\entry\\build\\default\\intermediates\\manifest\\default",
+			"JS_LITE_ASSETS_PATH":"D:\\huaweiProject\\YXSport\\entry\\build\\default\\intermediates\\loader_out_lite\\default",
+			"JS_SUPER_VISUAL_PATH":"D:\\huaweiProject\\YXSport\\entry\\build\\default\\cache\\default\\default@CompileJS\\jsbundle"
 		}
 	}
 }

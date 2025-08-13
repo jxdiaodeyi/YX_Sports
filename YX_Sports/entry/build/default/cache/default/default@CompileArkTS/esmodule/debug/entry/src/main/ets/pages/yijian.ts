@@ -8,7 +8,6 @@ interface suggestion_Params {
     selectedTypes?: boolean[];
     showImagePicker?: boolean;
     showSuccessDialog?: boolean;
-    isSubmit?: boolean;
     feedbackTypes?: string[];
 }
 import router from "@ohos:router";
@@ -24,7 +23,6 @@ class suggestion extends ViewPU {
         this.__selectedTypes = new ObservedPropertyObjectPU([false, false, false, false], this, "selectedTypes");
         this.__showImagePicker = new ObservedPropertySimplePU(false, this, "showImagePicker");
         this.__showSuccessDialog = new ObservedPropertySimplePU(false, this, "showSuccessDialog");
-        this.__isSubmit = new ObservedPropertySimplePU(false, this, "isSubmit");
         this.feedbackTypes = ['功能建议', '程序BUG', '视频问题', '其它'];
         this.setInitiallyProvidedValue(params);
         this.finalizeConstruction();
@@ -42,9 +40,6 @@ class suggestion extends ViewPU {
         if (params.showSuccessDialog !== undefined) {
             this.showSuccessDialog = params.showSuccessDialog;
         }
-        if (params.isSubmit !== undefined) {
-            this.isSubmit = params.isSubmit;
-        }
         if (params.feedbackTypes !== undefined) {
             this.feedbackTypes = params.feedbackTypes;
         }
@@ -58,7 +53,6 @@ class suggestion extends ViewPU {
         this.__selectedTypes.purgeDependencyOnElmtId(rmElmtId);
         this.__showImagePicker.purgeDependencyOnElmtId(rmElmtId);
         this.__showSuccessDialog.purgeDependencyOnElmtId(rmElmtId);
-        this.__isSubmit.purgeDependencyOnElmtId(rmElmtId);
     }
     aboutToBeDeleted() {
         this.__bottomRectHeight.aboutToBeDeleted();
@@ -67,7 +61,6 @@ class suggestion extends ViewPU {
         this.__selectedTypes.aboutToBeDeleted();
         this.__showImagePicker.aboutToBeDeleted();
         this.__showSuccessDialog.aboutToBeDeleted();
-        this.__isSubmit.aboutToBeDeleted();
         SubscriberManager.Get().delete(this.id__());
         this.aboutToBeDeletedInternal();
     }
@@ -112,13 +105,6 @@ class suggestion extends ViewPU {
     }
     set showSuccessDialog(newValue: boolean) {
         this.__showSuccessDialog.set(newValue);
-    }
-    private __isSubmit: ObservedPropertySimplePU<boolean>;
-    get isSubmit() {
-        return this.__isSubmit.get();
-    }
-    set isSubmit(newValue: boolean) {
-        this.__isSubmit.set(newValue);
     }
     private feedbackTypes: string[];
     handleSubmit() {
@@ -181,7 +167,7 @@ class suggestion extends ViewPU {
             Column.create();
             Column.width('100%');
             Column.height('100%');
-            Column.backgroundColor('#F4F4F4');
+            Column.backgroundColor('#FFFFFF');
             Column.padding({
                 top: px2vp(this.topRectHeight),
                 bottom: px2vp(this.bottomRectHeight)
@@ -205,7 +191,7 @@ class suggestion extends ViewPU {
             Row.padding({ left: 16, right: 16 });
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Image.create({ "id": 16777243, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
+            Image.create({ "id": 16777240, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
             Image.width(24);
             Image.height(24);
             Image.onClick(() => {
@@ -259,7 +245,6 @@ class suggestion extends ViewPU {
             TextArea.fontSize(14);
             TextArea.onChange((value: string) => {
                 this.feedbackText = value;
-                this.isSubmit = value.trim().length > 0;
             });
         }, TextArea);
         // 问题描述
@@ -444,7 +429,7 @@ class suggestion extends ViewPU {
             // 提交按钮
             Button.height(48);
             // 提交按钮
-            Button.backgroundColor((this.isSubmit == true) ? '#6C55E4' : '#CCCCCC');
+            Button.backgroundColor('#CCCCCC');
             // 提交按钮
             Button.fontColor('#FFFFFF');
             // 提交按钮

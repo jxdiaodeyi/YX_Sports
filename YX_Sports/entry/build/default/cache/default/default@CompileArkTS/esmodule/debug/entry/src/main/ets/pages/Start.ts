@@ -2,45 +2,40 @@ if (!("finalizeConstruction" in ViewPU.prototype)) {
     Reflect.set(ViewPU.prototype, "finalizeConstruction", () => { });
 }
 interface Start_Params {
-    buttonText?: string;
-    num?: number;
-    buttontexting?: string;
-    buttontexted?: string;
+    phoneNumber?: string;
+    password?: string;
     uiContext?: UIContext;
     promptAction?: PromptAction;
     showPrivacyDialog?: boolean;
 }
+import promptAction from "@ohos:promptAction";
 import type { PromptAction as PromptAction } from "@ohos:arkui.UIContext";
 import router from "@ohos:router";
+import http from "@ohos:net.http";
+import type loginNetWorkType from '../mod/login/loginType';
+import address from "@normalized:N&&&entry/src/main/resources/rawfile/IPaddress&";
 class Start extends ViewPU {
     constructor(parent, params, __localStorage, elmtId = -1, paramsLambda = undefined, extraInfo) {
         super(parent, __localStorage, elmtId, extraInfo);
         if (typeof paramsLambda === "function") {
             this.paramsGenerator_ = paramsLambda;
         }
-        this.__buttonText = new ObservedPropertySimplePU('获取验证码', this, "buttonText");
-        this.__num = new ObservedPropertySimplePU(1, this, "num");
-        this.__buttontexting = new ObservedPropertySimplePU('输入电话', this, "buttontexting");
-        this.__buttontexted = new ObservedPropertySimplePU('输入验证码', this, "buttontexted");
+        this.__phoneNumber = new ObservedPropertySimplePU('', this, "phoneNumber");
+        this.__password = new ObservedPropertySimplePU('', this, "password");
         this.uiContext = this.getUIContext();
         this.promptAction = this.uiContext.getPromptAction();
         this.__showPrivacyDialog = new ObservedPropertySimplePU(true // 保留原有状态控制
+        //*******************************标题*******************************//
         , this, "showPrivacyDialog");
         this.setInitiallyProvidedValue(params);
         this.finalizeConstruction();
     }
     setInitiallyProvidedValue(params: Start_Params) {
-        if (params.buttonText !== undefined) {
-            this.buttonText = params.buttonText;
+        if (params.phoneNumber !== undefined) {
+            this.phoneNumber = params.phoneNumber;
         }
-        if (params.num !== undefined) {
-            this.num = params.num;
-        }
-        if (params.buttontexting !== undefined) {
-            this.buttontexting = params.buttontexting;
-        }
-        if (params.buttontexted !== undefined) {
-            this.buttontexted = params.buttontexted;
+        if (params.password !== undefined) {
+            this.password = params.password;
         }
         if (params.uiContext !== undefined) {
             this.uiContext = params.uiContext;
@@ -55,48 +50,30 @@ class Start extends ViewPU {
     updateStateVars(params: Start_Params) {
     }
     purgeVariableDependenciesOnElmtId(rmElmtId) {
-        this.__buttonText.purgeDependencyOnElmtId(rmElmtId);
-        this.__num.purgeDependencyOnElmtId(rmElmtId);
-        this.__buttontexting.purgeDependencyOnElmtId(rmElmtId);
-        this.__buttontexted.purgeDependencyOnElmtId(rmElmtId);
+        this.__phoneNumber.purgeDependencyOnElmtId(rmElmtId);
+        this.__password.purgeDependencyOnElmtId(rmElmtId);
         this.__showPrivacyDialog.purgeDependencyOnElmtId(rmElmtId);
     }
     aboutToBeDeleted() {
-        this.__buttonText.aboutToBeDeleted();
-        this.__num.aboutToBeDeleted();
-        this.__buttontexting.aboutToBeDeleted();
-        this.__buttontexted.aboutToBeDeleted();
+        this.__phoneNumber.aboutToBeDeleted();
+        this.__password.aboutToBeDeleted();
         this.__showPrivacyDialog.aboutToBeDeleted();
         SubscriberManager.Get().delete(this.id__());
         this.aboutToBeDeletedInternal();
     }
-    private __buttonText: ObservedPropertySimplePU<string>;
-    get buttonText() {
-        return this.__buttonText.get();
+    private __phoneNumber: ObservedPropertySimplePU<string>;
+    get phoneNumber() {
+        return this.__phoneNumber.get();
     }
-    set buttonText(newValue: string) {
-        this.__buttonText.set(newValue);
+    set phoneNumber(newValue: string) {
+        this.__phoneNumber.set(newValue);
     }
-    private __num: ObservedPropertySimplePU<number>;
-    get num() {
-        return this.__num.get();
+    private __password: ObservedPropertySimplePU<string>;
+    get password() {
+        return this.__password.get();
     }
-    set num(newValue: number) {
-        this.__num.set(newValue);
-    }
-    private __buttontexting: ObservedPropertySimplePU<string>;
-    get buttontexting() {
-        return this.__buttontexting.get();
-    }
-    set buttontexting(newValue: string) {
-        this.__buttontexting.set(newValue);
-    }
-    private __buttontexted: ObservedPropertySimplePU<string>;
-    get buttontexted() {
-        return this.__buttontexted.get();
-    }
-    set buttontexted(newValue: string) {
-        this.__buttontexted.set(newValue);
+    set password(newValue: string) {
+        this.__password.set(newValue);
     }
     private uiContext: UIContext;
     private promptAction: PromptAction;
@@ -107,6 +84,175 @@ class Start extends ViewPU {
     set showPrivacyDialog(newValue: boolean) {
         this.__showPrivacyDialog.set(newValue);
     }
+    //*******************************标题*******************************//
+    title(parent = null) {
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Row.create();
+            Row.width('100%');
+            Row.justifyContent(FlexAlign.Start);
+            Row.padding(15);
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Column.create();
+        }, Column);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('悦享健身');
+            Text.fontSize(50);
+            Text.fontColor('#FFFFFF');
+        }, Text);
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('爱生活 爱自己');
+            Text.fontSize(25);
+            Text.fontColor('#FFFFFF');
+        }, Text);
+        Text.pop();
+        Column.pop();
+        Row.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create();
+            Text.height(50);
+        }, Text);
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Row.create();
+            Row.padding(15);
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('未注册手机验证后即完成注册');
+            Text.fontColor('#000000');
+            Text.fontSize(20);
+            Text.backgroundColor('FF867474');
+            Text.borderRadius(8);
+        }, Text);
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create();
+            Text.width('20%');
+        }, Text);
+        Text.pop();
+        Row.pop();
+    }
+    //*******************************登录*******************************//
+    loginCompoent(parent = null) {
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            TextInput.create({ placeholder: "请输入手机号", text: { value: this.phoneNumber, changeEvent: newValue => { this.phoneNumber = newValue; } } });
+            TextInput.type(InputType.Number);
+            TextInput.backgroundColor('#FFFFFF');
+            TextInput.width('80%');
+            TextInput.padding(15);
+            TextInput.borderRadius(15);
+            TextInput.margin({ bottom: 10 });
+        }, TextInput);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            TextInput.create({ placeholder: "请输入密码", text: { value: this.password, changeEvent: newValue => { this.password = newValue; } } });
+            TextInput.type(InputType.Number);
+            TextInput.backgroundColor('#FFFFFF');
+            TextInput.width('80%');
+            TextInput.padding(15);
+            TextInput.borderRadius(15);
+        }, TextInput);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Button.createWithLabel('登录');
+            Button.width('80%');
+            Button.height(40);
+            Button.margin({ top: 20 });
+            Button.fontColor('#000000');
+            Button.backgroundColor('#FFFFFF');
+            Button.onClick(() => {
+                this.login();
+            });
+        }, Button);
+        Button.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create();
+            Text.height(200);
+        }, Text);
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Column.create();
+        }, Column);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Row.create();
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('其他登录方式');
+            Text.fontSize(15);
+        }, Text);
+        Text.pop();
+        Row.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Row.create({ space: 15 });
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Image.create({ "id": 16777268, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
+            Image.width(30);
+            Image.height(30);
+        }, Image);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Image.create({ "id": 16777257, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
+            Image.width(30);
+            Image.height(30);
+        }, Image);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Image.create({ "id": 16777269, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
+            Image.width(30);
+            Image.height(30);
+        }, Image);
+        Row.pop();
+        Column.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create();
+            Text.height(30);
+        }, Text);
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('登录即表示您已同意《用户协议》和《隐私政策》');
+            Text.fontSize(15);
+            Text.onClick(() => { router.pushUrl({ url: "pages/PrivatePoliticPage" }); });
+        }, Text);
+        Text.pop();
+    }
+    async login() {
+        if (this.phoneNumber.trim().length <= 0) {
+            promptAction.showToast({
+                message: "手机号不能为空"
+            });
+        }
+        else if (this.password.trim().length <= 0) {
+            promptAction.showToast({
+                message: "密码不能为空"
+            });
+        }
+        else {
+            let httpRequest = http.createHttp();
+            let url = address.IP + "/login";
+            try {
+                let response = await httpRequest.request(url, {
+                    method: http.RequestMethod.POST,
+                    extraData: {
+                        telephone: this.phoneNumber,
+                        password: this.password
+                    },
+                    header: {
+                        "Content-Type": "application/json"
+                    }
+                });
+                promptAction.showToast({ message: "账号或密码错误，登录失败！" });
+                let result = JSON.parse(response.result as string) as loginNetWorkType;
+                if (result.code === 200) {
+                    router.replaceUrl({ url: "pages/Index", params: { token: result.token, userId: result.data.userId } });
+                }
+                else {
+                    promptAction.showToast({ message: "账号或密码错误，登录失败！" });
+                }
+            }
+            catch (error) {
+                promptAction.showToast({ message: "网路错误", });
+            }
+        }
+    }
+    //*******************************bulid*******************************//
     aboutToAppear() {
         this.showSystemPrivacyDialog();
     }
@@ -182,134 +328,8 @@ class Start extends ViewPU {
             Text.height(100);
         }, Text);
         Text.pop();
-        this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Row.create();
-            Row.width('100%');
-            Row.justifyContent(FlexAlign.Start);
-            Row.padding(15);
-        }, Row);
-        this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Column.create();
-        }, Column);
-        this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Text.create('悦享健身');
-            Text.fontSize(50);
-            Text.fontColor('#FFFFFF');
-        }, Text);
-        Text.pop();
-        this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Text.create('爱生活 爱自己');
-            Text.fontSize(25);
-            Text.fontColor('#FFFFFF');
-        }, Text);
-        Text.pop();
-        Column.pop();
-        Row.pop();
-        this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Text.create();
-            Text.height(50);
-        }, Text);
-        Text.pop();
-        this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Row.create();
-            Row.padding(15);
-        }, Row);
-        this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Text.create('未注册手机验证后即完成注册');
-            Text.fontColor('#000000');
-            Text.fontSize(20);
-            Text.backgroundColor('FF867474');
-            Text.borderRadius(8);
-        }, Text);
-        Text.pop();
-        this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Text.create();
-            Text.width('20%');
-        }, Text);
-        Text.pop();
-        Row.pop();
-        this.observeComponentCreation2((elmtId, isInitialRender) => {
-            TextInput.create({ placeholder: this.buttontexting });
-            TextInput.type(InputType.Number);
-            TextInput.backgroundColor('#FFFFFF');
-            TextInput.width('80%');
-            TextInput.padding(15);
-            TextInput.borderRadius(15);
-            TextInput.onChange((value: string) => {
-                this.buttontexting = value;
-            });
-        }, TextInput);
-        this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Button.createWithLabel(this.buttonText);
-            Button.width('80%');
-            Button.height(40);
-            Button.margin({ top: 20 });
-            Button.fontColor('#000000');
-            Button.backgroundColor('#FFFFFF');
-            Button.onClick(() => {
-                if (this.num == 1) {
-                    this.num++;
-                    this.promptAction.showToast({
-                        message: '已发送验证码',
-                        duration: 2000,
-                    });
-                    this.buttonText = '登录';
-                    this.buttontexting = this.buttontexted;
-                }
-                else if (this.num == 2) {
-                    router.replaceUrl({ url: 'pages/doc1' });
-                }
-            });
-        }, Button);
-        Button.pop();
-        this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Text.create();
-            Text.height(200);
-        }, Text);
-        Text.pop();
-        this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Column.create();
-        }, Column);
-        this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Row.create();
-        }, Row);
-        this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Text.create('其他登录方式');
-            Text.fontSize(15);
-        }, Text);
-        Text.pop();
-        Row.pop();
-        this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Row.create({ space: 15 });
-        }, Row);
-        this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Image.create({ "id": 16777268, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
-            Image.width(30);
-            Image.height(30);
-        }, Image);
-        this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Image.create({ "id": 16777257, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
-            Image.width(30);
-            Image.height(30);
-        }, Image);
-        this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Image.create({ "id": 16777269, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
-            Image.width(30);
-            Image.height(30);
-        }, Image);
-        Row.pop();
-        Column.pop();
-        this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Text.create();
-            Text.height(30);
-        }, Text);
-        Text.pop();
-        this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Text.create('登录即表示您已同意《用户协议》和《隐私政策》');
-            Text.fontSize(15);
-            Text.onClick(() => { router.pushUrl({ url: "pages/PrivatePoliticPage" }); });
-        }, Text);
-        Text.pop();
+        this.title.bind(this)();
+        this.loginCompoent.bind(this)();
         Column.pop();
         Stack.pop();
     }

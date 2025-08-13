@@ -2,40 +2,146 @@ if (!("finalizeConstruction" in ViewPU.prototype)) {
     Reflect.set(ViewPU.prototype, "finalizeConstruction", () => { });
 }
 interface Practice_Params {
+    isShow?: boolean;
+    WeightRecord?: number;
+    WeightInit?: number;
+    TodayTrainTime?: number;
+    TodayCaluli?: number;
+    AllTrainTime?: number;
+    AllCaluli?: number;
 }
+import { DialogAction, DialogHelper } from "@normalized:N&&&@pura/harmony-dialog/Index&1.1.7";
+import router from "@ohos:router";
 export class Practice extends ViewPU {
     constructor(parent, params, __localStorage, elmtId = -1, paramsLambda = undefined, extraInfo) {
         super(parent, __localStorage, elmtId, extraInfo);
         if (typeof paramsLambda === "function") {
             this.paramsGenerator_ = paramsLambda;
         }
+        this.__isShow = new ObservedPropertySimplePU(false, this, "isShow");
+        this.__WeightRecord = new ObservedPropertySimplePU(55.5, this, "WeightRecord");
+        this.__WeightInit = new ObservedPropertySimplePU(67.5, this, "WeightInit");
+        this.__TodayTrainTime = new ObservedPropertySimplePU(12, this, "TodayTrainTime");
+        this.__TodayCaluli = new ObservedPropertySimplePU(190, this, "TodayCaluli");
+        this.__AllTrainTime = new ObservedPropertySimplePU(102, this, "AllTrainTime");
+        this.__AllCaluli = new ObservedPropertySimplePU(112, this, "AllCaluli");
         this.setInitiallyProvidedValue(params);
         this.finalizeConstruction();
     }
     setInitiallyProvidedValue(params: Practice_Params) {
+        if (params.isShow !== undefined) {
+            this.isShow = params.isShow;
+        }
+        if (params.WeightRecord !== undefined) {
+            this.WeightRecord = params.WeightRecord;
+        }
+        if (params.WeightInit !== undefined) {
+            this.WeightInit = params.WeightInit;
+        }
+        if (params.TodayTrainTime !== undefined) {
+            this.TodayTrainTime = params.TodayTrainTime;
+        }
+        if (params.TodayCaluli !== undefined) {
+            this.TodayCaluli = params.TodayCaluli;
+        }
+        if (params.AllTrainTime !== undefined) {
+            this.AllTrainTime = params.AllTrainTime;
+        }
+        if (params.AllCaluli !== undefined) {
+            this.AllCaluli = params.AllCaluli;
+        }
     }
     updateStateVars(params: Practice_Params) {
     }
     purgeVariableDependenciesOnElmtId(rmElmtId) {
+        this.__isShow.purgeDependencyOnElmtId(rmElmtId);
+        this.__WeightRecord.purgeDependencyOnElmtId(rmElmtId);
+        this.__WeightInit.purgeDependencyOnElmtId(rmElmtId);
+        this.__TodayTrainTime.purgeDependencyOnElmtId(rmElmtId);
+        this.__TodayCaluli.purgeDependencyOnElmtId(rmElmtId);
+        this.__AllTrainTime.purgeDependencyOnElmtId(rmElmtId);
+        this.__AllCaluli.purgeDependencyOnElmtId(rmElmtId);
     }
     aboutToBeDeleted() {
+        this.__isShow.aboutToBeDeleted();
+        this.__WeightRecord.aboutToBeDeleted();
+        this.__WeightInit.aboutToBeDeleted();
+        this.__TodayTrainTime.aboutToBeDeleted();
+        this.__TodayCaluli.aboutToBeDeleted();
+        this.__AllTrainTime.aboutToBeDeleted();
+        this.__AllCaluli.aboutToBeDeleted();
         SubscriberManager.Get().delete(this.id__());
         this.aboutToBeDeletedInternal();
+    }
+    private __isShow: ObservedPropertySimplePU<boolean>;
+    get isShow() {
+        return this.__isShow.get();
+    }
+    set isShow(newValue: boolean) {
+        this.__isShow.set(newValue);
+    }
+    private __WeightRecord: ObservedPropertySimplePU<number>;
+    get WeightRecord() {
+        return this.__WeightRecord.get();
+    }
+    set WeightRecord(newValue: number) {
+        this.__WeightRecord.set(newValue);
+    }
+    private __WeightInit: ObservedPropertySimplePU<number>;
+    get WeightInit() {
+        return this.__WeightInit.get();
+    }
+    set WeightInit(newValue: number) {
+        this.__WeightInit.set(newValue);
+    }
+    private __TodayTrainTime: ObservedPropertySimplePU<number>;
+    get TodayTrainTime() {
+        return this.__TodayTrainTime.get();
+    }
+    set TodayTrainTime(newValue: number) {
+        this.__TodayTrainTime.set(newValue);
+    }
+    private __TodayCaluli: ObservedPropertySimplePU<number>;
+    get TodayCaluli() {
+        return this.__TodayCaluli.get();
+    }
+    set TodayCaluli(newValue: number) {
+        this.__TodayCaluli.set(newValue);
+    }
+    private __AllTrainTime: ObservedPropertySimplePU<number>;
+    get AllTrainTime() {
+        return this.__AllTrainTime.get();
+    }
+    set AllTrainTime(newValue: number) {
+        this.__AllTrainTime.set(newValue);
+    }
+    private __AllCaluli: ObservedPropertySimplePU<number>;
+    get AllCaluli() {
+        return this.__AllCaluli.get();
+    }
+    set AllCaluli(newValue: number) {
+        this.__AllCaluli.set(newValue);
     }
     initialRender() {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Column.create();
-            Column.debugLine("entry/src/main/ets/pages/PracticePage.ets(4:5)", "entry");
+            Column.debugLine("entry/src/main/ets/pages/PracticePage.ets(16:5)", "entry");
             Column.width('100%');
             Column.height('100%');
             Column.padding({ left: 10, right: 10 });
-            Column.backgroundImage({ "id": 16777246, "type": 20000, params: [], "bundleName": "com.example.watermalon_sport", "moduleName": "entry" });
+            Column.backgroundImage({ "id": 16777280, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
             Column.backgroundImageSize({ width: '100%', height: '100%' });
         }, Column);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create();
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(17:7)", "entry");
+            Text.height(20);
+        }, Text);
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
             //标题
             Row.create({ space: 15 });
-            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(6:7)", "entry");
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(19:7)", "entry");
             //标题
             Row.padding(15);
             //标题
@@ -45,33 +151,37 @@ export class Practice extends ViewPU {
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create('训练');
-            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(7:9)", "entry");
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(20:9)", "entry");
             Text.fontSize(24);
             Text.fontWeight(600);
             Text.fontColor('#FFFFFF');
         }, Text);
         Text.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Image.create({ "id": 16777223, "type": 20000, params: [], "bundleName": "com.example.watermalon_sport", "moduleName": "entry" });
-            Image.debugLine("entry/src/main/ets/pages/PracticePage.ets(11:9)", "entry");
+            Image.create({ "id": 16777312, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
+            Image.debugLine("entry/src/main/ets/pages/PracticePage.ets(24:9)", "entry");
             Image.width(24);
             Image.height(24);
+            Image.onClick(() => {
+                router.pushUrl({ url: 'pages/TrainRecordPage' });
+            });
         }, Image);
         //标题
         Row.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Scroll.create();
-            Scroll.debugLine("entry/src/main/ets/pages/PracticePage.ets(20:7)", "entry");
+            Scroll.debugLine("entry/src/main/ets/pages/PracticePage.ets(36:7)", "entry");
+            Scroll.height('100%');
             Scroll.scrollBar(BarState.Off);
         }, Scroll);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Column.create();
-            Column.debugLine("entry/src/main/ets/pages/PracticePage.ets(21:9)", "entry");
+            Column.debugLine("entry/src/main/ets/pages/PracticePage.ets(37:9)", "entry");
         }, Column);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             //训练时长+卡路里
             Row.create();
-            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(23:11)", "entry");
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(39:11)", "entry");
             //训练时长+卡路里
             Row.width('100%');
             //训练时长+卡路里
@@ -82,7 +192,7 @@ export class Practice extends ViewPU {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             // 左侧卡片：今日训练时长
             Column.create();
-            Column.debugLine("entry/src/main/ets/pages/PracticePage.ets(25:13)", "entry");
+            Column.debugLine("entry/src/main/ets/pages/PracticePage.ets(41:13)", "entry");
             // 左侧卡片：今日训练时长
             Column.width('48%');
             // 左侧卡片：今日训练时长
@@ -91,17 +201,21 @@ export class Practice extends ViewPU {
             Column.backgroundColor('#FFFFFF');
             // 左侧卡片：今日训练时长
             Column.borderRadius(8);
+            // 左侧卡片：今日训练时长
+            Column.onClick(() => {
+                router.pushUrl({ url: 'pages/TrainTimePage' });
+            });
         }, Column);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Row.create();
-            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(26:15)", "entry");
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(42:15)", "entry");
             Row.width('100%');
             Row.height(30);
             Row.justifyContent(FlexAlign.SpaceBetween);
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create('今日训练时长');
-            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(27:17)", "entry");
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(43:17)", "entry");
             Text.fontSize(20);
             Text.fontWeight(400);
             Text.fontColor('#333333');
@@ -110,7 +224,7 @@ export class Practice extends ViewPU {
         Text.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create('>');
-            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(32:17)", "entry");
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(48:17)", "entry");
             Text.fontColor('#333333');
             Text.margin({ right: 10 });
         }, Text);
@@ -118,13 +232,13 @@ export class Practice extends ViewPU {
         Row.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Row.create();
-            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(40:15)", "entry");
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(57:15)", "entry");
             Row.alignItems(VerticalAlign.Bottom);
             Row.justifyContent(FlexAlign.End);
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Text.create('12');
-            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(41:17)", "entry");
+            Text.create(this.TodayTrainTime.toString());
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(58:17)", "entry");
             Text.fontSize(35);
             Text.fontWeight(600);
             Text.fontColor('#6C55E4');
@@ -132,7 +246,7 @@ export class Practice extends ViewPU {
         Text.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create('分钟');
-            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(45:17)", "entry");
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(62:17)", "entry");
             Text.fontSize(20);
             Text.fontColor('#999999');
         }, Text);
@@ -147,7 +261,7 @@ export class Practice extends ViewPU {
             //})
             // 右侧卡片：燃烧卡路里
             Column.create();
-            Column.debugLine("entry/src/main/ets/pages/PracticePage.ets(63:13)", "entry");
+            Column.debugLine("entry/src/main/ets/pages/PracticePage.ets(83:13)", "entry");
             //.border({
             //  width: 1,
             //  color: '#6C55E4', // 边框颜色为紫色
@@ -172,17 +286,25 @@ export class Practice extends ViewPU {
             //})
             // 右侧卡片：燃烧卡路里
             Column.borderRadius(8);
+            //.border({
+            //  width: 1,
+            //  color: '#6C55E4', // 边框颜色为紫色
+            //})
+            // 右侧卡片：燃烧卡路里
+            Column.onClick(() => {
+                router.pushUrl({ url: 'pages/CaloriePage' });
+            });
         }, Column);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Row.create();
-            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(64:15)", "entry");
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(84:15)", "entry");
             Row.width('100%');
             Row.height(30);
             Row.justifyContent(FlexAlign.SpaceBetween);
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create('燃烧卡路里');
-            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(65:17)", "entry");
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(85:17)", "entry");
             Text.fontSize(20);
             Text.fontWeight(400);
             Text.fontColor('#333333');
@@ -191,7 +313,7 @@ export class Practice extends ViewPU {
         Text.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create('>');
-            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(70:17)", "entry");
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(90:17)", "entry");
             Text.fontColor('#333333');
             Text.margin({ right: 10 });
         }, Text);
@@ -199,13 +321,13 @@ export class Practice extends ViewPU {
         Row.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Row.create();
-            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(79:15)", "entry");
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(99:15)", "entry");
             Row.alignItems(VerticalAlign.Bottom);
             Row.justifyContent(FlexAlign.End);
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Text.create('190');
-            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(80:17)", "entry");
+            Text.create(this.TodayCaluli.toString());
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(100:17)", "entry");
             Text.fontSize(35);
             Text.fontWeight(600);
             Text.fontColor('#6C55E4');
@@ -213,7 +335,7 @@ export class Practice extends ViewPU {
         Text.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create('千卡');
-            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(84:17)", "entry");
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(104:17)", "entry");
             Text.fontSize(20);
             Text.fontColor('#999999');
         }, Text);
@@ -230,7 +352,7 @@ export class Practice extends ViewPU {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             //体重记录
             Column.create();
-            Column.debugLine("entry/src/main/ets/pages/PracticePage.ets(107:11)", "entry");
+            Column.debugLine("entry/src/main/ets/pages/PracticePage.ets(130:11)", "entry");
             //体重记录
             Column.backgroundColor('#FFFFFF');
             //体重记录
@@ -245,7 +367,7 @@ export class Practice extends ViewPU {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             // 标题行
             Row.create();
-            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(109:13)", "entry");
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(132:13)", "entry");
             // 标题行
             Row.width('100%');
             // 标题行
@@ -253,7 +375,7 @@ export class Practice extends ViewPU {
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create('体重记录');
-            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(110:15)", "entry");
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(133:15)", "entry");
             Text.fontSize(24);
             Text.fontColor('#333333');
             Text.fontWeight(500);
@@ -265,7 +387,7 @@ export class Practice extends ViewPU {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             // 体重数据行
             Row.create();
-            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(121:13)", "entry");
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(144:13)", "entry");
             // 体重数据行
             Row.width('100%');
             // 体重数据行
@@ -274,8 +396,8 @@ export class Practice extends ViewPU {
             Row.margin({ top: 20 });
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Text.create('55.5kg');
-            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(122:15)", "entry");
+            Text.create(this.WeightRecord.toString() + 'kg');
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(145:15)", "entry");
             Text.fontSize(35);
             Text.fontColor('#6C55E4');
             Text.fontWeight(700);
@@ -283,19 +405,44 @@ export class Practice extends ViewPU {
         }, Text);
         Text.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Text.create('已减12kg');
-            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(128:15)", "entry");
-            Text.fontSize(16);
-            Text.fontColor('#999999');
-            Text.margin({ left: 10 });
-        }, Text);
-        Text.pop();
+            Row.create();
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(151:15)", "entry");
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            If.create();
+            if (this.WeightRecord <= this.WeightInit) {
+                this.ifElseBranchUpdateFunction(0, () => {
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        Text.create('已减' + (this.WeightInit - this.WeightRecord).toString() + 'kg');
+                        Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(153:19)", "entry");
+                        Text.fontSize(16);
+                        Text.fontColor('#999999');
+                        Text.margin({ left: 10 });
+                    }, Text);
+                    Text.pop();
+                });
+            }
+            else {
+                this.ifElseBranchUpdateFunction(1, () => {
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        Text.create('增重' + (this.WeightRecord - this.WeightInit).toString() + 'kg');
+                        Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(158:19)", "entry");
+                        Text.fontSize(16);
+                        Text.fontColor('#999999');
+                        Text.margin({ left: 10 });
+                    }, Text);
+                    Text.pop();
+                });
+            }
+        }, If);
+        If.pop();
+        Row.pop();
         // 体重数据行
         Row.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             // 按钮
             Button.createWithLabel('记录体重');
-            Button.debugLine("entry/src/main/ets/pages/PracticePage.ets(138:13)", "entry");
+            Button.debugLine("entry/src/main/ets/pages/PracticePage.ets(170:13)", "entry");
             // 按钮
             Button.width('40%');
             // 按钮
@@ -312,8 +459,21 @@ export class Practice extends ViewPU {
             Button.margin({ top: 20 });
             // 按钮
             Button.onClick(() => {
-                // 点击事件处理逻辑
-                console.log('点击了记录体重按钮');
+                let numbers: string[] = [];
+                for (let i = 40; i <= 200; i += 0.5) {
+                    numbers.push(i.toString() + ' kg');
+                }
+                DialogHelper.showTextPickerDialog({
+                    title: "计体重",
+                    range: numbers.map(String),
+                    onAction: (action: number, dialogId: string, value: string | string[]) => {
+                        if (action == DialogAction.SURE) {
+                            const weightStr = (value as string).replace(' kg', '');
+                            const weight = parseFloat(weightStr);
+                            this.WeightRecord = weight;
+                        }
+                    }
+                });
             });
         }, Button);
         // 按钮
@@ -323,7 +483,7 @@ export class Practice extends ViewPU {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             //锻炼时长竖状图
             Column.create();
-            Column.debugLine("entry/src/main/ets/pages/PracticePage.ets(159:11)", "entry");
+            Column.debugLine("entry/src/main/ets/pages/PracticePage.ets(209:11)", "entry");
             //锻炼时长竖状图
             Column.width('100%');
             //锻炼时长竖状图
@@ -334,11 +494,15 @@ export class Practice extends ViewPU {
             Column.borderRadius(8);
             //锻炼时长竖状图
             Column.margin({ top: 15 });
+            //锻炼时长竖状图
+            Column.onClick(() => {
+                router.pushUrl({ url: 'pages/TrainTimePage' });
+            });
         }, Column);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             // 标题行
             Row.create();
-            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(161:13)", "entry");
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(211:13)", "entry");
             // 标题行
             Row.margin({ top: 15 });
             // 标题行
@@ -349,7 +513,7 @@ export class Practice extends ViewPU {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             //左边标题
             Text.create('锻炼时长');
-            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(163:15)", "entry");
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(213:15)", "entry");
             //左边标题
             Text.fontSize(24);
             //左边标题
@@ -364,13 +528,13 @@ export class Practice extends ViewPU {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             //右边数据
             Row.create();
-            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(170:15)", "entry");
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(220:15)", "entry");
             //右边数据
             Row.margin({ right: 15 });
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Text.create('102');
-            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(171:17)", "entry");
+            Text.create(this.AllTrainTime.toString());
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(221:17)", "entry");
             Text.fontSize(34);
             Text.fontColor('#6249E3');
             Text.fontWeight(500);
@@ -379,7 +543,7 @@ export class Practice extends ViewPU {
         Text.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create('分钟');
-            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(177:17)", "entry");
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(227:17)", "entry");
             Text.fontSize(22);
             Text.fontColor('#939EB5');
         }, Text);
@@ -390,8 +554,8 @@ export class Practice extends ViewPU {
         Row.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             //图表                                       //暂时贴图
-            Image.create({ "id": 16777226, "type": 20000, params: [], "bundleName": "com.example.watermalon_sport", "moduleName": "entry" });
-            Image.debugLine("entry/src/main/ets/pages/PracticePage.ets(188:13)", "entry");
+            Image.create({ "id": 16777237, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
+            Image.debugLine("entry/src/main/ets/pages/PracticePage.ets(238:13)", "entry");
             //图表                                       //暂时贴图
             Image.margin({ top: 15 });
             //图表                                       //暂时贴图
@@ -404,7 +568,7 @@ export class Practice extends ViewPU {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             //卡路里竖状图
             Column.create();
-            Column.debugLine("entry/src/main/ets/pages/PracticePage.ets(201:11)", "entry");
+            Column.debugLine("entry/src/main/ets/pages/PracticePage.ets(254:11)", "entry");
             //卡路里竖状图
             Column.width('100%');
             //卡路里竖状图
@@ -415,11 +579,15 @@ export class Practice extends ViewPU {
             Column.borderRadius(8);
             //卡路里竖状图
             Column.margin({ top: 15 });
+            //卡路里竖状图
+            Column.onClick(() => {
+                router.pushUrl({ url: 'pages/CaloriePage' });
+            });
         }, Column);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             // 标题行
             Row.create();
-            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(203:13)", "entry");
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(256:13)", "entry");
             // 标题行
             Row.margin({ top: 15 });
             // 标题行
@@ -430,7 +598,7 @@ export class Practice extends ViewPU {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             //左边标题
             Text.create('卡路里');
-            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(205:15)", "entry");
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(258:15)", "entry");
             //左边标题
             Text.fontSize(24);
             //左边标题
@@ -445,13 +613,13 @@ export class Practice extends ViewPU {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             //右边数据
             Row.create();
-            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(212:15)", "entry");
+            Row.debugLine("entry/src/main/ets/pages/PracticePage.ets(265:15)", "entry");
             //右边数据
             Row.margin({ right: 15 });
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Text.create('112');
-            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(213:17)", "entry");
+            Text.create(this.AllCaluli.toString());
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(266:17)", "entry");
             Text.fontSize(34);
             Text.fontColor('#6249E3');
             Text.fontWeight(500);
@@ -460,7 +628,7 @@ export class Practice extends ViewPU {
         Text.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create('千卡');
-            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(219:17)", "entry");
+            Text.debugLine("entry/src/main/ets/pages/PracticePage.ets(272:17)", "entry");
             Text.fontSize(22);
             Text.fontColor('#939EB5');
         }, Text);
@@ -471,8 +639,8 @@ export class Practice extends ViewPU {
         Row.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             //图表                                       //暂时贴图
-            Image.create({ "id": 16777221, "type": 20000, params: [], "bundleName": "com.example.watermalon_sport", "moduleName": "entry" });
-            Image.debugLine("entry/src/main/ets/pages/PracticePage.ets(230:13)", "entry");
+            Image.create({ "id": 16777273, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
+            Image.debugLine("entry/src/main/ets/pages/PracticePage.ets(283:13)", "entry");
             //图表                                       //暂时贴图
             Image.margin({ top: 15 });
             //图表                                       //暂时贴图

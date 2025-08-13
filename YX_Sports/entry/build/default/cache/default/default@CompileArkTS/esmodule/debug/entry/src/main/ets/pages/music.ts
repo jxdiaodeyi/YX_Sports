@@ -7,7 +7,6 @@ interface Music_Params {
     isOn?: boolean[];
     datas?: Type2[];
 }
-import router from "@ohos:router";
 import { sharedTitle } from "@normalized:N&&&entry/src/main/ets/pages/title&";
 interface Type2 {
     tex: string;
@@ -188,10 +187,6 @@ class Music extends ViewPU {
             Row.justifyContent(FlexAlign.SpaceBetween);
             //选择音乐
             Row.backgroundColor('#ffff');
-            //选择音乐
-            Row.onClick(() => {
-                router.pushUrl({ url: 'pages/trainMusic' });
-            });
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Column.create({ space: 10 });

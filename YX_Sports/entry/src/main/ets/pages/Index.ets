@@ -1,12 +1,18 @@
-import { router, TabBarPosition } from '@kit.ArkUI';
-import { Home } from './home';
-import { mine } from './mine';
-import { Plan } from './plan';
-import { Practice } from './PracticePage';
-import { vip } from './vip';
-import { SubscriptionPlan } from './vipplan';
+import { promptAction, router, TabBarPosition } from '@kit.ArkUI';
+import { home } from './home/home';
+import { Plan } from './plan/plan';
+
+import { PracticePage } from './practice/PracticePage';
+import { vipplan } from './plan/vipplan';
+import { Mine } from './mine/mine';
 
 
+interface userInfoType{
+  token:string,
+  userId:number,
+  telephone:string,
+  vip:number
+}
 
 @Entry
 @Component
@@ -14,7 +20,11 @@ struct Index {
   @State message: string = 'Hello World';
   @State curIndex: number = 0;
   @State change:boolean=false
-
+  @State token:string=(this.getUIContext().getRouter().getParams()as userInfoType).token
+  @State userId:number=(this.getUIContext().getRouter().getParams()as userInfoType).userId
+  @State telephone:string=(this.getUIContext().getRouter().getParams()as userInfoType).telephone
+  @State vip:number=(this.getUIContext().getRouter().getParams()as userInfoType).vip
+  private tokenFaker:string=this.token
   @Builder
   navBar(selImg:Resource, img:Resource, tex:string, index:number){
     Column({space:5}){
@@ -26,33 +36,26 @@ struct Index {
     }
   }
 
-  aboutToAppear():boolean {
-    const params = router.getParams()as vip | undefined
-    if (params) {
-      this.change=params.changes
-    }
-    return this.change
-  }
-
 
   build() {
     Column(){
       Tabs({barPosition:BarPosition.End}){
         TabContent(){
-          Home()
+          home({token:this.token,userId:this.userId,vip:this.vip})
         }.tabBar(this.navBar($r("app.media.home"),$r("app.media.img_0"),"首页",0))
         TabContent(){
-          if(this.aboutToAppear()){
-            Plan()
+          if(this.vip){
+            Plan({token:this.token,userId:this.userId})
           }else {
-            SubscriptionPlan()
+
+            vipplan({token:this.token,userId:this.userId})//{token:this.token,userId:this.userId,vip:this.vip}
           }
         }.tabBar(this.navBar($r("app.media.plan"),$r("app.media.img_1"),"计划",1))
         TabContent(){
-          Practice()
+          PracticePage({token:this.token,userId:this.userId})
         }.tabBar(this.navBar($r("app.media.practice"),$r("app.media.img_2"),"训练",2))
         TabContent(){
-          mine()
+          Mine({token:this.token,userId:this.userId,vip:this.vip})
         }.tabBar(this.navBar($r("app.media.mine"),$r("app.media.img_3"),"我的",3))
       }
       .onChange((index : number) => {this.curIndex = index;})

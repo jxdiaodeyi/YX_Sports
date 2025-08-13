@@ -17,6 +17,11 @@
 		"debug": true
 	},
 	"module": {
+		"requestPermissions": [
+			{
+				"name": "ohos.permission.INTERNET"
+			}
+		],
 		"name": "entry",
 		"type": "entry",
 		"description": "$string:module_desc",

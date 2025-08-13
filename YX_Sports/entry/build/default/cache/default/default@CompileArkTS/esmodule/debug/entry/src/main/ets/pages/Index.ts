@@ -5,14 +5,23 @@ interface Index_Params {
     message?: string;
     curIndex?: number;
     change?: boolean;
+    token?: string;
+    userId?: number;
+    telephone?: string;
+    vip?: number;
+    tokenFaker?: string;
 }
-import router from "@ohos:router";
-import { Home } from "@normalized:N&&&entry/src/main/ets/pages/home&";
-import { mine } from "@normalized:N&&&entry/src/main/ets/pages/mine&";
-import { Plan } from "@normalized:N&&&entry/src/main/ets/pages/plan&";
-import { Practice } from "@normalized:N&&&entry/src/main/ets/pages/PracticePage&";
-import type { vip } from './vip';
-import { SubscriptionPlan } from "@normalized:N&&&entry/src/main/ets/pages/vipplan&";
+import { home } from "@normalized:N&&&entry/src/main/ets/pages/home/home&";
+import { Plan } from "@normalized:N&&&entry/src/main/ets/pages/plan/plan&";
+import { PracticePage } from "@normalized:N&&&entry/src/main/ets/pages/practice/PracticePage&";
+import { vipplan } from "@normalized:N&&&entry/src/main/ets/pages/plan/vipplan&";
+import { Mine } from "@normalized:N&&&entry/src/main/ets/pages/mine/mine&";
+interface userInfoType {
+    token: string;
+    userId: number;
+    telephone: string;
+    vip: number;
+}
 class Index extends ViewPU {
     constructor(parent, params, __localStorage, elmtId = -1, paramsLambda = undefined, extraInfo) {
         super(parent, __localStorage, elmtId, extraInfo);
@@ -22,6 +31,11 @@ class Index extends ViewPU {
         this.__message = new ObservedPropertySimplePU('Hello World', this, "message");
         this.__curIndex = new ObservedPropertySimplePU(0, this, "curIndex");
         this.__change = new ObservedPropertySimplePU(false, this, "change");
+        this.__token = new ObservedPropertySimplePU((this.getUIContext().getRouter().getParams() as userInfoType).token, this, "token");
+        this.__userId = new ObservedPropertySimplePU((this.getUIContext().getRouter().getParams() as userInfoType).userId, this, "userId");
+        this.__telephone = new ObservedPropertySimplePU((this.getUIContext().getRouter().getParams() as userInfoType).telephone, this, "telephone");
+        this.__vip = new ObservedPropertySimplePU((this.getUIContext().getRouter().getParams() as userInfoType).vip, this, "vip");
+        this.tokenFaker = this.token;
         this.setInitiallyProvidedValue(params);
         this.finalizeConstruction();
     }
@@ -35,6 +49,21 @@ class Index extends ViewPU {
         if (params.change !== undefined) {
             this.change = params.change;
         }
+        if (params.token !== undefined) {
+            this.token = params.token;
+        }
+        if (params.userId !== undefined) {
+            this.userId = params.userId;
+        }
+        if (params.telephone !== undefined) {
+            this.telephone = params.telephone;
+        }
+        if (params.vip !== undefined) {
+            this.vip = params.vip;
+        }
+        if (params.tokenFaker !== undefined) {
+            this.tokenFaker = params.tokenFaker;
+        }
     }
     updateStateVars(params: Index_Params) {
     }
@@ -42,11 +71,19 @@ class Index extends ViewPU {
         this.__message.purgeDependencyOnElmtId(rmElmtId);
         this.__curIndex.purgeDependencyOnElmtId(rmElmtId);
         this.__change.purgeDependencyOnElmtId(rmElmtId);
+        this.__token.purgeDependencyOnElmtId(rmElmtId);
+        this.__userId.purgeDependencyOnElmtId(rmElmtId);
+        this.__telephone.purgeDependencyOnElmtId(rmElmtId);
+        this.__vip.purgeDependencyOnElmtId(rmElmtId);
     }
     aboutToBeDeleted() {
         this.__message.aboutToBeDeleted();
         this.__curIndex.aboutToBeDeleted();
         this.__change.aboutToBeDeleted();
+        this.__token.aboutToBeDeleted();
+        this.__userId.aboutToBeDeleted();
+        this.__telephone.aboutToBeDeleted();
+        this.__vip.aboutToBeDeleted();
         SubscriberManager.Get().delete(this.id__());
         this.aboutToBeDeletedInternal();
     }
@@ -71,6 +108,35 @@ class Index extends ViewPU {
     set change(newValue: boolean) {
         this.__change.set(newValue);
     }
+    private __token: ObservedPropertySimplePU<string>;
+    get token() {
+        return this.__token.get();
+    }
+    set token(newValue: string) {
+        this.__token.set(newValue);
+    }
+    private __userId: ObservedPropertySimplePU<number>;
+    get userId() {
+        return this.__userId.get();
+    }
+    set userId(newValue: number) {
+        this.__userId.set(newValue);
+    }
+    private __telephone: ObservedPropertySimplePU<string>;
+    get telephone() {
+        return this.__telephone.get();
+    }
+    set telephone(newValue: string) {
+        this.__telephone.set(newValue);
+    }
+    private __vip: ObservedPropertySimplePU<number>;
+    get vip() {
+        return this.__vip.get();
+    }
+    set vip(newValue: number) {
+        this.__vip.set(newValue);
+    }
+    private tokenFaker: string;
     navBar(selImg: Resource, img: Resource, tex: string, index: number, parent = null) {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Column.create({ space: 5 });
@@ -87,13 +153,6 @@ class Index extends ViewPU {
         Text.pop();
         Column.pop();
     }
-    aboutToAppear(): boolean {
-        const params = router.getParams() as vip | undefined;
-        if (params) {
-            this.change = params.changes;
-        }
-        return this.change;
-    }
     initialRender() {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Column.create();
@@ -109,17 +168,21 @@ class Index extends ViewPU {
                 {
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
                         if (isInitialRender) {
-                            let componentCall = new Home(this, {}, undefined, elmtId, () => { }, { page: "entry/src/main/ets/pages/Index.ets", line: 42, col: 11 });
+                            let componentCall = new home(this, { token: this.token, userId: this.userId, vip: this.vip }, undefined, elmtId, () => { }, { page: "entry/src/main/ets/pages/Index.ets", line: 44, col: 11 });
                             ViewPU.create(componentCall);
                             let paramsLambda = () => {
-                                return {};
+                                return {
+                                    token: this.token,
+                                    userId: this.userId,
+                                    vip: this.vip
+                                };
                             };
                             componentCall.paramsGenerator_ = paramsLambda;
                         }
                         else {
                             this.updateStateVarsOfChildByElmtId(elmtId, {});
                         }
-                    }, { name: "Home" });
+                    }, { name: "home" });
                 }
             });
             TabContent.tabBar({ builder: () => {
@@ -131,15 +194,18 @@ class Index extends ViewPU {
             TabContent.create(() => {
                 this.observeComponentCreation2((elmtId, isInitialRender) => {
                     If.create();
-                    if (this.aboutToAppear()) {
+                    if (this.vip) {
                         this.ifElseBranchUpdateFunction(0, () => {
                             {
                                 this.observeComponentCreation2((elmtId, isInitialRender) => {
                                     if (isInitialRender) {
-                                        let componentCall = new Plan(this, {}, undefined, elmtId, () => { }, { page: "entry/src/main/ets/pages/Index.ets", line: 46, col: 13 });
+                                        let componentCall = new Plan(this, { token: this.token, userId: this.userId }, undefined, elmtId, () => { }, { page: "entry/src/main/ets/pages/Index.ets", line: 48, col: 13 });
                                         ViewPU.create(componentCall);
                                         let paramsLambda = () => {
-                                            return {};
+                                            return {
+                                                token: this.token,
+                                                userId: this.userId
+                                            };
                                         };
                                         componentCall.paramsGenerator_ = paramsLambda;
                                     }
@@ -155,17 +221,20 @@ class Index extends ViewPU {
                             {
                                 this.observeComponentCreation2((elmtId, isInitialRender) => {
                                     if (isInitialRender) {
-                                        let componentCall = new SubscriptionPlan(this, {}, undefined, elmtId, () => { }, { page: "entry/src/main/ets/pages/Index.ets", line: 48, col: 13 });
+                                        let componentCall = new vipplan(this, { token: this.token, userId: this.userId }, undefined, elmtId, () => { }, { page: "entry/src/main/ets/pages/Index.ets", line: 51, col: 13 });
                                         ViewPU.create(componentCall);
                                         let paramsLambda = () => {
-                                            return {};
+                                            return {
+                                                token: this.token,
+                                                userId: this.userId
+                                            };
                                         };
                                         componentCall.paramsGenerator_ = paramsLambda;
                                     }
                                     else {
                                         this.updateStateVarsOfChildByElmtId(elmtId, {});
                                     }
-                                }, { name: "SubscriptionPlan" });
+                                }, { name: "vipplan" });
                             }
                         });
                     }
@@ -182,17 +251,20 @@ class Index extends ViewPU {
                 {
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
                         if (isInitialRender) {
-                            let componentCall = new Practice(this, {}, undefined, elmtId, () => { }, { page: "entry/src/main/ets/pages/Index.ets", line: 52, col: 11 });
+                            let componentCall = new PracticePage(this, { token: this.token, userId: this.userId }, undefined, elmtId, () => { }, { page: "entry/src/main/ets/pages/Index.ets", line: 55, col: 11 });
                             ViewPU.create(componentCall);
                             let paramsLambda = () => {
-                                return {};
+                                return {
+                                    token: this.token,
+                                    userId: this.userId
+                                };
                             };
                             componentCall.paramsGenerator_ = paramsLambda;
                         }
                         else {
                             this.updateStateVarsOfChildByElmtId(elmtId, {});
                         }
-                    }, { name: "Practice" });
+                    }, { name: "PracticePage" });
                 }
             });
             TabContent.tabBar({ builder: () => {
@@ -205,17 +277,21 @@ class Index extends ViewPU {
                 {
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
                         if (isInitialRender) {
-                            let componentCall = new mine(this, {}, undefined, elmtId, () => { }, { page: "entry/src/main/ets/pages/Index.ets", line: 55, col: 11 });
+                            let componentCall = new Mine(this, { token: this.token, userId: this.userId, vip: this.vip }, undefined, elmtId, () => { }, { page: "entry/src/main/ets/pages/Index.ets", line: 58, col: 11 });
                             ViewPU.create(componentCall);
                             let paramsLambda = () => {
-                                return {};
+                                return {
+                                    token: this.token,
+                                    userId: this.userId,
+                                    vip: this.vip
+                                };
                             };
                             componentCall.paramsGenerator_ = paramsLambda;
                         }
                         else {
                             this.updateStateVarsOfChildByElmtId(elmtId, {});
                         }
-                    }, { name: "mine" });
+                    }, { name: "Mine" });
                 }
             });
             TabContent.tabBar({ builder: () => {

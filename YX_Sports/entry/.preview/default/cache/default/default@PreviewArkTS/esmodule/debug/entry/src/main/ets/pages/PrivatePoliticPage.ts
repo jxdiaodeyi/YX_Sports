@@ -4,6 +4,7 @@ if (!("finalizeConstruction" in ViewPU.prototype)) {
 interface PrivatePoliticPage_Params {
     message?: string;
 }
+import router from "@ohos:router";
 class PrivatePoliticPage extends ViewPU {
     constructor(parent, params, __localStorage, elmtId = -1, paramsLambda = undefined, extraInfo) {
         super(parent, __localStorage, elmtId, extraInfo);
@@ -39,14 +40,20 @@ class PrivatePoliticPage extends ViewPU {
     initialRender() {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Column.create();
-            Column.debugLine("entry/src/main/ets/pages/PrivatePoliticPage.ets(7:5)", "entry");
+            Column.debugLine("entry/src/main/ets/pages/PrivatePoliticPage.ets(9:5)", "entry");
             Column.height('100%');
             Column.width('100%');
         }, Column);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create();
+            Text.debugLine("entry/src/main/ets/pages/PrivatePoliticPage.ets(10:7)", "entry");
+            Text.height(40);
+        }, Text);
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
             Row.create();
-            Row.debugLine("entry/src/main/ets/pages/PrivatePoliticPage.ets(8:7)", "entry");
-            Row.justifyContent(FlexAlign.SpaceAround);
+            Row.debugLine("entry/src/main/ets/pages/PrivatePoliticPage.ets(11:7)", "entry");
+            Row.justifyContent(FlexAlign.SpaceBetween);
             Row.width('100%');
             Row.height(30);
             Row.padding(5);
@@ -56,16 +63,17 @@ class PrivatePoliticPage extends ViewPU {
             });
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Text.create('<');
-            Text.debugLine("entry/src/main/ets/pages/PrivatePoliticPage.ets(9:9)", "entry");
-            Text.fontColor('#333333');
-            Text.fontSize(24);
-            Text.fontWeight(500);
-        }, Text);
-        Text.pop();
+            Image.create({ "id": 16777308, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
+            Image.debugLine("entry/src/main/ets/pages/PrivatePoliticPage.ets(12:9)", "entry");
+            Image.height(40);
+            Image.width(40);
+            Image.onClick(() => {
+                router.back();
+            });
+        }, Image);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create('隐私政策');
-            Text.debugLine("entry/src/main/ets/pages/PrivatePoliticPage.ets(13:9)", "entry");
+            Text.debugLine("entry/src/main/ets/pages/PrivatePoliticPage.ets(18:9)", "entry");
             Text.fontColor('#333333');
             Text.fontSize(24);
             Text.fontWeight(700);
@@ -73,18 +81,21 @@ class PrivatePoliticPage extends ViewPU {
         Text.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create('     ');
-            Text.debugLine("entry/src/main/ets/pages/PrivatePoliticPage.ets(17:9)", "entry");
+            Text.debugLine("entry/src/main/ets/pages/PrivatePoliticPage.ets(22:9)", "entry");
             Text.fontSize(24);
         }, Text);
         Text.pop();
         Row.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Scroll.create();
-            Scroll.debugLine("entry/src/main/ets/pages/PrivatePoliticPage.ets(28:7)", "entry");
+            Scroll.debugLine("entry/src/main/ets/pages/PrivatePoliticPage.ets(33:7)", "entry");
+            Scroll.height('100%');
+            Scroll.margin({ top: 15 });
         }, Scroll);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Column.create();
-            Column.debugLine("entry/src/main/ets/pages/PrivatePoliticPage.ets(29:9)", "entry");
+            Column.debugLine("entry/src/main/ets/pages/PrivatePoliticPage.ets(34:9)", "entry");
+            Column.padding(10);
         }, Column);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create('本应用尊重并保护所有使用服务用户的个人隐私权。为了给您提供更准确、更有个性化的服务，本应用会按照本隐私权政策的规定使用和披露您的个人信息。但本应用将以高度的勤勉、审慎义务对待这些信息。除本隐私权政策另有规定外，在未征得您事先许可的情况下，本应用不会将这些信息对外披露或向第三方提供。本应用会不时更新本隐私权政策。 您在同意本应用服务使用协议之时，即视为您已经同意本隐私权政策全部内容。本隐私权政策属于本应用服务使用协议不可分割的一部分。\n' +
@@ -118,9 +129,9 @@ class PrivatePoliticPage extends ViewPU {
                 '\n' +
                 '\n' +
                 '(c) 违反法律规定或违反本应用规则行为及本应用已对您采取的措施。');
-            Text.debugLine("entry/src/main/ets/pages/PrivatePoliticPage.ets(30:11)", "entry");
+            Text.debugLine("entry/src/main/ets/pages/PrivatePoliticPage.ets(35:11)", "entry");
             Text.fontSize(20);
-            Text.fontColor('#858585');
+            Text.fontColor('#333333');
         }, Text);
         Text.pop();
         Column.pop();
@@ -134,4 +145,4 @@ class PrivatePoliticPage extends ViewPU {
         return "PrivatePoliticPage";
     }
 }
-registerNamedRoute(() => new PrivatePoliticPage(undefined, {}), "", { bundleName: "com.example.watermalon_sport", moduleName: "entry", pagePath: "pages/PrivatePoliticPage", pageFullPath: "entry/src/main/ets/pages/PrivatePoliticPage", integratedHsp: "false", moduleType: "followWithHap" });
+registerNamedRoute(() => new PrivatePoliticPage(undefined, {}), "", { bundleName: "com.example.yxsport", moduleName: "entry", pagePath: "pages/PrivatePoliticPage", pageFullPath: "entry/src/main/ets/pages/PrivatePoliticPage", integratedHsp: "false", moduleType: "followWithHap" });

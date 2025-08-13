@@ -764,11 +764,6 @@ class EditInfoPage extends ViewPU {
             Column.width('100%');
         }, Column);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Text.create();
-            Text.height(40);
-        }, Text);
-        Text.pop();
-        this.observeComponentCreation2((elmtId, isInitialRender) => {
             //标题
             Row.create();
             //标题
@@ -781,7 +776,7 @@ class EditInfoPage extends ViewPU {
             Row.backgroundColor('#FFFFFF');
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Image.create({ "id": 16777243, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
+            Image.create({ "id": 16777240, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
             Image.width(20);
             Image.height(20);
             Image.margin(({ left: 5 }));

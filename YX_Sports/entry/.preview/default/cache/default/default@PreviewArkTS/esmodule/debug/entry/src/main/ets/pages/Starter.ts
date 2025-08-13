@@ -51,7 +51,7 @@ class Starter extends ViewPU {
             Stack.debugLine("entry/src/main/ets/pages/Starter.ets(10:7)", "entry");
         }, Stack);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Image.create({ "id": 16777233, "type": 20000, params: [], "bundleName": "com.example.watermalon_sport", "moduleName": "entry" });
+            Image.create({ "id": 16777224, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
             Image.debugLine("entry/src/main/ets/pages/Starter.ets(11:9)", "entry");
             Image.width('100%');
             Image.height('100%');
@@ -72,7 +72,7 @@ class Starter extends ViewPU {
             Stack.debugLine("entry/src/main/ets/pages/Starter.ets(21:7)", "entry");
         }, Stack);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Image.create({ "id": 16777244, "type": 20000, params: [], "bundleName": "com.example.watermalon_sport", "moduleName": "entry" });
+            Image.create({ "id": 16777258, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
             Image.debugLine("entry/src/main/ets/pages/Starter.ets(22:9)", "entry");
             Image.width('100%');
             Image.height('100%');
@@ -93,7 +93,7 @@ class Starter extends ViewPU {
             Stack.debugLine("entry/src/main/ets/pages/Starter.ets(33:7)", "entry");
         }, Stack);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Image.create({ "id": 16777234, "type": 20000, params: [], "bundleName": "com.example.watermalon_sport", "moduleName": "entry" });
+            Image.create({ "id": 16777287, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
             Image.debugLine("entry/src/main/ets/pages/Starter.ets(34:9)", "entry");
             Image.width('100%');
             Image.height('100%');
@@ -114,7 +114,7 @@ class Starter extends ViewPU {
             Stack.debugLine("entry/src/main/ets/pages/Starter.ets(44:7)", "entry");
         }, Stack);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Image.create({ "id": 16777224, "type": 20000, params: [], "bundleName": "com.example.watermalon_sport", "moduleName": "entry" });
+            Image.create({ "id": 16777223, "type": 20000, params: [], "bundleName": "com.example.yxsport", "moduleName": "entry" });
             Image.debugLine("entry/src/main/ets/pages/Starter.ets(45:9)", "entry");
             Image.width('100%');
             Image.height('100%');
@@ -148,7 +148,7 @@ class Starter extends ViewPU {
             Button.onClick(() => {
                 // 点击事件处理逻辑
                 console.log('点击了立即体验按钮');
-                router.replaceUrl({ url: 'pages/Index' });
+                router.replaceUrl({ url: 'pages/start' });
             });
         }, Button);
         Button.pop();
@@ -163,4 +163,4 @@ class Starter extends ViewPU {
         return "Starter";
     }
 }
-registerNamedRoute(() => new Starter(undefined, {}), "", { bundleName: "com.example.watermalon_sport", moduleName: "entry", pagePath: "pages/Starter", pageFullPath: "entry/src/main/ets/pages/Starter", integratedHsp: "false", moduleType: "followWithHap" });
+registerNamedRoute(() => new Starter(undefined, {}), "", { bundleName: "com.example.yxsport", moduleName: "entry", pagePath: "pages/Starter", pageFullPath: "entry/src/main/ets/pages/Starter", integratedHsp: "false", moduleType: "followWithHap" });
